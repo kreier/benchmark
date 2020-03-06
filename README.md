@@ -1,6 +1,6 @@
 # Benchmark collection
 
-There are countless benchmarks out there. This is just a collection of benchmarks I used myself over the years and a list of the results gained in this time.
+There are countless benchmarks out there. This is just a collection of benchmarks I used myself over the years and a list of the results gained in this time. While some tests date back to 1972 and I measured the speed of my Lattice C compiler against Omicron Basic on my Atari ST in 1992, the presented data collection here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
 
 ## NBench
 
@@ -17,3 +17,20 @@ This [synthetic benchmark from 1972](https://en.wikipedia.org/wiki/Whetstone_(be
 ## Dhrystone
 
 Not Whether it can perform, just dry integer operations lead to the [Dhrystone benchmark](https://en.wikipedia.org/wiki/Dhrystone) in 1984. Gave it a try as well.
+
+## Memtest 86+
+
+The data gives some inside to the architechture of the CPU and the speed of the connected memory.
+
+## 3Dmark
+
+Testing the speed of a 3D graphics card is inherent to its purpose of presenting a smooth image for the user. The benchmark from 1999 still runs on modern hardware. I longed for years to eventually have the hardware just to see the benchmark without stutter. Instead of investing in expensive hardware I relied on Moore's law and endurance payed off!
+
+## Crystaldisk and hdtune
+
+...
+
+## Webbrowser
+
+The benchmarks drove the innovation in browser development significantly, but became obsolete quite fast as well. Notable examples are Browermark 2.0, Basemark Web 3.0, peacekeeper, octane, sunspider, kraken, Jetstream and Speedometer.
+
