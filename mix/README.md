@@ -8,4 +8,6 @@ Starting 2015 I had to write C again for Arduino. My first Python program was wr
 
 Early 2020 I started with 32bit Microcontrollers like the bluepill STM32F103C8T6. And others had already done a speed comparison of these embedded controllers. Like [Fernando Koyanagi](https://www.instructables.com/member/Fernando+Koyanagi/) ([fernandok.com/](https://www.fernandok.com/)) from Brazil in his article on [instructables](https://www.instructables.com/id/SpeedTest-Arduinos-ESP32-8266s-STM32/). His excel data table exists only as a picture:
 
-![Speed comparison microcontroller](speed_comparison.jpg)
+![Speed comparison microcontroller](speed_comparison.png)
+
+nbench does not run on many of them. And switching IOs with the default frameworks has some real-world applications. A usefull speed test I found in June 2020 was [CoreMark](../CoreMark). It runs on small machines like a Arduino Mega, ESP8266 and STM32F103 as well as a dual Quadcore Xeon X5550. Leonardo and Uno have only 2.5 kByte RAM, that's unfortunately not enough.
