@@ -4,6 +4,8 @@ The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/corem
 
 In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it to Arduino. It runs out of the box on an ESP32. Multicore optimisation is not enabled yet.
 
+With multicore it was compiled under linux by [ochrin](https://github.com/ochrin/coremark) in March 2020 and he got both ESP8266 running and dualcore results on ESP32. Still no match for the 2200 of the Teensy 4.0.
+
 Some of my results:
 
 | Board                  | CoreMark | LED |
@@ -15,7 +17,7 @@ Some of my results:
 | Xeon X5550             |    13643 |     |
 | Xeon X5550 16 threads  |   124634 |     |
 
-It does not run on ESP8266 yet. 
+It does not run on ESP8266 yet. Look at solution from [ochrin](https://github.com/ochrin/coremark)
 
 Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
 
