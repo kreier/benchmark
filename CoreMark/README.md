@@ -8,8 +8,12 @@ Some of my results:
 
 | Board                  | CoreMark |
 | ---------------------- | :------: |
+| STM32F103C8T6 128k     |       81 |
 | T-Koala ESP32          |      351 |
 | Xeon X5550             |    13643 |
 | Xeon X5550 16 threads  |   124634 |
 
-It does not run on ESP8266 yet. Same for bluepill STM32F103 and blackpill STM32F411.
+It does not run on ESP8266 yet. 
+
+Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
+Blackpill STM32F411.
