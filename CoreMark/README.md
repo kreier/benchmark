@@ -2,7 +2,7 @@
 
 The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence.
 
-In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it to Arduino. It runs out of the box on an ESP32. Multicore optimisation is not enabled yet.
+In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it [to Arduino](https://github.com/PaulStoffregen/CoreMark). It runs out of the box on an ESP32. Multicore optimisation is not enabled yet.
 
 With multicore it was compiled under linux by [ochrin](https://github.com/ochrin/coremark) in March 2020 and he got both ESP8266 running and dualcore results on ESP32. Still no match for the 2200 of the Teensy 4.0.
 
@@ -10,6 +10,7 @@ Some of my results:
 
 | Board                  | CoreMark | LED |
 | ---------------------- | -------: | :-: |
+| Arduino MEGA 2560      |        7 |  13 |
 | STM32F103C8T6 128k     |       81 |  17 |
 | STM32F401CCU6 256k     |      150 |  31 |
 | STM32F411CEU6 512k     |      172 |  31 |
