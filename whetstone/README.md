@@ -15,3 +15,29 @@ Had to adjust T1 and T2 to t1 and t2 since the otheres are used by the ESP32 lib
 ### Original:
 
 http://www.netlib.org/benchmark/
+
+### Ubuntu
+
+```
+mkdir whetstone
+cd whetstone
+wget http://www.netlib.org/benchmark/whetstone.c
+gcc whetstone.c -o whet -lm
+whet -c 100000
+```
+
+### Roy Longbottom
+
+```
+mkdir whetstone
+cd whetstone
+wget http://www.roylongbottom.org.uk/whets.c
+gcc -DUNIX whets.c -o whets -lm
+whet
+```
+
+Calibrates itself, more output data. See [this documentation](http://www.roylongbottom.org.uk/whetstone%20results.htm). I got up to 680 MFLOPS and 2292 MWIPS.
+
+### ESP IDF
+
+on my to do list
