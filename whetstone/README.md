@@ -6,10 +6,20 @@ Had to adjust T1 and T2 to t1 and t2 since the otheres are used by the ESP32 lib
 
 ### Results:
 
+- Arduino Leonardo: 8.00 MIPS
 - Arduino Uno:  8.01 MIPS - should be only 1.21 MIPS ...
 - Mega 2560:    7.92 MIPS
 - ESP8266: does not run
 - ESP32:       14.94 MIPS
+
+## Whetstone 1.2
+
+Copied from https://raw.githubusercontent.com/ghalfacree/Arduino-Sketches/master/Whetstone/Whetstone.ino
+
+- Arduino Leonardo:   7.96 MIPS
+- Arduino Uno:        8.01 MIPS
+- Arduino Mega 2560:  7.92 MIPS
+- Wemos Lolin ESP32: 70.62 MIPS
 
 
 ### Original:
