@@ -10,19 +10,27 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 
 Some of my results:
 
-| Board                  | CoreMark | LED |
-| ---------------------- | -------: | :-: |
-| Arduino MEGA 2560      |        7 |  13 |
-| STM32F103C8T6 128k     |       81 |  17 |
-| STM32F401CCU6 256k     |      150 |  31 |
-| STM32F411CEU6 512k     |      172 |  31 |
-| T-Koala ESP32          |      351 |   5 |
-| Raspberry Pi 3 Model B |     3800 |     |
-| RPi3 Model B 4 threads |    15194 |     |
-| i5-3320M               |    21245 |     |
-| i5-3320M 4 threads     |    53450 |     |
-| Xeon X5550             |    13643 |     |
-| Xeon X5550 16 threads  |   124634 |     |
+| Board                   | CoreMark | LED | MHz  |
+| ----------------------- | -------: | :-: | ---: |
+| Arduino MEGA 2560       |        7 |  13 |   16 |
+| STM32F103C8T6 128k      |       81 |  17 |   72 |
+| STM32F401CCU6 256k      |      150 |  31 |   84 |
+| STM32F411CEU6 512k      |      172 |  31 |  100 |
+| T-Koala ESP32           |      351 |   5 |  160 |
+| Raspberry Pi 3 Model B  |     3800 |     | 1200 |
+| Amlogic S905W tanix tx3 |     3913 |     | 1200 |
+| Xeon X5550              |    13643 |     | 3060 |
+| i5-3320M                |    21245 |     | 3300 |
+
+Multithread
+
+| Board                   | CoreMark | MHz  |
+| ----------------------- | -------: | ---: |
+| RPi3 Model B  4 threads |    15194 | 1200 |
+| Amlogic S905W 4 threads |    15393 | 1200 |
+| i5-3320M 4 threads      |    53450 | 3300 |
+| Xeon X5550 16 threads   |   124634 | 3060 |
+
 
 Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
 
