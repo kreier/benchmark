@@ -8,28 +8,29 @@ In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https:/
 make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 ``` 
 
-Some of my results:
+## Some of my results from Arduino IDE and Ubuntu:
 
-| Board                   | CoreMark | LED | MHz  |
-| ----------------------- | -------: | :-: | ---: |
-| Arduino MEGA 2560       |        7 |  13 |   16 |
-| STM32F103C8T6 128k      |       81 |  17 |   72 |
-| STM32F401CCU6 256k      |      150 |  31 |   84 |
-| STM32F411CEU6 512k      |      172 |  31 |  100 |
-| T-Koala ESP32           |      351 |   5 |  160 |
-| Raspberry Pi 3 Model B  |     3800 |     | 1200 |
-| Amlogic S905W tanix tx3 |     3913 |     | 1200 |
-| Xeon X5550              |    13643 |     | 3060 |
-| i5-3320M                |    21245 |     | 3300 |
+| Board                   | CoreMark | LED | MHz  | Mark/MHz |
+| ----------------------- | -------: | :-: | ---: | -------- |
+| Arduino MEGA 2560       |        7 |  13 |   16 |     0.44 |
+| STM32F103C8T6 128k      |       81 |  17 |   72 |     1.13 |
+| STM32F401CCU6 256k      |      150 |  31 |   84 |     1.79 |
+| STM32F411CEU6 512k      |      172 |  31 |  100 |     1.72 |
+| T-Koala ESP32           |      351 |   5 |  160 |     2.19 |
+| Raspberry Pi Model B v2 |     1574 |     |  700 |     2.25 |
+| Raspberry Pi 3 Model B  |     3800 |     | 1200 |     3.17 |
+| Amlogic S905W tanix tx3 |     3913 |     | 1200 |     3.26 |
+| Xeon X5550              |    13643 |     | 3060 |     4.46 |
+| i5-3320M                |    21245 |     | 3300 |     6.44 |
 
-Multithread
+## Multithread results
 
-| Board                   | CoreMark | MHz  |
-| ----------------------- | -------: | ---: |
-| RPi3 Model B  4 threads |    15194 | 1200 |
-| Amlogic S905W 4 threads |    15393 | 1200 |
-| i5-3320M 4 threads      |    53450 | 3300 |
-| Xeon X5550 16 threads   |   124634 | 3060 |
+| Board                   | CoreMark | MHz  | Mark/Mhz |
+| ----------------------- | -------: | ---: | -------- |
+| RPi3 Model B  4 threads |    15194 | 1200 |     3.16 |
+| Amlogic S905W 4 threads |    15393 | 1200 |     3.21 |
+| i5-3320M 4 threads      |    53450 | 3300 |     4.05 |
+| Xeon X5550 16 threads   |   124634 | 3060 |     2.55 |
 
 
 Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
@@ -42,14 +43,19 @@ Blackpill STM32F401CCU6 and STM32F411CEU6 working with:
 
 Programming mode activated by press and hold Boot0 and hit NRST. You have a new USB devices "STM32 BOOTLOADER".
 
-It does not run on ESP8266 yet. Look at solution from [ochrin](https://github.com/ochrin/coremark). He uses the esp8266 toolchain. My results:
+## ESP IDF crosscompiling toolchain
 
-| Board            | CoreMark |
-| ---------------- | -------: |
-| ESP8266  80 MHz  |      155 |
-| ESP8266  80 MHz  |      262 |
-| ESP32    80 MHz  |          |
-| ESP32   240 MHz  |          |
+The Arduino port from Paul Stoffregen does not run on ESP8266 yet. But [ochrin](https://github.com/ochrin/coremark) used the esp8266 toolchain and got some results in March 2020. I tried to replicate his results:
 
-With multicore it was compiled under linux by [ochrin](https://github.com/ochrin/coremark) in March 2020 and he got both ESP8266 running and dualcore results on ESP32. Still no match for the 2200 of the Teensy 4.0. I can't make the ESP32 toolchain running.
+| Board            | CoreMark | Ochrin |
+| ---------------- | -------: | -----: |
+| ESP8266   80 MHz |      155 |    191 |
+| ESP8266  160 MHz |      262 |        |
+| ESP32     80 MHz |          |    166 |
+| ESP32    160 MHz |          |    332 |
+| ESP32    240 MHz |          |    498 |
+| ESP32 2C 160 MHz |          |    661 |
+| ESP32 2C 240 MHz |          |    991 |
+
+Still no match for the 2314 coremark score of the Teensy 4.0 (Cortex-M7 at 600 MHz compared to LX6 with 240 MHz). I can't make the ESP32 toolchain running.
 
