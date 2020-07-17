@@ -26,6 +26,10 @@ The data gives some inside to the architechture of the CPU and the speed of the 
 
 Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2009 for embedded system it is too large for an Arduino Uno, but runs from an Arduino Mega 2560 onwards to multithreaded Octacore Xeon processor. The results show that it scales with frequency and improved IPC.
 
+![Results 2020](mix/coremark2020.png)
+
+The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 23770 for an i7-6820HQ or 124624 for a 16-thread execution on a dual Xeon X5550 machine. That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 3600 MHz in a Quadcore i7.
+
 ## [embench](embench)
 
 When [comparing the power](https://content.riscv.org/wp-content/uploads/2019/06/9.25-Embench-RISC-V-Workshop-Patterson-v3.pdf) of the new [RISC-V](https://en.wikipedia.org/wiki/RISC-V) ISA some people used drystone and coremark on May 12th, 2018. Not everybody was happy. While 4.9 CoreMarks/MHz and 2.5 DMIPS/Mhz sound interesting, there are shortcomings. To provide a proper tool for comparison they developed this suite from 2019 on. Version 0.5 was released  in June 2020 at the Embedded World Conference in Nürnberg, Germany.
