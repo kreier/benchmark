@@ -2,6 +2,8 @@
 
 The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence.
 
+![Results 2020](../mix/coremark2020.png)
+
 In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it [to Arduino](https://github.com/PaulStoffregen/CoreMark). It runs out of the box on an ESP32. Multicore optimisation is not enabled yet. In ubuntu it works with
 
 ```
@@ -22,6 +24,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | Amlogic S905W tanix tx3 |     3913 |     | 1200 |     3.26 |
 | Xeon X5550              |    13643 |     | 3060 |     4.46 |
 | i5-3320M                |    21245 |     | 3300 |     6.44 |
+| i7-6820HQ               |    23779 |     | 3660 |     6.61 |
 
 ## Multithread results
 
@@ -30,6 +33,8 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | RPi3 Model B  4 threads |    15194 | 1200 |     3.16 |
 | Amlogic S905W 4 threads |    15393 | 1200 |     3.21 |
 | i5-3320M 4 threads      |    53450 | 3300 |     4.05 |
+| i7-6820HQ 4 threads     |    96420 | 3660 |     6.70 |
+| i7-6820HQ 8 threads     |   118862 | 3660 |     4.13 |
 | Xeon X5550 16 threads   |   124634 | 3060 |     2.55 |
 
 
