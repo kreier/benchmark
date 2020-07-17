@@ -28,7 +28,11 @@ Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2
 
 ![Results 2020](mix/coremark2020.png)
 
-The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 23770 for an i7-6820HQ or 124624 for a 16-thread execution on a dual Xeon X5550 machine. That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 3600 MHz in a Quadcore i7.
+The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 23770 for an i7-6820HQ or 124624 for a 16-thread execution on a dual Xeon X5550 machine. That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 3600 MHz in a Quadcore i7. Putting this into relationship narrows the differences:
+
+![Results 2020](mix/coremark-mhz.png)
+
+Still its comparing 8bit CPUs to 32bit ARM and 64bit x86 ones with long pipelines, many registers and the like. The difference in simple IPC is seen.
 
 ## [embench](embench)
 
