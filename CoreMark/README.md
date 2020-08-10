@@ -33,6 +33,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | ----------------------- | -------: | ---: | -------- |
 | RPi3 Model B  4 threads |    15194 | 1200 |     3.16 |
 | Amlogic S905W 4 threads |    15393 | 1200 |     3.21 |
+| Raspberry 4 with  4 threads |    32880 | 1500 |     5.48 |
 | i5-3320M 4 threads      |    53450 | 3300 |     4.05 |
 | i7-6820HQ 4 threads     |    96420 | 3660 |     6.70 |
 | i7-6820HQ 8 threads     |   118862 | 3660 |     4.13 |
@@ -48,6 +49,10 @@ Blackpill STM32F401CCU6 and STM32F411CEU6 working with:
 - Upload method: "STM32CubeProgrammer (DFU)"
 
 Programming mode activated by press and hold Boot0 and hit NRST. You have a new USB devices "STM32 BOOTLOADER".
+
+Most interesting is the ratio CoreMark/MHz:
+
+![Results 2020](../mix/coremark-mhz.png)
 
 ## ESP IDF crosscompiling toolchain
 
