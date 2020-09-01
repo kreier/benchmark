@@ -36,6 +36,8 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | Amlogic S905W 4 threads |    15393 | 1200 |     3.21 |
 | Raspberry 4 with  4 threads |    32880 | 1500 |     5.48 |
 | i5-3320M 4 threads      |    53450 | 3300 |     4.05 |
+| i7-4960HQ 4 threads     |    74944 | 3800 |     4.93 |
+| i7-4960HQ 8 threads     |    95261 | 3800 |     3.13 |
 | i7-6820HQ 4 threads     |    96420 | 3660 |     6.70 |
 | i7-6820HQ 8 threads     |   118862 | 3660 |     4.13 |
 | Xeon X5550 16 threads   |   124634 | 3060 |     2.55 |
