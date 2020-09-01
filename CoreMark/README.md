@@ -25,7 +25,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | Raspberry Pi 4 v1.1 4GB |     8257 |     | 1500 |     5.50 |
 | Xeon X5550              |    13643 |     | 3060 |     4.46 |
 | i5-3320M                |    21245 |     | 3300 |     6.44 |
-| i7-4960HQ               |    21326 |     |      |          |
+| i7-4960HQ               |    21326 |     | 3800 |     5.61 |
 | i7-6820HQ               |    23779 |     | 3660 |     6.61 |
 
 ## Multithread results
