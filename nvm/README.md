@@ -19,9 +19,10 @@ You can use the CLI in unix to test the speed of your NVM with commands like
 ``` console
 foo@bar:~$ sudo apt install hdparm
 
-foo@bar:~$ sudo hdparm -tT /dev/sda
+foo@bar:~$ sudo hdparm -tT /dev/sdb
 
-/dev/sda:
-Timing cached reads:   12540 MB in  2.00 seconds = 6277.67 MB/sec
-Timing buffered disk reads: 234 MB in  3.00 seconds =  77.98 MB/sec
+/dev/sdb:
+ Timing cached reads:   13134 MB in  1.99 seconds = 6590.12 MB/sec
+
+ Timing buffered disk reads: 3348 MB in  3.00 seconds = 1115.37 MB/sec
 ```
