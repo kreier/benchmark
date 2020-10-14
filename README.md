@@ -48,7 +48,10 @@ Some collected values from version 2 to 5 and compared in a table.
 
 ## [Crystaldisk and hdtune for non volatile memory](nvm)
 
-Evolved speed of non volatile memory NVM over the years.
+Evolved speed of non volatile memory NVM over the years. Compare my Samsung R20 from 2008 with mechanical harddrive to my Lenovo Yoga 370 from 2017 with NVMe:
+
+<img src="nvm/wd_black_500GB.png" width="50%" align="right">
+<img src="nvm/CoreDuo.jpg" width="46%">
 
 ## Webbrowser
 
