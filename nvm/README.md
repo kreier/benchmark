@@ -11,3 +11,17 @@ Switching to solid state drives the speed improves even further. The sequential 
 <img src="hp8460p_SATA3_240GB_Kingston.png" width="48%">
 
 This change is one of the reasons for responsive Computers in recent years.
+
+## How to measure speed in Linux
+
+You can use the CLI in unix to test the speed of your NVM with commands like
+
+``` console
+foo@bar:~$ sudo apt install hdparm
+
+foo@bar:~$ sudo hdparm -tT /dev/sda
+
+/dev/sda:
+Timing cached reads:   12540 MB in  2.00 seconds = 6277.67 MB/sec
+Timing buffered disk reads: 234 MB in  3.00 seconds =  77.98 MB/sec
+```
