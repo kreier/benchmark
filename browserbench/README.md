@@ -4,16 +4,26 @@ There is quite some history with benchmarks for browsers and JavaScript in parti
 
 ## Sunspider
 
-Maybe the first I started?
+Maybe the first I started? Highly deprecated!
 
 ## Peacekeeper
 
-## Kraken
+No longer maintaned.
 
-## Octane
+## [Kraken JavaScript Benchmark 1.1](https://krakenbenchmark.mozilla.org/)
 
-Still one of my favourite ones, rather fast to execute. More recent ones got better as well.
+Always wondered how fast this could get. i7 scored 1159 ms and iPhone 7 just 1352 ms.
 
-## Speedometer 2.0
+## [Octane 2.0](https://chromium.github.io/octane/)
 
-My old iPhone 7 scores 69.6. While my i7-6820HQ gets 
+Still one of my favourite ones, rather fast to execute. More recent ones got better as well. The i7-6820HW got 35218 points. The iPhone 7 reached 25875 points.
+
+## [Speedometer 2.0](https://browserbench.org/Speedometer2.0/)
+
+My old iPhone 7 scores 69.6. While my i7-6820HQ gets 85.6 runs/min.
+
+## [JetStream 2](https://browserbench.org/JetStream/)
+
+Here the result is ...
+
+And a table follows. I work on this for years!
