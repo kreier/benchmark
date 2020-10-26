@@ -53,7 +53,7 @@ Evolved speed of non volatile memory NVM over the years. Compare my Samsung R20 
 <img src="nvm/wd_black_500GB.png" width="50%" align="right">
 <img src="nvm/CoreDuo.jpg" width="46%">
 
-## Webbrowser
+## [Webbrowser benchmarks](browserbench)
 
 The benchmarks drove the innovation in browser development significantly, but became obsolete quite fast as well. Notable examples are Browermark 2.0, Basemark Web 3.0, peacekeeper, octane, sunspider, kraken, Jetstream and Speedometer.
 
