@@ -6,7 +6,7 @@ This is just a copy of the port Uwe F. Mayer did in November 1997, based on the 
 
 Sorted by Integer index (in reference to K6/233) since its most relevant to user experience. Pentium 90 is really old :)
 
-|CPU                                                                |Memory_index|Integer_index|Floating-Point_index|INTEGER|FLOAT|SuperPI_1M|
+|CPU                                                                |Memory index|Integer index|Floating Point index|INTEGER|FLOAT|SuperPI 1M|
 |-------------------------------------------------------------------|------------|-------------|--------------------|-------|-----|----------|
 |[Eclair 2.1] S5P6422 @ 667 MHz                                     |0.541       |0.959        |0.126               |3      |0.2  |-         |
 |Pentium II @ 233 MHz                                               |1.238       |1.33         |2.409               |5.1    |4.3  |8m16.4s   |
@@ -48,10 +48,11 @@ Sorted by Integer index (in reference to K6/233) since its most relevant to user
 |MacBookAir i5 4250U @ 2300 MHz                                     |39.05       |33.215       |54.26               |142.7  |97.8 |-         |
 |hp 8460p i5 2520M @ 2500 MHz                                       |40.699      |37.018       |52.635              |154.5  |94.9 |0m13.145s |
 |Lenovo X230 i5 3320M @ 2600 MHz                                    |45.382      |40.313       |61.804              |169.9  |111.4|0m12.264s |
+|Lenovo Yoga 370 i5 7300U @ 2600 MHz                                |55.043      |41.173       |105.528             |186.8  |190.3|0m11.590s |
 |HP ZBook 15 G3 i7 6820HQ @ 2700 MHz                                |57.200      |43.732       |107.954             |196.6  |194.6|0m10.672s |
 |MacBookPro15 i7 4960HQ @ 2600 MHz                                  |55.046      |44.618       |73.57               |195.6  |132.6|0m10.164s |
 |Intel Core i7 6700HQ @ 2600 MHz                                    |63.682      |45.732       |68.159              |211.2  |122.9|-         |
 |Intel Core i7 4710HQ @ 2500 MHz                                    |50.423      |46.117       |70.039              |192    |126.3|-         |
-|__CPU__                                    |__Memory_index__|__Integer_index__|__Floating-Point_index__|__INTEGER__|__FLOAT__|__SuperPI_1M__|
+|__CPU__                                    |__Memory index__|__Integer index__|__Floating Point index__|__INTEGER__|__FLOAT__|__SuperPI 1M__|
 
 Xeon X5550 1M 15.112s
