@@ -22,12 +22,14 @@ Still one of my favourite ones, rather fast to execute. More recent ones got bet
 
 My old iPhone 7 scores 69.6. While my i7-6820HQ gets 85.6 runs/min.
 
-|     device    | score |
-|:-------------:|:-----:|
-| Galaxy Note 8 | 26.5  |
-| iPhone 7      | 69.6  |
-| i7 6820HQ     | 85.6  |
-| iPad pro 10.5 | 89.8  |
+|     device    | score | released |
+|:-------------:|:-----:|:--------:|
+| Galaxy Note 8 | 26.5  |   2017   |
+| MacBook 12    | 58.5  |   2015   |
+| i5 7300U      | 68.4  |   2017   |
+| iPhone 7      | 69.6  |   2016   |
+| i7 6820HQ     | 85.6  |   2016   |
+| iPad pro 10.5 | 89.8  |   2017   |
 
 ## [JetStream 2](https://browserbench.org/JetStream/)
 
