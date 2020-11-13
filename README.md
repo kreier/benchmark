@@ -6,7 +6,7 @@ There are countless benchmarks out there. This is just a collection of benchmark
 
 This [synthetic benchmark from 1972](https://en.wikipedia.org/wiki/Whetstone_(benchmark)) is one of the oldest ones to estimate the [FLOPS - floating point operations](https://en.wikipedia.org/wiki/FLOPS) a CPU can perform per second. Well described in an [article of arstechnica](https://arstechnica.com/information-technology/2013/05/native-level-performance-on-the-web-a-brief-examination-of-asm-js/2/) from 2013. And it is neither related to wet nor a [whetstone](https://en.wikipedia.org/wiki/Sharpening_stone), but the town of [Whetstone](https://en.wikipedia.org/wiki/Whetstone,_Leicestershire) in England.
 
-## [Linpack](linpack) - 1979
+## [Linpack](LinpackDP) - 1979
 
 Well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks) this benchmark from 1979 is still usefull because it scales with instructions per second, frequency and number of cores (HPL). It took me some time to get it running.
 
