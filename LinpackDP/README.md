@@ -2,15 +2,17 @@
 
 Results for Linpack DP (double precision)
 
-| Platform        | CPU        | MFlops | MHz  |
-|-----------------|------------|--------|------|
-| Arduino Uno R3  | ATmega328P | 0.0943 | 16   |
-| Node MCU 1.0    | ESP8266    | 1.207  | 80   |
-| Node MCU32      | ESP32s     | 2.805  | 160  |
-| NUCLEO F746ZG   | STM32F746Z | 3.588  | 216  |
-| Raspberry Pi 1B | BCM2835    | 42     | 700  |
-| Raspberry Pi 2  | BCM2836    | 170.92 | 900  |
-| Raspberry Pi 3  | BCM2837    | 180.14 | 1200 |
+| Platform        | CPU/MCU     | Architecture                   | MFlops    | DMIPS     | MHz  | RAM kB  |
+| --------------- | ----------- | ------------------------------ | --------- | --------- | ---- | ------- |
+| Arduino Uno R3  | ATmega328P  | AVR 8bit RISC                  | 0.0943    | 10        | 16   | 2       |
+| Embedded Pi     | STM32F103RB | ARM Cortex-M3 (ARMv7-M) 32bit  | 0.552     | 92        | 72   | 20      |
+| Node MCU 1.0    | ESP8266     | Tensilica Xtensa LX106 32bit   | 1.207     | 113       | 80   | 64      |
+| Node MCU32      | ESP32s      | Tensilica Xtensa LX106 32bit   | 2.805     | 176       | 160  | 520     |
+| NUCLEO F746ZG   | STM32F746Z  | ARM Cortex-M7 (ARMv7E-M) 32bit | 3.588     | 763       | 216  | 320     |
+| Raspberry Pi 1B | BCM2835     | ARM1176 (v6) 32bit             | 42        | 875       | 700  | 512000  |
+| Raspberry Pi 2  | BCM2836     | ARM Cortex-A7 (v7-A) 32bit     | 170.92    | 2019      | 900  | 1024000 |
+| Raspberry Pi 3  | BCM2837     | ARM Cortex-A53 (v8-A) 32bit    | 180.14    | 3039      | 1200 | 1024000 |
+|                 |             |                                | LinpackDP | Dhrystone |      |         |
 
 Read more in [this article (paper ICIST 2017)](paper_ICIST_2017.pdf)
 
