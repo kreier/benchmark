@@ -4,14 +4,14 @@ This gives you integer performance (DMIPS).
 
 Software from:
 
-https://www.netlib.org/benchmark/dhry-c
+[https://www.netlib.org/benchmark/dhry-c](https://www.netlib.org/benchmark/dhry-c)
 
 A little more modifications done for Dhrystone 2.2
 
-'' sh 
+``` bash 
 me@z840:~/$ wget https://homepages.cwi.nl/~steven/dry.c
 me@z840:~/$ sh dry.c
-''
+```
 
 ### Results:
 
@@ -27,6 +27,6 @@ Run 13/11/2020 on i7-6820HQ: 32 DMIPS
 
 ### Original:
 
-http://www.netlib.org/benchmark/
+[http://www.netlib.org/benchmark/](http://www.netlib.org/benchmark/)
 
 
