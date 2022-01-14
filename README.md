@@ -57,3 +57,21 @@ Evolved speed of non volatile memory NVM over the years. Compare my Samsung R20 
 
 The benchmarks drove the innovation in browser development significantly, but became obsolete quite fast as well. Notable examples are Browermark 2.0, Basemark Web 3.0, peacekeeper, octane, sunspider, kraken, Jetstream and Speedometer.
 
+## SuperPi 1M
+
+Calcualting Pi to 1 million digits does not take too long nowadayes:
+
+## Prime numbers in basic, python and CPU
+
+One of my first benchmarks, written 1992 in Omicron Basic on the Atari ST 520 STFM and then compared to an edition in Lattice C. Surprisingly the Basic variant was faster.
+
+With text output in Mu it took the ESP32-S2 38.9 seconds. Commenting the print command in line 17 reduced the time to 13.3 seconds.
+
+I used it for some microcomputers as well:
+
+| Frequency |  ESP8266 |   ESP32  | Raspberry Pi 1 | Raspberry Pi 4 |
+|:---------:|:--------:|:--------:|:--------------:|:--------------:|
+|    40 MHz |     -    | 44427 ms |                |                |
+|    80 MHz | 32807 ms | 23323 ms |                |                |
+|   160 MHz | 16113 ms | 11375 ms |                |                |
+|   240 MHz |     -    |  7783 ms |                |                |
