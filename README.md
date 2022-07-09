@@ -75,3 +75,7 @@ I used it for some microcomputers as well:
 |    80 MHz | 32807 ms | 23323 ms |                |                |
 |   160 MHz | 16113 ms | 11375 ms |                |                |
 |   240 MHz |     -    |  7783 ms |                |                |
+
+## [Benchmark game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/) - Which programming language is the fastest?
+
+Compiled in 2018 (with history going back to 2002) several benchmarks compare the execution speed of programs in 24 languages. Many are optimized for multicore parallel execution, to make modern processors comparable. Probably disable the efficiency cores might speed up the processes.
