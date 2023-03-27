@@ -27,6 +27,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | i5-3320M                |    21245 |     | 3300 |     6.44 |
 | i7-4960HQ               |    21326 |     | 3800 |     5.61 |
 | i7-6820HQ               |    23779 |     | 3660 |     6.61 |
+| i3-10100                |    30532 |     | 4220 |     7.23 |
 
 ## Multithread results
 
@@ -39,8 +40,10 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | i7-4960HQ 4 threads     |    74944 | 3800 |     4.93 |
 | i7-4960HQ 8 threads     |    95261 | 3800 |     3.13 |
 | i7-6820HQ 4 threads     |    96420 | 3660 |     6.70 |
+| i3-10100  4 threads     |   103808 | 4070 |     6.38 |
 | i7-6820HQ 8 threads     |   118862 | 3660 |     4.13 |
 | Xeon X5550 16 threads   |   124634 | 3060 |     2.55 |
+| i3-10100  8 threads     |   167829 | 4070 |     4.95 |
 
 
 Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
