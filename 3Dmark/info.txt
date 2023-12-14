@@ -1,0 +1,3 @@
+Latest tests:
+
+2023/10/20 results from hp al132TX with i3-7100U and GeForce 940MX included, now as .csv files
