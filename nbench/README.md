@@ -2,6 +2,29 @@
 
 This is just a copy of the port Uwe F. Mayer did in November 1997, based on the Bytemark benchmark from October 1995. Version 2.2.3. With some optimizations the performance can be greatly increased.
 
+## Installation
+
+It is usually only 3 steps to get a result:
+
+- Download the nbench.tar.gz and unpack the file
+- Compile the benchmark with `make` (you have __make__ and __gcc__ installed)
+- Run the benchmark
+
+It will look like:
+
+``` sh
+mk@mbp:~ $ wget kreier.org/docs/nbench.tar.gz
+mk@mbp:~ $ tar xf nbench.tar.gz
+mk@mbp:~ $ cd nbench-byte-2.2.3
+mk@mbp:~/nbench-byte-2.2.3 $ make
+mk@mbp:~/nbench-byte-2.2.3 $ ./nbench
+``` 
+
+
+## Error messages under macOS
+
+If you try to run the 5 steps under macOS the `make` command will throw the error `ld: library not found for -lcrt0.o`. The solution ... I have to find.
+
 ## Data collection 2005 - 2020:
 
 Sorted by Integer index (in reference to K6/233) since its most relevant to user experience. Pentium 90 is really old :)
