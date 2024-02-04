@@ -5,6 +5,7 @@ What a great tool! So many things included we look for in our little single boar
 Some of my results:
 
 - rk3229 [2024-02-04](https://sprunge.us/ABPd1y)
+- i3 10100 [2024-02-04](https://sprunge.us/0lOI8m)
 
 ## Source and reason
 
