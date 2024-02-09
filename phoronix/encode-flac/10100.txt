@@ -1,0 +1,16 @@
+10100
+wsl testing on Ubuntu 22.04 via the Phoronix Test Suite.
+
+
+saiht 2024-02-09: 
+
+	Processor: Intel Core i3-10100 (4 Cores / 8 Threads), Memory: 24GB, Disk: 0GB Virtual Disk + 6GB Virtual Disk + 1100GB Virtual Disk, Graphics: NVIDIA GeForce RTX 3070 Ti 8GB
+
+	OS: Ubuntu 22.04, Kernel: 5.15.133.1-microsoft-standard-WSL2 (x86_64), Display Server: Wayland, Display Driver: nouveau, OpenGL: 4.2 Mesa 23.0.4-0ubuntu1~22.04.1, Vulkan: 1.3.238, Compiler: GCC 11.4.0, File-System: ext4, System Layer: wsl
+
+
+FLAC Audio Encoding 1.4
+WAV To FLAC
+Seconds < Lower Is Better
+saiht 2024-02-09 . 18.72 |=====================================================
+
