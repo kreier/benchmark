@@ -1,0 +1,1034 @@
+https://sprunge.us/slmdrY
+
+sbc-bench v0.9.63 Raspberry Pi 3 Model B Rev 1.2 (Mon, 12 Feb 2024 05:17:28 +0000)
+
+Distributor ID:	Debian
+Description:	Debian GNU/Linux 12 (bookworm)
+Release:	12
+Codename:	bookworm
+Build system:   http://archive.raspberrypi.com/debian/ bookworm main
+
+Raspberry Pi ThreadX version:
+Oct 17 2023 15:42:39 
+Copyright (c) 2012 Broadcom
+version 30f0c5e4d076da3ab4f341d88e7d505760b93ad7 (clean) (release) (start)
+
+ThreadX configuration (/boot/firmware/config.txt):
+dtparam=audio=on
+camera_auto_detect=1
+display_auto_detect=1
+auto_initramfs=1
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+disable_fw_kms_setup=1
+arm_64bit=1
+disable_overscan=1
+arm_boost=1
+[cm4]
+otg_mode=1
+[all]
+
+Actual ThreadX settings:
+aphy_params_current=819
+arm_64bit=1
+arm_boost=1
+arm_freq=1200
+arm_freq_min=600
+audio_pwm_mode=514
+auto_initramfs=1
+camera_auto_detect=1
+config_hdmi_boost=5
+core_freq=400
+desired_osc_freq=0x387520
+disable_commandline_tags=2
+disable_fw_kms_setup=1
+disable_l2cache=1
+disable_overscan=1
+display_auto_detect=1
+display_hdmi_rotate=-1
+display_lcd_rotate=-1
+dphy_params_current=547
+dvfs=3
+enable_tvout=1
+force_eeprom_read=1
+force_pwm_open=1
+framebuffer_ignore_alpha=1
+framebuffer_swap=1
+gpu_freq=300
+hdmi_enable_4kp60=-1
+init_uart_clock=0x2dc6c00
+lcd_framerate=60
+mask_gpu_interrupt0=3072
+mask_gpu_interrupt1=26370
+max_framebuffers=2
+over_voltage_avs=0x155cc
+pause_burst_frames=1
+pciex4_reset=1
+program_serial_random=1
+sdram_freq=450
+total_mem=1024
+hdmi_force_cec_address:0=65535
+hdmi_force_cec_address:1=65535
+hdmi_pixel_freq_limit:0=0x9a7ec80
+hdmi_pixel_freq_limit:1=0x9a7ec80
+
+/usr/bin/gcc (Debian 12.2.0-14) 12.2.0
+
+Uptime: 05:17:28 up  1:44,  2 users,  load average: 1.06, 0.49, 0.19,  64.5°C,  552273208
+
+Linux 6.1.0-rpi7-rpi-v8 (raspberrypi) 	02/12/24 	_aarch64_	(4 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           2.01    0.01    1.13    0.99    0.00   95.85
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+mmcblk0           7.45        88.52       425.20      2047.32     553339    2658018   12798128
+
+               total        used        free      shared  buff/cache   available
+Mem:           908Mi       140Mi       677Mi       1.0Mi       146Mi       768Mi
+Swap:           99Mi          0B        99Mi
+
+Filename				Type		Size		Used		Priority
+/var/swap                               file		102396		0		-2
+
+##########################################################################
+
+Checking cpufreq OPP (Cortex-A53):
+
+Cpufreq OPP: 1200  ThreadX: 1200  Measured: 1185 @ 1.2875V     (-1.2%)
+Cpufreq OPP: 1100  ThreadX: 1100  Measured: 1086 @ 1.2875V     (-1.3%)
+Cpufreq OPP: 1000  ThreadX: 1000  Measured:  985 @ 1.2875V     (-1.5%)
+Cpufreq OPP:  900  ThreadX:  900  Measured:  888 @ 1.2875V     (-1.3%)
+Cpufreq OPP:  800  ThreadX:  800  Measured:  787 @ 1.2875V     (-1.6%)
+Cpufreq OPP:  700  ThreadX:  700  Measured:  688 @ 1.2875V     (-1.7%)
+Cpufreq OPP:  600  ThreadX:  600  Measured:  586 @ 1.2875V     (-2.3%)
+
+##########################################################################
+
+Hardware sensors:
+
+cpu_thermal-virtual-0
+temp1:        +65.0 C  (crit = +110.0 C)
+
+##########################################################################
+
+Executing benchmark on cpu0 (Cortex-A53):
+
+tinymembench v0.4.9-nuumio (simple benchmark for memory throughput and latency)
+
+CFLAGS: 
+bandwidth test min repeats (-b): 2
+bandwidth test max repeats (-B): 3
+bandwidth test mem realloc (-M): no      (-m for realloc)
+      latency test repeats (-l): 3
+        latency test count (-c): 1000000
+
+==========================================================================
+== Memory bandwidth tests                                               ==
+==                                                                      ==
+== Note 1: 1MB = 1000000 bytes                                          ==
+== Note 2: Test result is the best of repeated runs. Number of repeats  ==
+==         is shown in brackets                                         ==
+== Note 3: Results for 'copy' tests show how many bytes can be          ==
+==         copied per second (adding together read and writen           ==
+==         bytes would have provided twice higher numbers)              ==
+== Note 4: 2-pass copy means that we are using a small temporary buffer ==
+==         to first fetch data into it, and only then write it to the   ==
+==         destination (source -> L1 cache, L1 cache -> destination)    ==
+== Note 5: If sample standard deviation exceeds 0.1%, it is shown in    ==
+==         brackets                                                     ==
+==========================================================================
+
+ C copy backwards                                 :    996.5 MB/s (3, 9.0%)
+ C copy backwards (32 byte blocks)                :   1119.9 MB/s (3, 0.5%)
+ C copy backwards (64 byte blocks)                :   1126.8 MB/s (3, 0.4%)
+ C copy                                           :   1117.3 MB/s (3, 0.5%)
+ C copy prefetched (32 bytes step)                :    941.8 MB/s (3, 2.3%)
+ C copy prefetched (64 bytes step)                :   1055.2 MB/s (3, 0.3%)
+ C 2-pass copy                                    :    965.1 MB/s (3, 0.2%)
+ C 2-pass copy prefetched (32 bytes step)         :    681.8 MB/s (2)
+ C 2-pass copy prefetched (64 bytes step)         :    492.0 MB/s (3, 0.4%)
+ C scan 8                                         :    231.5 MB/s (3, 0.1%)
+ C scan 16                                        :    453.8 MB/s (3, 0.1%)
+ C scan 32                                        :    863.9 MB/s (3, 0.5%)
+ C scan 64                                        :   1578.0 MB/s (3, 0.9%)
+ C fill                                           :   1632.9 MB/s (3, 1.3%)
+ C fill (shuffle within 16 byte blocks)           :   1632.9 MB/s (2)
+ C fill (shuffle within 32 byte blocks)           :   1632.5 MB/s (2)
+ C fill (shuffle within 64 byte blocks)           :   1635.4 MB/s (2)
+ ---
+ libc memcpy copy                                 :   1140.9 MB/s (3, 0.1%)
+ libc memchr scan                                 :   1530.8 MB/s (3, 0.5%)
+ libc memset fill                                 :   1633.9 MB/s (3, 1.2%)
+ ---
+ NEON LDP/STP copy                                :   1145.4 MB/s (3, 0.5%)
+ NEON LDP/STP copy pldl2strm (32 bytes step)      :    857.1 MB/s (3, 0.7%)
+ NEON LDP/STP copy pldl2strm (64 bytes step)      :   1030.5 MB/s (3, 0.3%)
+ NEON LDP/STP copy pldl1keep (32 bytes step)      :   1181.3 MB/s (3, 2.9%)
+ NEON LDP/STP copy pldl1keep (64 bytes step)      :   1182.1 MB/s (3, 0.3%)
+ NEON LD1/ST1 copy                                :   1133.2 MB/s (3, 0.1%)
+ NEON LDP load                                    :   2185.3 MB/s (3, 5.1%)
+ NEON LDNP load                                   :   2023.8 MB/s (3, 0.5%)
+ NEON STP fill                                    :   1632.0 MB/s (2)
+ NEON STNP fill                                   :   1085.2 MB/s (2)
+ ARM LDP/STP copy                                 :   1140.5 MB/s (3, 0.3%)
+ ARM LDP load                                     :   2179.8 MB/s (3, 4.9%)
+ ARM LDNP load                                    :   2022.3 MB/s (3, 0.5%)
+ ARM STP fill                                     :   1633.0 MB/s (3, 0.3%)
+ ARM STNP fill                                    :   1086.3 MB/s (3, 0.2%)
+
+==========================================================================
+== Framebuffer read tests.                                              ==
+==                                                                      ==
+== Many ARM devices use a part of the system memory as the framebuffer, ==
+== typically mapped as uncached but with write-combining enabled.       ==
+== Writes to such framebuffers are quite fast, but reads are much       ==
+== slower and very sensitive to the alignment and the selection of      ==
+== CPU instructions which are used for accessing memory.                ==
+==                                                                      ==
+== Many x86 systems allocate the framebuffer in the GPU memory,         ==
+== accessible for the CPU via a relatively slow PCI-E bus. Moreover,    ==
+== PCI-E is asymmetric and handles reads a lot worse than writes.       ==
+==                                                                      ==
+== If uncached framebuffer reads are reasonably fast (at least 100 MB/s ==
+== or preferably >300 MB/s), then using the shadow framebuffer layer    ==
+== is not necessary in Xorg DDX drivers, resulting in a nice overall    ==
+== performance improvement. For example, the xf86-video-fbturbo DDX     ==
+== uses this trick.                                                     ==
+==========================================================================
+
+ NEON LDP/STP copy (from framebuffer)             :    238.7 MB/s (3, 0.1%)
+ NEON LDP/STP 2-pass copy (from framebuffer)      :    218.5 MB/s (2)
+ NEON LD1/ST1 copy (from framebuffer)             :     65.7 MB/s (3, 1.0%)
+ NEON LD1/ST1 2-pass copy (from framebuffer)      :     63.7 MB/s (2)
+ ARM LDP/STP copy (from framebuffer)              :    127.5 MB/s (2)
+ ARM LDP/STP 2-pass copy (from framebuffer)       :    121.7 MB/s (3)
+
+==========================================================================
+== Memory latency test                                                  ==
+==                                                                      ==
+== Average time is measured for random memory accesses in the buffers   ==
+== of different sizes. The larger is the buffer, the more significant   ==
+== are relative contributions of TLB, L1/L2 cache misses and SDRAM      ==
+== accesses. For extremely large buffer sizes we are expecting to see   ==
+== page table walk with several requests to SDRAM for almost every      ==
+== memory access (though 64MiB is not nearly large enough to experience ==
+== this effect to its fullest).                                         ==
+==                                                                      ==
+== Note 1: All the numbers are representing extra time, which needs to  ==
+==         be added to L1 cache latency. The cycle timings for L1 cache ==
+==         latency can be usually found in the processor documentation. ==
+== Note 2: Dual random read means that we are simultaneously performing ==
+==         two independent memory accesses at a time. In the case if    ==
+==         the memory subsystem can't handle multiple outstanding       ==
+==         requests, dual random read has the same timings as two       ==
+==         single reads performed one after another.                    ==
+==========================================================================
+
+block size : single random read / dual random read
+      1024 :    0.0 ns          /     0.0 ns 
+      2048 :    0.0 ns          /     0.0 ns 
+      4096 :    0.0 ns          /     0.0 ns 
+      8192 :    0.0 ns          /     0.0 ns 
+     16384 :    0.0 ns          /     0.0 ns 
+     32768 :    0.2 ns          /     0.2 ns 
+     65536 :    5.6 ns          /     9.3 ns 
+    131072 :    8.6 ns          /    13.2 ns 
+    262144 :   10.4 ns          /    15.0 ns 
+    524288 :   16.7 ns          /    24.2 ns 
+   1048576 :   87.6 ns          /   135.4 ns 
+   2097152 :  124.9 ns          /   172.9 ns 
+   4194304 :  149.8 ns          /   193.3 ns 
+   8388608 :  163.8 ns          /   204.9 ns 
+  16777216 :  172.4 ns          /   210.0 ns 
+  33554432 :  176.3 ns          /   212.8 ns 
+  67108864 :  179.5 ns          /   215.9 ns 
+
+##########################################################################
+
+Executing ramlat on cpu0 (Cortex-A53), results in ns:
+
+       size:  1x32  2x32  1x64  2x64 1xPTR 2xPTR 4xPTR 8xPTR
+         4k: 3.404 3.468 2.564 2.564 2.561 2.538 3.483 7.067 
+         8k: 3.379 3.377 2.534 2.533 2.535 2.532 3.482 7.070 
+        16k: 3.382 3.379 2.538 2.541 2.547 2.530 3.478 7.061 
+        32k: 3.414 3.419 2.573 2.566 2.573 2.568 3.527 7.155 
+        64k: 20.76 22.63 20.48 22.60 20.44 22.23 30.08 57.31 
+       128k: 25.19 26.41 24.59 25.73 24.62 25.92 33.26 64.63 
+       256k: 25.54 27.61 24.84 25.78 24.82 25.90 33.38 65.51 
+       512k: 46.80 55.77 46.01 61.36 45.38 55.03 82.39 216.0 
+      1024k: 156.0 155.6 155.4 155.8 155.1 157.0 198.7 377.8 
+      2048k: 167.6 174.7 166.8 170.2 166.8 169.9 216.1 387.0 
+      4096k: 174.0 177.6 176.4 176.6 173.9 176.1 213.2 395.3 
+      8192k: 174.6 177.8 178.1 177.8 174.7 177.6 216.4 406.3 
+     16384k: 178.8 182.9 180.4 184.8 178.7 182.8 223.9 418.1 
+     32768k: 184.5 188.9 187.8 188.8 184.4 188.8 224.5 415.1 
+     65536k: 186.0 190.1 195.8 189.8 186.1 189.8 220.7 403.7 
+    131072k: 187.4 239.1 187.4 192.0 187.4 191.9 222.4 404.4 
+
+##########################################################################
+
+Executing benchmark twice on cluster 0 (Cortex-A53)
+
+OpenSSL 3.0.11, built on 19 Sep 2023 (Library: OpenSSL 3.0.11 19 Sep 2023)
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes  16384 bytes
+aes-128-cbc      35102.75k    47610.97k    53073.07k    54555.99k    55009.28k    54957.40k
+aes-128-cbc      35309.27k    47826.37k    53090.22k    54573.40k    54998.36k    54919.17k
+aes-192-cbc      31374.03k    40971.73k    44759.55k    45853.70k    46077.27k    46159.19k
+aes-192-cbc      31332.19k    40911.34k    44752.47k    45799.08k    46164.65k    46131.88k
+aes-256-cbc      28259.13k    35849.32k    38727.51k    39520.94k    39747.58k    39758.51k
+aes-256-cbc      28254.57k    35857.45k    38706.01k    39513.43k    39723.01k    39791.27k
+
+##########################################################################
+
+Executing benchmark single-threaded on cpu0 (Cortex-A53)
+
+7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C,Utf16=off,HugeFiles=on,64 bits,4 CPUs LE)
+
+LE
+CPU Freq: - - 64000000 64000000 128000000 - - - -
+
+RAM size:     908 MB,  # CPU hardware threads:   4
+RAM usage:    435 MB,  # Benchmark threads:      1
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:        731   100    712    712  |      13112   100   1120   1120
+23:        697   100    711    711  |      12887   100   1116   1116
+24:        665   100    716    716  |      12643   100   1110   1110
+25:        632   100    722    722  |      12333   100   1098   1098
+----------------------------------  | ------------------------------
+Avr:             100    715    715  |              100   1111   1111
+Tot:             100    913    913
+
+##########################################################################
+
+Executing benchmark 3 times multi-threaded on CPUs 0-3
+
+7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C,Utf16=off,HugeFiles=on,64 bits,4 CPUs LE)
+
+LE
+CPU Freq: 64000000 64000000 - - - - 512000000 1024000000 2048000000
+
+RAM size:     908 MB,  # CPU hardware threads:   4
+RAM usage:    882 MB,  # Benchmark threads:      4
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:       1936   321    587   1884  |      41943   394    907   3578
+23:       1624   323    512   1655  |      35509   399    770   3072
+24:       1499   329    491   1612  |      32906   398    726   2889
+25:       1161   256    518   1326  |      33878   397    760   3015
+----------------------------------  | ------------------------------
+Avr:             307    527   1619  |              397    791   3139
+Tot:             352    659   2379
+
+Compression: 1619
+Decompression: 3139
+Total: 2379
+
+##########################################################################
+
+Testing maximum cpufreq again, still under full load. System health now:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:45:32: 1200/ 818MHz  3.84  84%   1%  82%   0%   0%   0%  83.8°C  1.2875V 
+
+Checking cpufreq OPP (Cortex-A53):
+
+Cpufreq OPP: 1200  ThreadX: 1200  Measured: 1184 @ 1.2875V     (-1.3%)
+
+##########################################################################
+
+Hardware sensors:
+
+cpu_thermal-virtual-0
+temp1:        +75.2 C  (crit = +110.0 C)
+
+##########################################################################
+
+Thermal source: /sys/devices/virtual/thermal/thermal_zone0/ (cpu-thermal)
+
+System health while running tinymembench:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:18:03: 1200/1200MHz  1.19   4%   1%   2%   0%   0%   0%  67.7°C  1.2875V 
+05:18:13: 1200/1200MHz  1.16  25%   0%  25%   0%   0%   0%  68.8°C  1.2875V 
+05:18:24: 1200/1200MHz  1.14  25%   0%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:18:34: 1200/1200MHz  1.12  25%   0%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:18:44: 1200/1200MHz  1.10  25%   0%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:18:54: 1200/1200MHz  1.08  25%   0%  25%   0%   0%   0%  70.9°C  1.2875V 
+05:19:04: 1200/1200MHz  1.07  25%   0%  25%   0%   0%   0%  70.9°C  1.2875V 
+05:19:14: 1200/1200MHz  1.06  25%   0%  25%   0%   0%   0%  70.9°C  1.2875V 
+05:19:25: 1200/1200MHz  1.05  25%   0%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:19:35: 1200/1200MHz  1.04  25%   0%  24%   0%   0%   0%  69.3°C  1.2875V 
+
+System health while running ramlat:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:19:44: 1200/1200MHz  1.03   4%   1%   2%   0%   0%   0%  69.8°C  1.2875V 
+05:19:47: 1200/1200MHz  1.03  26%   0%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:19:50: 1200/1200MHz  1.03  26%   0%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:19:53: 1200/1200MHz  1.03  26%   0%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:19:56: 1200/1200MHz  1.03  26%   1%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:19:59: 1200/1200MHz  1.03  26%   0%  25%   0%   0%   0%  69.8°C  1.2875V 
+05:20:03: 1200/1200MHz  1.02  27%   1%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:20:06: 1200/1200MHz  1.02  26%   0%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:20:09: 1200/1200MHz  1.02  26%   0%  25%   0%   0%   0%  69.3°C  1.2875V 
+05:20:12: 1200/1200MHz  1.02  26%   1%  24%   0%   0%   0%  69.3°C  1.2875V 
+05:20:15: 1200/1200MHz  1.02  26%   1%  24%   0%   0%   0%  69.8°C  1.2875V 
+05:20:18: 1200/1200MHz  1.02  26%   1%  24%   0%   0%   0%  69.8°C  1.2875V 
+
+System health while running OpenSSL benchmark:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:20:22: 1200/1200MHz  1.02   4%   1%   2%   0%   0%   0%  69.8°C  1.2875V 
+05:20:38: 1200/1200MHz  1.07  26%   0%  25%   0%   0%   0%  71.4°C  1.2875V 
+05:20:55: 1200/1200MHz  1.06  25%   0%  25%   0%   0%   0%  72.5°C  1.2875V 
+05:21:11: 1200/1200MHz  1.04  25%   0%  25%   0%   0%   0%  72.5°C  1.2875V 
+05:21:27: 1200/1200MHz  1.03  25%   0%  25%   0%   0%   0%  73.1°C  1.2875V 
+05:21:43: 1200/1200MHz  1.02  25%   0%  25%   0%   0%   0%  73.1°C  1.2875V 
+05:21:59: 1200/1200MHz  1.02  25%   0%  25%   0%   0%   0%  73.6°C  1.2875V 
+
+System health while running 7-zip single core benchmark:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:22:11: 1200/1200MHz  1.01   5%   1%   3%   0%   0%   0%  75.2°C  1.2875V 
+05:22:26: 1200/1200MHz  1.01  25%   0%  25%   0%   0%   0%  72.5°C  1.2875V 
+05:22:41: 1200/1200MHz  1.01  25%   0%  25%   0%   0%   0%  72.0°C  1.2875V 
+05:22:56: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  72.0°C  1.2875V 
+05:23:11: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  71.4°C  1.2875V 
+05:23:26: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  71.4°C  1.2875V 
+05:23:42: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  71.4°C  1.2875V 
+05:23:57: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  72.0°C  1.2875V 
+05:24:12: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  71.4°C  1.2875V 
+05:24:27: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  70.9°C  1.2875V 
+05:24:42: 1200/1200MHz  1.00  25%   0%  24%   0%   0%   0%  70.9°C  1.2875V 
+
+System health while running 7-zip multi core benchmark:
+
+Time        fake/real   load %cpu %sys %usr %nice %io %irq   Temp    VCore
+05:24:56: 1200/1200MHz  1.00   5%   1%   3%   0%   0%   0%  72.0°C  1.2875V 
+05:25:28: 1200/1034MHz  2.02  86%   0%  85%   0%   0%   0%  80.6°C  1.2875V 
+05:25:59: 1200/1034MHz  2.57  91%   1%  90%   0%   0%   0%  82.2°C  1.2875V 
+05:26:39: 1200/ 818MHz  3.01  89%   1%  88%   0%   0%   0%  83.3°C  1.2875V 
+05:27:09: 1200/1200MHz  3.14  52%   1%  51%   0%   0%   0%  79.5°C  1.2875V 
+05:39:53: 1200/1200MHz  3.21  94%  26%   2%   0%  65%   0%  74.7°C  1.2875V 
+05:40:28: 1200/ 818MHz 10.78  88%   1%  85%   0%   1%   0%  82.7°C  1.2875V 
+05:41:01: 1200/ 765MHz  7.70  93%   0%  92%   0%   0%   0%  83.8°C  1.2875V 
+05:41:42: 1200/ 765MHz  5.90  86%   1%  84%   0%   0%   0%  83.8°C  1.2875V 
+05:42:12: 1200/ 926MHz  4.85  78%   1%  76%   0%   0%   0%  82.7°C  1.2875V 
+05:42:43: 1200/1034MHz  4.63  71%   5%  57%   0%   7%   0%  81.7°C  1.2875V 
+05:43:13: 1200/ 818MHz  4.14  89%   1%  87%   0%   0%   0%  83.3°C  1.2875V 
+05:43:45: 1200/ 711MHz  3.98  94%   0%  94%   0%   0%   0%  84.9°C  1.2875V 
+05:44:23: 1200/ 711MHz  3.87  91%   1%  89%   0%   0%   0%  84.9°C  1.2875V 
+05:45:01: 1200/ 711MHz  3.64  86%   1%  84%   0%   0%   0%  84.4°C  1.2875V 
+05:45:32: 1200/ 818MHz  3.84  84%   1%  82%   0%   0%   0%  83.8°C  1.2875V 
+
+##########################################################################
+
+Querying ThreadX on RPi for thermal or undervoltage issues:
+
+0100000000000000000
+|||             |||_ under-voltage
+|||             ||_ currently throttled
+|||             |_ arm frequency capped
+|||_ under-voltage has occurred since last reboot
+||_ throttling has occurred since last reboot
+|_ arm frequency capped has occurred since last reboot
+
+##########################################################################
+
+dmesg output while running the benchmarks:
+
+[ 7009.280657] INFO: task kworker/2:0:28652 blocked for more than 120 seconds.
+[ 7009.280688]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 7009.280699] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 7009.280708] task:kworker/2:0     state:D stack:0     pid:28652 ppid:2      flags:0x00000008
+[ 7009.280732] Workqueue: events_freezable mmc_rescan
+[ 7009.280763] Call trace:
+[ 7009.280771]  __switch_to+0xe8/0x160
+[ 7009.280792]  __schedule+0x338/0x924
+[ 7009.280805]  schedule+0x64/0x10c
+[ 7009.280819]  __mmc_claim_host+0xe0/0x204
+[ 7009.280832]  mmc_get_card+0x3c/0x4c
+[ 7009.280845]  mmc_sd_detect+0x28/0xa0
+[ 7009.280859]  mmc_rescan+0x94/0x2ec
+[ 7009.280872]  process_one_work+0x200/0x474
+[ 7009.280889]  worker_thread+0x74/0x43c
+[ 7009.280903]  kthread+0x110/0x114
+[ 7009.280916]  ret_from_fork+0x10/0x20
+[ 7130.109855] INFO: task kworker/2:0:28652 blocked for more than 241 seconds.
+[ 7130.109892]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 7130.109902] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 7130.109911] task:kworker/2:0     state:D stack:0     pid:28652 ppid:2      flags:0x00000008
+[ 7130.109936] Workqueue: events_freezable mmc_rescan
+[ 7130.109966] Call trace:
+[ 7130.109975]  __switch_to+0xe8/0x160
+[ 7130.109994]  __schedule+0x338/0x924
+[ 7130.110007]  schedule+0x64/0x10c
+[ 7130.110021]  __mmc_claim_host+0xe0/0x204
+[ 7130.110034]  mmc_get_card+0x3c/0x4c
+[ 7130.110047]  mmc_sd_detect+0x28/0xa0
+[ 7130.110060]  mmc_rescan+0x94/0x2ec
+[ 7130.110073]  process_one_work+0x200/0x474
+[ 7130.110090]  worker_thread+0x74/0x43c
+[ 7130.110104]  kthread+0x110/0x114
+[ 7130.110118]  ret_from_fork+0x10/0x20
+[ 7250.946913] INFO: task kworker/2:0:28652 blocked for more than 362 seconds.
+[ 7250.946945]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 7250.946956] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 7250.946965] task:kworker/2:0     state:D stack:0     pid:28652 ppid:2      flags:0x00000008
+[ 7250.946990] Workqueue: events_freezable mmc_rescan
+[ 7250.947021] Call trace:
+[ 7250.947029]  __switch_to+0xe8/0x160
+[ 7250.947048]  __schedule+0x338/0x924
+[ 7250.947061]  schedule+0x64/0x10c
+[ 7250.947075]  __mmc_claim_host+0xe0/0x204
+[ 7250.947088]  mmc_get_card+0x3c/0x4c
+[ 7250.947101]  mmc_sd_detect+0x28/0xa0
+[ 7250.947114]  mmc_rescan+0x94/0x2ec
+[ 7250.947127]  process_one_work+0x200/0x474
+[ 7250.947144]  worker_thread+0x74/0x43c
+[ 7250.947157]  kthread+0x110/0x114
+[ 7250.947171]  ret_from_fork+0x10/0x20
+[ 7371.775906] INFO: task kworker/2:0:28652 blocked for more than 483 seconds.
+[ 7371.775934]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 7371.775945] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 7371.775953] task:kworker/2:0     state:D stack:0     pid:28652 ppid:2      flags:0x00000008
+[ 7371.775978] Workqueue: events_freezable mmc_rescan
+[ 7371.776008] Call trace:
+[ 7371.776016]  __switch_to+0xe8/0x160
+[ 7371.776036]  __schedule+0x338/0x924
+[ 7371.776050]  schedule+0x64/0x10c
+[ 7371.776063]  __mmc_claim_host+0xe0/0x204
+[ 7371.776076]  mmc_get_card+0x3c/0x4c
+[ 7371.776089]  mmc_sd_detect+0x28/0xa0
+[ 7371.776102]  mmc_rescan+0x94/0x2ec
+[ 7371.776115]  process_one_work+0x200/0x474
+[ 7371.776132]  worker_thread+0x74/0x43c
+[ 7371.776146]  kthread+0x110/0x114
+[ 7371.776159]  ret_from_fork+0x10/0x20
+[ 7492.608888] INFO: task kworker/2:0:28652 blocked for more than 604 seconds.
+[ 7492.608921]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 7492.608932] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 7492.608942] task:kworker/2:0     state:D stack:0     pid:28652 ppid:2      flags:0x00000008
+[ 7492.608967] Workqueue: events_freezable mmc_rescan
+[ 7492.608996] Call trace:
+[ 7492.609005]  __switch_to+0xe8/0x160
+[ 7492.609024]  __schedule+0x338/0x924
+[ 7492.609038]  schedule+0x64/0x10c
+[ 7492.609051]  __mmc_claim_host+0xe0/0x204
+[ 7492.609065]  mmc_get_card+0x3c/0x4c
+[ 7492.609078]  mmc_sd_detect+0x28/0xa0
+[ 7492.609092]  mmc_rescan+0x94/0x2ec
+[ 7492.609105]  process_one_work+0x200/0x474
+[ 7492.609125]  worker_thread+0x74/0x43c
+[ 7492.609140]  kthread+0x110/0x114
+[ 7492.609154]  ret_from_fork+0x10/0x20
+[ 7592.865391] bash invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+[ 7592.865443] CPU: 3 PID: 28781 Comm: bash Tainted: G         C         6.1.0-rpi7-rpi-v8 #1  Debian 1:6.1.63-1+rpt1
+[ 7592.865456] Hardware name: Raspberry Pi 3 Model B Rev 1.2 (DT)
+[ 7592.865462] Call trace:
+[ 7592.865465]  dump_backtrace.part.0+0xec/0x100
+[ 7592.865483]  show_stack+0x20/0x30
+[ 7592.865490]  dump_stack_lvl+0x88/0xb4
+[ 7592.865503]  dump_stack+0x18/0x34
+[ 7592.865510]  dump_header+0x4c/0x210
+[ 7592.865520]  oom_kill_process+0x2bc/0x2c0
+[ 7592.865531]  out_of_memory+0xe8/0x354
+[ 7592.865539]  __alloc_pages+0xb04/0xea0
+[ 7592.865549]  __folio_alloc+0x1c/0x30
+[ 7592.865556]  __filemap_get_folio+0x1e0/0x460
+[ 7592.865568]  filemap_fault+0x490/0x910
+[ 7592.865578]  __do_fault+0x44/0x114
+[ 7592.865589]  __handle_mm_fault+0x390/0xa40
+[ 7592.865596]  handle_mm_fault+0x1b8/0x2d0
+[ 7592.865603]  do_page_fault+0x194/0x3c4
+[ 7592.865613]  do_translation_fault+0xa4/0xcc
+[ 7592.865622]  do_mem_abort+0x4c/0xa0
+[ 7592.865632]  el0_ia+0x74/0x10c
+[ 7592.865641]  el0t_64_sync_handler+0xc4/0x120
+[ 7592.865651]  el0t_64_sync+0x18c/0x190
+[ 7592.865666] Mem-Info:
+[ 7592.865676] active_anon:166731 inactive_anon:44108 isolated_anon:0
+                active_file:218 inactive_file:24 isolated_file:0
+                unevictable:0 dirty:0 writeback:0
+                slab_reclaimable:4548 slab_unreclaimable:5649
+                mapped:1 shmem:0 pagetables:873
+                sec_pagetables:0 bounce:0
+                kernel_misc_reclaimable:0
+                free:4153 free_pcp:347 free_cma:73
+[ 7592.865698] Node 0 active_anon:666924kB inactive_anon:176432kB active_file:872kB inactive_file:96kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:4kB dirty:0kB writeback:0kB shmem:0kB writeback_tmp:0kB kernel_stack:2208kB pagetables:3492kB sec_pagetables:0kB all_unreclaimable? no
+[ 7592.865718] DMA free:16612kB boost:0kB min:16384kB low:20480kB high:24576kB reserved_highatomic:0KB active_anon:510480kB inactive_anon:332876kB active_file:0kB inactive_file:1264kB unevictable:0kB writepending:0kB present:970752kB managed:930340kB mlocked:0kB bounce:0kB free_pcp:1636kB local_pcp:248kB free_cma:292kB
+[ 7592.865739] lowmem_reserve[]: 0 0 0 0
+[ 7592.865809] DMA: 928*4kB (UEC) 353*8kB (UEC) 254*16kB (UMEC) 88*32kB (UMEC) 38*64kB (UMEC) 4*128kB (UM) 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 16360kB
+[ 7592.865951] 619 total pagecache pages
+[ 7592.865959] 338 pages in swap cache
+[ 7592.865967] Free swap  = 248kB
+[ 7592.865975] Total swap = 102396kB
+[ 7592.865983] 242688 pages RAM
+[ 7592.865991] 0 pages HighMem/MovableOnly
+[ 7592.866002] 10103 pages reserved
+[ 7592.866010] 65536 pages cma reserved
+[ 7592.866018] Tasks state (memory values in pages):
+[ 7592.866026] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+[ 7592.866062] [    483]   104   483     1840       68    53248       59             0 avahi-daemon
+[ 7592.866078] [    487]     0   487     1673        9    45056       52             0 cron
+[ 7592.866094] [    489]   100   489     2234        4    53248      273          -900 dbus-daemon
+[ 7592.866110] [    499]   996   499    58828        1    81920      251             0 polkitd
+[ 7592.866125] [    500]   104   500     1795        6    49152       71             0 avahi-daemon
+[ 7592.866141] [    511]     0   511     4281       18    65536      263             0 systemd-logind
+[ 7592.866155] [    515] 65534   515     1457       10    45056       56             0 thd
+[ 7592.866170] [    555]     0   555    80860        0   126976      478             0 ModemManager
+[ 7592.866185] [    557]     0   557    65612      116   151552      729             0 NetworkManager
+[ 7592.866200] [    558]     0   558     4288       33    65536      360             0 wpa_supplicant
+[ 7592.866218] [    886]     0   886     1873        1    49152      126             0 login
+[ 7592.866234] [    899]  1000   899     4844       14    73728      417           100 systemd
+[ 7592.866249] [    900]  1000   900    42601        0    90112      829           100 (sd-pam)
+[ 7592.866263] [    915]  1000   915     1994        5    45056      376             0 bash
+[ 7592.866277] [   8315]     0  8315     6409      160    61440      408         -1000 systemd-udevd
+[ 7592.866292] [  11359]     0 11359    12442       48   102400      206          -250 systemd-journal
+[ 7592.866306] [  11569]     0 11569     3320        0    53248      153             0 bluetoothd
+[ 7592.866320] [  11603]   997 11603    22645       22    73728      217             0 systemd-timesyn
+[ 7592.866337] [  25675]  1000 25675     2617        0    49152      115             0 sudo
+[ 7592.866352] [  25676]  1000 25676     2617        2    49152      117             0 sudo
+[ 7592.866366] [  25677]     0 25677     2921       43    53248     1262             0 sbc-bench.sh
+[ 7592.866382] [  28447]     0 28447     2168      105    53248     1200             0 bash
+[ 7592.866395] [  28449]     0 28449   307242   209623  1929216    16385             0 7zr
+[ 7592.866412] [  28781]     0 28781     2168      120    53248     1185             0 bash
+[ 7592.866426] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/,task=7zr,pid=28449,uid=0
+[ 7592.866533] Out of memory: Killed process 28449 (7zr) total-vm:1228968kB, anon-rss:838492kB, file-rss:0kB, shmem-rss:0kB, UID:0 pgtables:1884kB oom_score_adj:0
+[ 8084.234885] kworker/2:0H: page allocation failure: order:0, mode:0x40800(GFP_NOWAIT|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+[ 8084.234955] CPU: 2 PID: 29092 Comm: kworker/2:0H Tainted: G         C         6.1.0-rpi7-rpi-v8 #1  Debian 1:6.1.63-1+rpt1
+[ 8084.234965] Hardware name: Raspberry Pi 3 Model B Rev 1.2 (DT)
+[ 8084.234972] Workqueue: kblockd blk_mq_run_work_fn
+[ 8084.234993] Call trace:
+[ 8084.234996]  dump_backtrace.part.0+0xec/0x100
+[ 8084.235008]  show_stack+0x20/0x30
+[ 8084.235015]  dump_stack_lvl+0x88/0xb4
+[ 8084.235025]  dump_stack+0x18/0x34
+[ 8084.235033]  warn_alloc+0x120/0x1c0
+[ 8084.235043]  __alloc_pages+0xe00/0xea0
+[ 8084.235051]  new_slab+0x36c/0x440
+[ 8084.235060]  ___slab_alloc+0x4f0/0xb4c
+[ 8084.235068]  __slab_alloc.constprop.0+0x3c/0x70
+[ 8084.235078]  __kmem_cache_alloc_node+0x3b4/0x3e0
+[ 8084.235087]  __kmalloc+0x68/0x10c
+[ 8084.235095]  bcm2835_dma_create_cb_chain+0x74/0x440
+[ 8084.235106]  bcm2835_dma_prep_slave_sg+0x130/0x3c0
+[ 8084.235115]  bcm2835_sdhost_request+0x4b8/0x670
+[ 8084.235128]  __mmc_start_request+0x74/0x1dc
+[ 8084.235138]  mmc_start_request+0x8c/0xb4
+[ 8084.235146]  mmc_blk_mq_issue_rq+0x290/0x86c
+[ 8084.235154]  mmc_mq_queue_rq+0x120/0x2a0
+[ 8084.235162]  blk_mq_dispatch_rq_list+0x1b4/0x8d0
+[ 8084.235173]  blk_mq_do_dispatch_sched+0x2c8/0x340
+[ 8084.235181]  __blk_mq_sched_dispatch_requests+0x110/0x160
+[ 8084.235189]  blk_mq_sched_dispatch_requests+0x40/0x80
+[ 8084.235198]  __blk_mq_run_hw_queue+0x88/0xc0
+[ 8084.235208]  blk_mq_run_work_fn+0x28/0x34
+[ 8084.235217]  process_one_work+0x200/0x474
+[ 8084.235228]  worker_thread+0x74/0x43c
+[ 8084.235238]  kthread+0x110/0x114
+[ 8084.235247]  ret_from_fork+0x10/0x20
+[ 8084.235258] Mem-Info:
+[ 8084.235268] active_anon:174659 inactive_anon:24946 isolated_anon:0
+                active_file:376 inactive_file:202 isolated_file:0
+                unevictable:0 dirty:0 writeback:0
+                slab_reclaimable:4528 slab_unreclaimable:5631
+                mapped:0 shmem:0 pagetables:838
+                sec_pagetables:0 bounce:0
+                kernel_misc_reclaimable:0
+                free:15380 free_pcp:237 free_cma:11416
+[ 8084.235289] Node 0 active_anon:698636kB inactive_anon:99784kB active_file:1704kB inactive_file:608kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:0kB dirty:0kB writeback:0kB shmem:0kB writeback_tmp:0kB kernel_stack:2240kB pagetables:3352kB sec_pagetables:0kB all_unreclaimable? no
+[ 8084.235309] DMA free:61520kB boost:0kB min:16384kB low:20480kB high:24576kB reserved_highatomic:0KB active_anon:698636kB inactive_anon:99784kB active_file:1632kB inactive_file:680kB unevictable:0kB writepending:0kB present:970752kB managed:930340kB mlocked:0kB bounce:0kB free_pcp:948kB local_pcp:196kB free_cma:45664kB
+[ 8084.235330] lowmem_reserve[]: 0 0 0 0
+[ 8084.235370] DMA: 622*4kB (UMEC) 409*8kB (UMEC) 261*16kB (UMEC) 120*32kB (UMEC) 60*64kB (UMEC) 13*128kB (UMEC) 1*256kB (C) 0*512kB 1*1024kB (C) 0*2048kB 10*4096kB (C) = 61520kB
+[ 8084.235540] 823 total pagecache pages
+[ 8084.235548] 224 pages in swap cache
+[ 8084.235555] Free swap  = 92kB
+[ 8084.235563] Total swap = 102396kB
+[ 8084.235571] 242688 pages RAM
+[ 8084.235578] 0 pages HighMem/MovableOnly
+[ 8084.235586] 10103 pages reserved
+[ 8084.235593] 65536 pages cma reserved
+[ 8084.235603] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 8084.235614]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 8084.235626]   node 0: slabs: 51, objs: 816, free: 0
+[ 8084.267478] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 8084.267514]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 8084.267528]   node 0: slabs: 51, objs: 816, free: 0
+[ 8084.281732] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 8084.281757]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 8084.281771]   node 0: slabs: 51, objs: 816, free: 0
+[ 8084.394916] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 8084.394949]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 8084.394962]   node 0: slabs: 51, objs: 816, free: 0
+[ 8096.772863] INFO: task kworker/2:1:28688 blocked for more than 120 seconds.
+[ 8096.772900]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 8096.772910] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 8096.772919] task:kworker/2:1     state:D stack:0     pid:28688 ppid:2      flags:0x00000008
+[ 8096.772944] Workqueue: events_freezable mmc_rescan
+[ 8096.772973] Call trace:
+[ 8096.772981]  __switch_to+0xe8/0x160
+[ 8096.773000]  __schedule+0x338/0x924
+[ 8096.773014]  schedule+0x64/0x10c
+[ 8096.773027]  __mmc_claim_host+0xe0/0x204
+[ 8096.773041]  mmc_get_card+0x3c/0x4c
+[ 8096.773054]  mmc_sd_detect+0x28/0xa0
+[ 8096.773066]  mmc_rescan+0x94/0x2ec
+[ 8096.773080]  process_one_work+0x200/0x474
+[ 8096.773096]  worker_thread+0x74/0x43c
+[ 8096.773109]  kthread+0x110/0x114
+[ 8096.773122]  ret_from_fork+0x10/0x20
+[ 8217.605557] INFO: task kworker/2:1:28688 blocked for more than 241 seconds.
+[ 8217.605586]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 8217.605597] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 8217.605605] task:kworker/2:1     state:D stack:0     pid:28688 ppid:2      flags:0x00000008
+[ 8217.605631] Workqueue: events_freezable mmc_rescan
+[ 8217.605660] Call trace:
+[ 8217.605668]  __switch_to+0xe8/0x160
+[ 8217.605687]  __schedule+0x338/0x924
+[ 8217.605701]  schedule+0x64/0x10c
+[ 8217.605714]  __mmc_claim_host+0xe0/0x204
+[ 8217.605728]  mmc_get_card+0x3c/0x4c
+[ 8217.605741]  mmc_sd_detect+0x28/0xa0
+[ 8217.605754]  mmc_rescan+0x94/0x2ec
+[ 8217.605767]  process_one_work+0x200/0x474
+[ 8217.605783]  worker_thread+0x74/0x43c
+[ 8217.605796]  kthread+0x110/0x114
+[ 8217.605809]  ret_from_fork+0x10/0x20
+[ 8338.438205] INFO: task kworker/2:1:28688 blocked for more than 362 seconds.
+[ 8338.438234]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 8338.438244] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 8338.438259] task:kworker/2:1     state:D stack:0     pid:28688 ppid:2      flags:0x00000008
+[ 8338.438285] Workqueue: events_freezable mmc_rescan
+[ 8338.438317] Call trace:
+[ 8338.438325]  __switch_to+0xe8/0x160
+[ 8338.438343]  __schedule+0x338/0x924
+[ 8338.438357]  schedule+0x64/0x10c
+[ 8338.438370]  __mmc_claim_host+0xe0/0x204
+[ 8338.438383]  mmc_get_card+0x3c/0x4c
+[ 8338.438401]  mmc_sd_detect+0x28/0xa0
+[ 8338.438414]  mmc_rescan+0x94/0x2ec
+[ 8338.438428]  process_one_work+0x200/0x474
+[ 8338.438443]  worker_thread+0x74/0x43c
+[ 8338.438456]  kthread+0x110/0x114
+[ 8338.438470]  ret_from_fork+0x10/0x20
+[ 8459.270942] INFO: task kworker/2:1:28688 blocked for more than 483 seconds.
+[ 8459.270969]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 8459.270979] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 8459.270988] task:kworker/2:1     state:D stack:0     pid:28688 ppid:2      flags:0x00000008
+[ 8459.271013] Workqueue: events_freezable mmc_rescan
+[ 8459.271042] Call trace:
+[ 8459.271050]  __switch_to+0xe8/0x160
+[ 8459.271070]  __schedule+0x338/0x924
+[ 8459.271084]  schedule+0x64/0x10c
+[ 8459.271097]  __mmc_claim_host+0xe0/0x204
+[ 8459.271110]  mmc_get_card+0x3c/0x4c
+[ 8459.271129]  mmc_sd_detect+0x28/0xa0
+[ 8459.271142]  mmc_rescan+0x94/0x2ec
+[ 8459.271155]  process_one_work+0x200/0x474
+[ 8459.271171]  worker_thread+0x74/0x43c
+[ 8459.271184]  kthread+0x110/0x114
+[ 8459.271198]  ret_from_fork+0x10/0x20
+[ 8580.103589] INFO: task kworker/2:1:28688 blocked for more than 604 seconds.
+[ 8580.103619]       Tainted: G         C         6.1.0-rpi7-rpi-v8 #1 Debian 1:6.1.63-1+rpt1
+[ 8580.103630] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 8580.103639] task:kworker/2:1     state:D stack:0     pid:28688 ppid:2      flags:0x00000008
+[ 8580.103664] Workqueue: events_freezable mmc_rescan
+[ 8580.103693] Call trace:
+[ 8580.103701]  __switch_to+0xe8/0x160
+[ 8580.103720]  __schedule+0x338/0x924
+[ 8580.103734]  schedule+0x64/0x10c
+[ 8580.103747]  __mmc_claim_host+0xe0/0x204
+[ 8580.103761]  mmc_get_card+0x3c/0x4c
+[ 8580.103774]  mmc_sd_detect+0x28/0xa0
+[ 8580.103786]  mmc_rescan+0x94/0x2ec
+[ 8580.103800]  process_one_work+0x200/0x474
+[ 8580.103815]  worker_thread+0x74/0x43c
+[ 8580.103829]  kthread+0x110/0x114
+[ 8580.103842]  ret_from_fork+0x10/0x20
+[ 9548.654855] warn_alloc: 3 callbacks suppressed
+[ 9548.654873] kworker/2:0H: page allocation failure: order:0, mode:0x40800(GFP_NOWAIT|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+[ 9548.654930] CPU: 2 PID: 29092 Comm: kworker/2:0H Tainted: G         C         6.1.0-rpi7-rpi-v8 #1  Debian 1:6.1.63-1+rpt1
+[ 9548.654940] Hardware name: Raspberry Pi 3 Model B Rev 1.2 (DT)
+[ 9548.654947] Workqueue: kblockd blk_mq_run_work_fn
+[ 9548.654967] Call trace:
+[ 9548.654971]  dump_backtrace.part.0+0xec/0x100
+[ 9548.654981]  show_stack+0x20/0x30
+[ 9548.654988]  dump_stack_lvl+0x88/0xb4
+[ 9548.654999]  dump_stack+0x18/0x34
+[ 9548.655007]  warn_alloc+0x120/0x1c0
+[ 9548.655016]  __alloc_pages+0xe00/0xea0
+[ 9548.655024]  new_slab+0x36c/0x440
+[ 9548.655033]  ___slab_alloc+0x4f0/0xb4c
+[ 9548.655041]  __slab_alloc.constprop.0+0x3c/0x70
+[ 9548.655050]  __kmem_cache_alloc_node+0x3b4/0x3e0
+[ 9548.655059]  __kmalloc+0x68/0x10c
+[ 9548.655067]  bcm2835_dma_create_cb_chain+0x74/0x440
+[ 9548.655079]  bcm2835_dma_prep_slave_sg+0x130/0x3c0
+[ 9548.655088]  bcm2835_sdhost_request+0x4b8/0x670
+[ 9548.655099]  __mmc_start_request+0x74/0x1dc
+[ 9548.655109]  mmc_start_request+0x8c/0xb4
+[ 9548.655118]  mmc_blk_mq_issue_rq+0x290/0x86c
+[ 9548.655126]  mmc_mq_queue_rq+0x120/0x2a0
+[ 9548.655133]  blk_mq_dispatch_rq_list+0x1b4/0x8d0
+[ 9548.655145]  blk_mq_do_dispatch_sched+0x2c8/0x340
+[ 9548.655154]  __blk_mq_sched_dispatch_requests+0x110/0x160
+[ 9548.655162]  blk_mq_sched_dispatch_requests+0x40/0x80
+[ 9548.655170]  __blk_mq_run_hw_queue+0x88/0xc0
+[ 9548.655179]  blk_mq_run_work_fn+0x28/0x34
+[ 9548.655188]  process_one_work+0x200/0x474
+[ 9548.655198]  worker_thread+0x74/0x43c
+[ 9548.655207]  kthread+0x110/0x114
+[ 9548.655216]  ret_from_fork+0x10/0x20
+[ 9548.655228] Mem-Info:
+[ 9548.655237] active_anon:24004 inactive_anon:176581 isolated_anon:0
+                active_file:0 inactive_file:424 isolated_file:0
+                unevictable:0 dirty:0 writeback:0
+                slab_reclaimable:4528 slab_unreclaimable:5629
+                mapped:4 shmem:0 pagetables:839
+                sec_pagetables:0 bounce:0
+                kernel_misc_reclaimable:0
+                free:14414 free_pcp:0 free_cma:10747
+[ 9548.655263] Node 0 active_anon:96016kB inactive_anon:706324kB active_file:260kB inactive_file:1396kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:16kB dirty:0kB writeback:0kB shmem:0kB writeback_tmp:0kB kernel_stack:2176kB pagetables:3356kB sec_pagetables:0kB all_unreclaimable? no
+[ 9548.655282] DMA free:57656kB boost:0kB min:16384kB low:20480kB high:24576kB reserved_highatomic:0KB active_anon:96016kB inactive_anon:706324kB active_file:88kB inactive_file:1768kB unevictable:0kB writepending:0kB present:970752kB managed:930340kB mlocked:0kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:42988kB
+[ 9548.655302] lowmem_reserve[]: 0 0 0 0
+[ 9548.655343] DMA: 684*4kB (UMEC) 421*8kB (UMEC) 317*16kB (UMEC) 89*32kB (UMEC) 63*64kB (UMEC) 7*128kB (UEC) 2*256kB (C) 1*512kB (C) 1*1024kB (C) 0*2048kB 9*4096kB (C) = 57864kB
+[ 9548.655516] 649 total pagecache pages
+[ 9548.655524] 160 pages in swap cache
+[ 9548.655532] Free swap  = 196kB
+[ 9548.655539] Total swap = 102396kB
+[ 9548.655547] 242688 pages RAM
+[ 9548.655555] 0 pages HighMem/MovableOnly
+[ 9548.655562] 10103 pages reserved
+[ 9548.655569] 65536 pages cma reserved
+[ 9548.655579] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.655590]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.655602]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.688319] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.688346]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.688360]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.711456] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.711475]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.711489]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.728375] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.728397]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.728410]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.745871] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.745896]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.745909]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.762842] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.762860]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.762873]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.779615] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.779634]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.779647]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.802441] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.802459]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.802472]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.819356] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.819378]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.819391]   node 0: slabs: 52, objs: 820, free: 0
+[ 9548.835787] SLUB: Unable to allocate memory on node -1, gfp=0x900(GFP_NOWAIT|__GFP_ZERO)
+[ 9548.835806]   cache: kmalloc-1k, object size: 1024, buffer size: 1024, default order: 2, min order: 0
+[ 9548.835818]   node 0: slabs: 52, objs: 820, free: 0
+[ 9549.120368] kthreadd invoked oom-killer: gfp_mask=0x2dc2(GFP_KERNEL|__GFP_HIGHMEM|__GFP_NOWARN|__GFP_ZERO), order=0, oom_score_adj=0
+[ 9549.120411] CPU: 0 PID: 2 Comm: kthreadd Tainted: G         C         6.1.0-rpi7-rpi-v8 #1  Debian 1:6.1.63-1+rpt1
+[ 9549.120421] Hardware name: Raspberry Pi 3 Model B Rev 1.2 (DT)
+[ 9549.120427] Call trace:
+[ 9549.120431]  dump_backtrace.part.0+0xec/0x100
+[ 9549.120447]  show_stack+0x20/0x30
+[ 9549.120454]  dump_stack_lvl+0x88/0xb4
+[ 9549.120465]  dump_stack+0x18/0x34
+[ 9549.120472]  dump_header+0x4c/0x210
+[ 9549.120481]  oom_kill_process+0x2bc/0x2c0
+[ 9549.120492]  out_of_memory+0xe8/0x354
+[ 9549.120499]  __alloc_pages+0xb04/0xea0
+[ 9549.120509]  __alloc_pages_bulk+0x35c/0x690
+[ 9549.120517]  __vmalloc_node_range+0x204/0x77c
+[ 9549.120524]  copy_process+0x52c/0x15fc
+[ 9549.120533]  kernel_clone+0x9c/0x44c
+[ 9549.120541]  kernel_thread+0x7c/0xb0
+[ 9549.120548]  kthreadd+0x164/0x200
+[ 9549.120558]  ret_from_fork+0x10/0x20
+[ 9549.120575] Mem-Info:
+[ 9549.120586] active_anon:24004 inactive_anon:176581 isolated_anon:0
+                active_file:331 inactive_file:181 isolated_file:0
+                unevictable:0 dirty:0 writeback:0
+                slab_reclaimable:4528 slab_unreclaimable:5629
+                mapped:1 shmem:0 pagetables:839
+                sec_pagetables:0 bounce:0
+                kernel_misc_reclaimable:0
+                free:14456 free_pcp:0 free_cma:10831
+[ 9549.120608] Node 0 active_anon:96016kB inactive_anon:706324kB active_file:1624kB inactive_file:424kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:4kB dirty:0kB writeback:0kB shmem:0kB writeback_tmp:0kB kernel_stack:2176kB pagetables:3356kB sec_pagetables:0kB all_unreclaimable? no
+[ 9549.120627] DMA free:57824kB boost:0kB min:16384kB low:20480kB high:24576kB reserved_highatomic:0KB active_anon:96016kB inactive_anon:706324kB active_file:1464kB inactive_file:584kB unevictable:0kB writepending:0kB present:970752kB managed:930340kB mlocked:0kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:43324kB
+[ 9549.120672] lowmem_reserve[]: 0 0 0 0
+[ 9549.120714] DMA: 686*4kB (UEC) 415*8kB (UMEC) 317*16kB (UMEC) 89*32kB (UMEC) 63*64kB (UMEC) 7*128kB (UEC) 2*256kB (C) 1*512kB (C) 1*1024kB (C) 0*2048kB 9*4096kB (C) = 57824kB
+[ 9549.120900] 672 total pagecache pages
+[ 9549.120909] 160 pages in swap cache
+[ 9549.120916] Free swap  = 196kB
+[ 9549.120949] Total swap = 102396kB
+[ 9549.120957] 242688 pages RAM
+[ 9549.120965] 0 pages HighMem/MovableOnly
+[ 9549.120972] 10103 pages reserved
+[ 9549.120979] 65536 pages cma reserved
+[ 9549.120987] Tasks state (memory values in pages):
+[ 9549.120994] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+[ 9549.121027] [    483]   104   483     1840       46    53248       81             0 avahi-daemon
+[ 9549.121043] [    487]     0   487     1673       21    45056       40             0 cron
+[ 9549.121057] [    489]   100   489     2234      167    53248      110          -900 dbus-daemon
+[ 9549.121072] [    499]   996   499    58828        1    81920      251             0 polkitd
+[ 9549.121087] [    500]   104   500     1795        0    49152       77             0 avahi-daemon
+[ 9549.121126] [    511]     0   511     4281       49    65536      232             0 systemd-logind
+[ 9549.121141] [    515] 65534   515     1457        9    45056       57             0 thd
+[ 9549.121156] [    555]     0   555    80860        0   126976      478             0 ModemManager
+[ 9549.121170] [    557]     0   557    65612      256   151552      595             0 NetworkManager
+[ 9549.121185] [    558]     0   558     4288       82    65536      311             0 wpa_supplicant
+[ 9549.121199] [    886]     0   886     1873        1    49152      127             0 login
+[ 9549.121212] [    899]  1000   899     4844        1    73728      430           100 systemd
+[ 9549.121227] [    900]  1000   900    42601        0    90112      829           100 (sd-pam)
+[ 9549.121241] [    915]  1000   915     1994        1    45056      381             0 bash
+[ 9549.121255] [  11359]     0 11359    12442       40   102400      214          -250 systemd-journal
+[ 9549.121294] [  11569]     0 11569     3320        0    53248      154             0 bluetoothd
+[ 9549.121308] [  11603]   997 11603    22645       19    73728      220             0 systemd-timesyn
+[ 9549.121324] [  25675]  1000 25675     2617        0    49152      127             0 sudo
+[ 9549.121338] [  25676]  1000 25676     2617        0    49152      120             0 sudo
+[ 9549.121352] [  25677]     0 25677     2921        0    53248     1320             0 sbc-bench.sh
+[ 9549.121367] [  28447]     0 28447     2168       34    53248     1271             0 bash
+[ 9549.121383] [  28810]     0 28810     6213       17    57344      367         -1000 systemd-udevd
+[ 9549.121397] [  28969]     0 28969   307242   199225  1847296    16949             0 7zr
+[ 9549.121412] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/,task=7zr,pid=28969,uid=0
+[ 9549.121543] Out of memory: Killed process 28969 (7zr) total-vm:1228968kB, anon-rss:796900kB, file-rss:0kB, shmem-rss:0kB, UID:0 pgtables:1804kB oom_score_adj:0
+[ 9549.123650] I/O error, dev mmcblk0, sector 1872416 op 0x0:(READ) flags 0x80700 phys_seg 49 prio class 2
+[ 9549.138448] I/O error, dev mmcblk0, sector 1873008 op 0x0:(READ) flags 0x80700 phys_seg 32 prio class 2
+[ 9549.152722] I/O error, dev mmcblk0, sector 1992552 op 0x0:(READ) flags 0x80700 phys_seg 32 prio class 2
+[ 9549.165889] I/O error, dev mmcblk0, sector 2216840 op 0x0:(READ) flags 0x80700 phys_seg 25 prio class 2
+[ 9549.177731] I/O error, dev mmcblk0, sector 2281872 op 0x0:(READ) flags 0x80700 phys_seg 32 prio class 2
+[ 9549.188555] I/O error, dev mmcblk0, sector 2290672 op 0x0:(READ) flags 0x80700 phys_seg 32 prio class 2
+[ 9549.198239] I/O error, dev mmcblk0, sector 3314752 op 0x0:(READ) flags 0x80700 phys_seg 24 prio class 2
+[ 9549.207364] I/O error, dev mmcblk0, sector 30362064 op 0x0:(READ) flags 0x80700 phys_seg 30 prio class 2
+[ 9549.215956] I/O error, dev mmcblk0, sector 1447832 op 0x0:(READ) flags 0x80700 phys_seg 32 prio class 2
+[ 9551.418476] systemd[1]: systemd-journald.service: Main process exited, code=killed, status=6/ABRT
+[ 9551.419237] systemd[1]: systemd-journald.service: Failed with result 'watchdog'.
+[ 9551.522355] systemd[1]: systemd-journald.service: Consumed 9.485s CPU time.
+[ 9551.718136] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[ 9551.823835] systemd[1]: Starting apt-daily-upgrade.service - Daily apt upgrade and clean activities...
+[ 9551.825007] systemd[1]: Stopped systemd-journald.service - Journal Service.
+[ 9551.825464] systemd[1]: systemd-journald.service: Consumed 9.485s CPU time.
+[ 9551.849222] systemd[1]: Starting systemd-journald.service - Journal Service...
+[ 9551.858186] systemd[1]: Starting tuptime-sync.service - Tuptime scheduled sync service...
+[ 9552.841162] systemd-journald[29143]: File /var/log/journal/376d044afaa44b35916adf762fc089a5/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[ 9552.964441] systemd[1]: Started systemd-journald.service - Journal Service.
+
+##########################################################################
+
+Linux 6.1.0-rpi7-rpi-v8 (raspberrypi) 	02/12/24 	_aarch64_	(4 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           7.00    0.01    9.11   16.49    0.00   67.38
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+mmcblk0          49.74      5307.83       308.43      1338.94   50734291    2948071   12798128
+
+               total        used        free      shared  buff/cache   available
+Mem:           908Mi       145Mi       675Mi        68Ki       140Mi       763Mi
+Swap:           99Mi        39Mi        60Mi
+
+Filename				Type		Size		Used		Priority
+/var/swap                               file		102396		40816		-2
+
+CPU sysfs topology (clusters, cpufreq members, clockspeeds)
+                 cpufreq   min    max
+ CPU    cluster  policy   speed  speed   core type
+  0        0        0      600    1200   Cortex-A53 / r0p4
+  1        0        0      600    1200   Cortex-A53 / r0p4
+  2        0        0      600    1200   Cortex-A53 / r0p4
+  3        0        0      600    1200   Cortex-A53 / r0p4
+
+Architecture:                       aarch64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+CPU(s):                             4
+On-line CPU(s) list:                0-3
+Vendor ID:                          ARM
+Model name:                         Cortex-A53
+Model:                              4
+Thread(s) per core:                 1
+Core(s) per cluster:                4
+Socket(s):                          -
+Cluster(s):                         1
+Stepping:                           r0p4
+CPU(s) scaling MHz:                 100%
+CPU max MHz:                        1200.0000
+CPU min MHz:                        600.0000
+BogoMIPS:                           38.40
+Flags:                              fp asimd evtstrm crc32 cpuid
+L1d cache:                          128 KiB (4 instances)
+L1i cache:                          128 KiB (4 instances)
+L2 cache:                           512 KiB (1 instance)
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Not affected
+Vulnerability Spectre v1:           Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:           Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+SoC guess: BCM2837 (BCM2710)
+DT compat: raspberrypi,3-model-b
+           brcm,bcm2837
+ Compiler: /usr/bin/gcc (Debian 12.2.0-14) 12.2.0 / aarch64-linux-gnu
+ Userland: arm64
+  ThreadX: 30f0c5e4d076da3ab4f341d88e7d505760b93ad7 / Oct 17 2023 15:42:39 
+           alloc failures:     0
+           compactions:        0
+           legacy block fails: 0
+   Kernel: 6.1.0-rpi7-rpi-v8/aarch64
+           CONFIG_HZ=250
+           CONFIG_HZ_250=y
+           CONFIG_PREEMPTION=y
+           CONFIG_PREEMPTIRQ_TRACEPOINTS=y
+           CONFIG_PREEMPT=y
+           CONFIG_PREEMPT_BUILD=y
+           CONFIG_PREEMPT_COUNT=y
+           CONFIG_PREEMPT_NOTIFIERS=y
+           CONFIG_PREEMPT_RCU=y
+
+##########################################################################
+
+   opp-table-threadx-0:
+       600 MHz   1287.5 mV
+       700 MHz   1287.5 mV
+       800 MHz   1287.5 mV
+       900 MHz   1287.5 mV
+      1000 MHz   1287.5 mV
+      1100 MHz   1287.5 mV
+      1200 MHz   1287.5 mV
+
+##########################################################################
+
+Results validation:
+
+  * Advertised vs. measured max CPU clockspeed: -1.2% before, -1.3% after -> https://tinyurl.com/32w9rr94
+  * Swapping occured -> https://tinyurl.com/3h222wnh
+  * Swap configured on ultra slow SD card storage
+  * Too much background activity (%system): 0% avg, 26% max -> https://tinyurl.com/mr2wy5uv
+  * 2 oom-killer invocations (system too low on RAM and insufficient swap configured) -> https://tinyurl.com/ytma8u4e
+  * Throttling occured -> https://tinyurl.com/4ky59sys
+
+| Raspberry Pi 3 Model B Rev 1.2 | 1200 MHz (throttled) | 6.1 | Debian GNU/Linux 12 (bookworm) arm64 | 2380 | 913 | 39770 | 1140 | 1630 | - |
