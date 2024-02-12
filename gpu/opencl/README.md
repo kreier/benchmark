@@ -1,5 +1,15 @@
 # GPU performance in GFLOPS
 
+This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark 
+
+| Device             | CU | Freq. | Cores |   FP64   |   FP32   |   FP16   |  INT64  |  INT32  |  INT16  |   INT8  | Memory |  PCIe |
+|--------------------|---:|------:|------:|:--------:|:--------:|:--------:|:-------:|:-------:|:-------:|:-------:|:------:|:-----:|
+| units              |  # |   MHz |     # | TFLOPs/s | TFLOPs/s | TFLOPs/s | TIOPs/s | TIOPs/s | TIOPs/s | TIOPs/s |  GB/s  |  GB/s |
+| 🔵 UHD Graphics 620 | 24 |  1100 |   192 |   0.086  |   0.328  |   0.588  |  0.011  |  0.099  |  0.560  |  0.115  |  14.47 |  6.28 |
+| 🔵 UHD Graphics 630 | 24 |  1100 |   192 |   0.100  |   0.393  |   0.722  |  0.015  |  0.134  |  0.779  |  0.135  |  28.31 | 14.12 |
+| 🔴 RX470            |    |       |       |          |          |          |         |         |         |         |        |       |
+| 🟢 RTX 3070 Ti      |    |       |       |          |          |          |         |         |         |         |        |       |
+
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles. 
 
 ## FP32 single
