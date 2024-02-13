@@ -8,19 +8,21 @@ This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark
 | 🔵 UHD 620       |   0.086  |   0.328  |   0.588  |  0.011  |  0.099  |  0.560  |  0.115  |
 | 🔵 UHD 630       |   0.100  |   0.393  |   0.722  |  0.015  |  0.134  |  0.779  |  0.135  |
 | 🟢 Quadro M1000M |   0.035  |   0.734  |   ---    |  0.192  |  0.308  |  1.071  |  1.087  |
+| ⚪ M1 GPU 8CU    |    ---   |   0.620  |   ---    |  0.439  |  0.603  |  0.645  |  0.638  |
 | 🔴 RX470         |          |          |          |         |         |         |         |
 | 🟢 RTX 3070 Ti   |   0.366  |  22.572  |   ---    |  3.049  | 11.502  |  9.993  |  8.681  |
 
 Specification:
 
-| Device           | CU | Freq. | Cores | Memory |  PCIe |
-|------------------|---:|------:|------:|:------:|:-----:|
-| units            |  # |   MHz |     # |  GB/s  |  GB/s |
-| 🔵 UHD 620       | 24 |  1100 |   192 |  14.47 |  6.28 |
-| 🔵 UHD 630       | 24 |  1100 |   192 |  28.31 | 14.12 |
-| 🟢 Quadro M1000M |  2 |  1071 |   512 |  71.74 |  3.96 |
-| 🔴 RX470         |    |       |       |        |       |
-| 🟢 RTX 3070 Ti   | 48 |  1770 |  6144 | 574.81 |  8.76 |
+| Device           | CU | Freq. | Cores | TFLOPs/s | Memory |  PCIe |
+|------------------|---:|------:|------:|:--------:|:------:|:-----:|
+| units            |  # |   MHz |     # |          |  GB/s  |  GB/s |
+| 🔵 UHD 620       | 24 |  1100 |   192 |    0.422 |  14.47 |  6.28 |
+| 🔵 UHD 630       | 24 |  1100 |   192 |    0.422 |  28.31 | 14.12 |
+| 🟢 Quadro M1000M |  2 |  1071 |   512 |    1.097 |  71.74 |  3.96 |
+| ⚪ M1 GPU 8CU    |  8 |  1000 |  1024 |    2.048 |  65.54 | 18.28 |
+| 🔴 RX470         |    |       |       |          |        |       |
+| 🟢 RTX 3070 Ti   | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles. 
 
