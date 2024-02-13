@@ -43,3 +43,7 @@ I looked at the changes in single core and multi-core performances from Rasberry
 ![graph single core](single.png)
 
 ![graph multi core](multi.png)
+
+The comparison should be best made between SBCs and comparison with Desktop Computers be made carefully:
+
+![graph desktop CPUs](desktop.png)
