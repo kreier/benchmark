@@ -2,7 +2,14 @@
 
 ## R23 for CPU Multi Core
 
-Results will follow
+| Device                   | CPU        | Single Core | Multi-Core | 
+|--------------------------|------------|-------------|------------|
+| Lenovo Thinkpad Yoga 370 | i5 7300U   |             |            |
+| HP zBook 15 G3           | i7 6820HQ  |             |            |
+| HP 800 mini G4           | i5 8500T   |             |            |
+| HP Z600 Workstation      | X5550 x2   |             |            |
+| Workstation II           | E5 2696 v3 |         708 |      10279 |
+| Xigmatek Gemini          | i3 10100   |             |            |
 
 
 ## Cinebench 2024 for CPU and GPU
