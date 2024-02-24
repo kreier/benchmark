@@ -2,7 +2,7 @@
 
 This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark 
 
-| Device           | FP64<br>double | FP32<br>single | FP16<br>half |  INT64  |  INT32  |  INT16  |   INT8  |
+| Device           | FP64<br>double | FP32<br>single | FP16<br>half | INT64<br>long | INT32<br>int | INT16<br>short | INT8<br>char |
 |------------------|:--------:|---------:|---------:|:-------:|:-------:|:-------:|:-------:|
 | units            | TFLOPs/s | TFLOPs/s | TFLOPs/s | TIOPs/s | TIOPs/s | TIOPs/s | TIOPs/s |
 | 🔵 UHD 620       |   0.086  |   0.328  |   0.588  |  0.011  |  0.099  |  0.560  |  0.115  |
@@ -16,17 +16,17 @@ This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark
 
 Specification:
 
-| Device           | CU | Freq. | Cores | TFLOPs/s | Memory |  PCIe |
-|------------------|---:|------:|------:|---------:|-------:|------:|
-| units            |  # |   MHz |     # |          |  GB/s  |  GB/s |
-| 🔵 UHD 620       | 24 |  1100 |   192 |    0.422 |  14.47 |  6.28 |
-| 🔵 UHD 630       | 24 |  1100 |   192 |    0.422 |  28.31 | 14.12 |
-| 🟢 Quadro M1000M |  2 |  1071 |   512 |    1.097 |  71.74 |  3.96 |
-| ⚪ M1 GPU 8CU    |  8 |  1000 |  1024 |    2.048 |  65.54 | 18.28 |
-| 🟢 GTX 960       |  8 |  1266 |  1024 |    2.593 |  97.41 |  6.91 |
-| 🔴 RX 470        | 32 |  1226 |  2048 |    5.022 | 193.25 |  4.63 |
-| 🔴 RX 6600       | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
-| 🟢 RTX 3070 Ti   | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
+| Device           | OpenCL | CU | Freq. | Cores | TFLOPs/s | Memory |  PCIe |
+|------------------|:------:|---:|------:|------:|---------:|-------:|------:|
+| units            | version | # |   MHz |   # | theorerical | GB/s  |  GB/s |
+| 🔵 UHD 620       |        | 24 |  1100 |   192 |    0.422 |  14.47 |  6.28 |
+| 🔵 UHD 630       |        | 24 |  1100 |   192 |    0.422 |  28.31 | 14.12 |
+| 🟢 Quadro M1000M |        |  2 |  1071 |   512 |    1.097 |  71.74 |  3.96 |
+| ⚪ M1 GPU 8CU    |   1.2  |  8 |  1000 |  1024 |    2.048 |  65.54 | 18.28 |
+| 🟢 GTX 960       |        |  8 |  1266 |  1024 |    2.593 |  97.41 |  6.91 |
+| 🔴 RX 470        |        | 32 |  1226 |  2048 |    5.022 | 193.25 |  4.63 |
+| 🔴 RX 6600       |        | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
+| 🟢 RTX 3070 Ti   |        | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles in 2020. Above results are taken early 2024.
 
