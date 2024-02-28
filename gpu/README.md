@@ -1,8 +1,13 @@
 # GPU performance in GFLOPS
 
-I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles. 
+On the way to a [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) and to compare the processing speed I tried to collect some theoretical GFLOPS data as well as measuring the computation speed in half-precision, single and double precision (FP16, FP32 and FP64) with OpenCL. In the near future some TOPS with INT8 for NPUs and __bf16__ numbers for GPUs will be interesting with tne new wave of AI and LLMs. 
 
-## FP32 single
+![GFLOPS of some GPUs](./gpu2024.png)
+
+
+Below some text from 2020 when I started to collect some information:
+
+## FP32 single precision
 
 Let's assume this is possible max raw performance in long (32 bit or single) FP32
 
@@ -18,8 +23,8 @@ Let's assume this is possible max raw performance in long (32 bit or single) FP3
 - XBox Series S 
 - XBox Series X 
 
-In many cases it can be simple calculated by the CPU architecture and the frequency. For example my dual [https://ark.intel.com/content/www/us/en/ark/products/37106/intel-xeon-processor-x5550-8m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html](Xeon X5550) with 2.67 GHz has a [https://en.wikipedia.org/wiki/FLOPS](multiplier of 8) (Nehalem EP) which results in 2.67 x 8 = 21.36 gflops.
+In many cases it can be simple calculated by the CPU architecture and the frequency. For example my dual [Xeon X5550](https://ark.intel.com/content/www/us/en/ark/products/37106/intel-xeon-processor-x5550-8m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html) with 2.67 GHz has a [multiplier of 8](https://en.wikipedia.org/wiki/FLOPS) (Nehalem EP) which results in 2.67 x 8 = 21.36 gflops.
 
-## FP64 double
+## FP64 double precision
 
 - RX 470 	237 GFLOPS
