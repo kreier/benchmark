@@ -9,11 +9,11 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 It can be installed in WSL or Ubuntu with:
 
 ``` sh
-m@x:~/$ git clone https://github.com/phoronix-test-suite/phoronix-test-suite.git
-m@x:~/$ ./phoronix-test-suite/install-sh pts
-m@x:~/$ sudo apt install php-cli php-xml
-m@x:~/$ 
-m@x:~/$ 
+sudo apt install php php-cli php-xml
+git clone https://github.com/phoronix-test-suite/phoronix-test-suite/
+cd phoronix-test-suite
+sudo ./install-sh
+phoronix-test-suite benchmark hpl
 ```
 
 ## Speed comparison results
