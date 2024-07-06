@@ -4,6 +4,16 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 
 64bit for normal citizens took a little longer. In 2003 AMD starts shipping the [Athlon 64](https://en.wikipedia.org/wiki/Athlon_64) processor lines with the first x86-based 64-bit processor architecture. For smartphones to move to 64bit it took until 2013 with the [iPhone 5S](https://en.wikipedia.org/wiki/IPhone_5s).
 
+## Speed comparison results
+
+|     CPU    |  MHz  |      FLOPS       |
+| ---------- | ----: | ---------------: |
+| ATmega328P |    16 |           94,300 |
+|  i7-6820HQ | 3,600 |   99,997,800,000 |
+|   i3-10100 | 4,038 |  132,278,500,000 |
+
+## List from 2017
+
 | Platform        | CPU/MCU     | Architecture                   | MFlops    | DMIPS     | MHz  | RAM kB  |
 | --------------- | ----------- | ------------------------------ | --------- | --------- | ---- | ------- |
 | Arduino Uno R3  | ATmega328P  | AVR 8bit RISC                  | 0.0943    | 10        | 16   | 2       |
@@ -16,16 +26,16 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 | Raspberry Pi 3  | BCM2837     | ARM Cortex-A53 (v8-A) 32bit    | 180.14    | 3039      | 1200 | 1024000 |
 |                 |             |                                | LinpackDP | Dhrystone |      |         |
 
-Read more in [this article (paper ICIST 2017)](paper_ICIST_2017.pdf)
+Read more in [this article - paper ICIST 2017](paper_ICIST_2017.pdf).
 
 ## HPL by Intel
 
 The multithread version to measure the performance of supercomputers there is the High Performance Linpack:
 
-- https://www.netlib.org/benchmark/hpl/
+- [https://www.netlib.org/benchmark/hpl/](https://www.netlib.org/benchmark/hpl/)
 
 But you can't just download it and make/compile the benchmark and run it. You need MPI, BLAS and VSIPL. A simple solution is to download the compiled binaries from Intel
 
-- https://software.intel.com/content/www/us/en/develop/articles/intel-mkl-benchmarks-suite.html
+- [https://software.intel.com/content/www/us/en/develop/articles/intel-mkl-benchmarks-suite.html](https://software.intel.com/content/www/us/en/develop/articles/intel-mkl-benchmarks-suite.html)
 
-For my i7-6820HQ it reached a maximum of 99.9978 GFlops for a size of 27000.
+For my i7-6820HQ it reached a maximum of 99.9978 GFlops for a size of 27000. That's $10^{11}$.
