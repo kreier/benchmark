@@ -4,6 +4,18 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 
 64bit for normal citizens took a little longer. In 2003 AMD starts shipping the [Athlon 64](https://en.wikipedia.org/wiki/Athlon_64) processor lines with the first x86-based 64-bit processor architecture. For smartphones to move to 64bit it took until 2013 with the [iPhone 5S](https://en.wikipedia.org/wiki/IPhone_5s).
 
+## Test with the Phoronix Test Suite
+
+It can be installed in WSL or Ubuntu with:
+
+``` sh
+m@x:~/$ git clone https://github.com/phoronix-test-suite/phoronix-test-suite.git
+m@x:~/$ ./phoronix-test-suite/install-sh pts
+m@x:~/$ sudo apt install php-cli php-xml
+m@x:~/$ 
+m@x:~/$ 
+```
+
 ## Speed comparison results
 
 |     CPU    |  MHz  |      FLOPS       |
@@ -11,6 +23,8 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 | ATmega328P |    16 |           94,300 |
 |  i7-6820HQ | 3,600 |   99,997,800,000 |
 |   i3-10100 | 4,038 |  132,278,500,000 |
+
+Downloaded from [https://www.techpowerup.com/download/linpack-xtreme/](https://www.techpowerup.com/download/linpack-xtreme/).
 
 ## List from 2017
 
@@ -27,6 +41,7 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 |                 |             |                                | LinpackDP | Dhrystone |      |         |
 
 Read more in [this article - paper ICIST 2017](paper_ICIST_2017.pdf).
+
 
 ## HPL by Intel
 
