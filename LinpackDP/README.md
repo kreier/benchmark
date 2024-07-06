@@ -1,6 +1,8 @@
-# Linpack DP
+# Linpack benchmark in DP (double precision, 64bit)
 
-Results for Linpack DP (double precision)
+When the initial linpack was released in 1979 minicomputers like the [PDP-11](https://en.wikipedia.org/wiki/PDP-11) (from 1970) had just moved from 16bit to 32bit with superminicomputers like the [VAX-11](https://en.wikipedia.org/wiki/VAX-11) (1978). The supercomputer [Cray-1](https://en.wikipedia.org/wiki/Cray-1) uses 64bit for data since 1975. By the time the [TOP500](https://en.wikipedia.org/wiki/TOP500) of fastest supercomputers was created in 1993 most supercomputers were using 64bit. For comparison this value is been used ever since.
+
+64bit for normal citizens took a little longer. In 2003 AMD starts shipping the [Athlon 64](https://en.wikipedia.org/wiki/Athlon_64) processor lines with the first x86-based 64-bit processor architecture. For smartphones to move to 64bit it took until 2013 with the [iPhone 5S](https://en.wikipedia.org/wiki/IPhone_5s).
 
 | Platform        | CPU/MCU     | Architecture                   | MFlops    | DMIPS     | MHz  | RAM kB  |
 | --------------- | ----------- | ------------------------------ | --------- | --------- | ---- | ------- |
