@@ -1,14 +1,14 @@
 # Benchmark collection
 
-There are countless benchmarks out there. This is just a collection of benchmarks I used over the years and the results. Some tests date back to 1972. I measured the speed of a Lattice C compiler against Omicron Basic in 1992 on my Atari ST. Data presented here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
+There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks I used over the years, and their results. Some benchmarks were created back in 1972. I measured the speed of a Lattice C compiler against Omicron Basic on my [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) in 1992. The data collection presented here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
 
 ## [Whetstone](whetstone) - 1972
 
 This [synthetic benchmark from 1972](https://en.wikipedia.org/wiki/Whetstone_(benchmark)) is one of the oldest ones to estimate the [FLOPS - floating point operations](https://en.wikipedia.org/wiki/FLOPS) a CPU can perform per second. Well described in an [article of arstechnica](https://arstechnica.com/information-technology/2013/05/native-level-performance-on-the-web-a-brief-examination-of-asm-js/2/) from 2013. And it is neither related to wet nor a [whetstone](https://en.wikipedia.org/wiki/Sharpening_stone), but the town of [Whetstone](https://en.wikipedia.org/wiki/Whetstone,_Leicestershire) in England.
 
-## [Linpack](LinpackDP) - 1979
+## [Linpack](LinpackDP) - FLOPS since 1979
 
-Well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks) this benchmark from 1979 is still usefull because it scales with instructions per second, frequency and number of cores (HPL). It took me some time to get it running.
+Well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks) this benchmark from 1979 is still usefull today because it scales with IPC (instructions per cycle), frequency and number of cores. It is therefore used since 1993 to determine the speed of supercomputers with a single value to put it in a list for comparison as the [TOP500](https://en.wikipedia.org/wiki/TOP500). It is measured in FLOPS in DP (double precision, 64bit).
 
 ## [Dhrystone](dhrystone) - 1984
 
