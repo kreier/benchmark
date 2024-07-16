@@ -72,12 +72,15 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | MacBook Pro 15       | i7-4960HQ      | 4 x 2600 | Iris Pro         | 937    | 3263  | 4957    |
 | Z600 workstation     | Xeon X5550     | 8 x 2666 | Radeon RX 470    | 521    | 3881  | 36618   |
 
-## [Geekbench 6]() - 2023
+## [Geekbench 6](https://www.geekbench.com/) - 2023
 
-| Computer             | CPU                                                      | MHz      | GPU              | Single | Multi | Compute |
-| -------------------- | -------------------------------------------------------- | -------- | ---------------- | -----: | ----: | ------: |
-| HP zBook 15 G3       | [i7-6820HQ](https://browser.geekbench.com/v6/cpu/158904) | 4 x 3591 | Quadro M1000M    |   1102 |  3261 |    8677 |
-| Xigmatec Gemini      | i3-10100                                                 | 4 x 4198 | RTX 3070 Ti      |   1430 |  4676 |  132095 |
+| Computer         | CPU                                                             | MHz      | GPU                                                             | Single | Multi | Compute |
+| ---------------- | --------------------------------------------------------------- | -------: | --------------------------------------------------------------- | -----: | ----: | ------: |
+| HP Z600          | [Xeon X5550](https://browser.geekbench.com/v6/cpu/3005255)      | 8 x 3042 | [GTX 960](https://browser.geekbench.com/v6/compute/1082229)     |    436 |  2218 |   21720 |
+| Server I         | [Xeon E3-1226 v3](https://browser.geekbench.com/v6/cpu/5214156) | 4 x 3290 | [HD P4600](https://browser.geekbench.com/v6/compute/1873782)    |   1248 |  3624 |    3440 |
+| HP zBook 15 G3   | [i7-6820HQ](https://browser.geekbench.com/v6/cpu/158904)       |  4 x 3591 | [Quadro M1000M](https://browser.geekbench.com/v6/compute/57023) |   1102 |  3261 |    8677 |
+| Workstation II   | [E5-2696 v3](https://browser.geekbench.com/v6/cpu/6936285)     | 18 x 2300 | [RX 6600](https://browser.geekbench.com/v6/compute/2470749)     |   1148 |  6693 |   73716 |
+| Xigmatec Gemini  | [i3-10100](https://browser.geekbench.com/v6/cpu/244210)        |  4 x 4198 | [RTX 3070 Ti](https://browser.geekbench.com/v6/compute/89317)   |   1430 |  4676 |  134364 |
 
 ## [Geekbench ML 0.6](https://www.geekbench.com/ml/) - 2023
 
