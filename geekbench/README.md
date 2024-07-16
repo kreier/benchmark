@@ -4,17 +4,20 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 
 ## [Geekbench 2.4](https://www.geekbench.com/geekbench2/) - 2012
 
-| Computer     | CPU             | MHz      | Geekbench |
-| ------------ | --------------- | -------- | --------- |
-| Raspberry Pi | BCM2835         | 4 x 1200 | 1200      |
-| Silentium AC | Athlon 64 3000+ | 1 x 1803 | 1464      |
-| Lenovo X200  | Core2Duo P8400  | 2 x 2265 | 2670      |
-| Lenovo X230  | i5-3320M        | 2 x 2600 | 6383      |
+| Computer       | CPU             | MHz      | Geekbench |
+| -------------- | --------------- | -------- | --------: |
+| [Raspberry Pi 1B v2](https://browser.geekbench.com/geekbench2/2691113) | BCM2835 | 1 x 700 |  229    |
+| Raspberry Pi 3 | BCM2835         | 4 x 1200 | 1200      |
+| Silentium AC   | Athlon 64 3000+ | 1 x 1803 | 1464      |
+| Lenovo X200    | Core2Duo P8400  | 2 x 2265 | 2670      |
+| [Raspberry Pi 4](https://browser.geekbench.com/geekbench2/2688916) | BCM2835   | 4 x 1500 |  4874    |
+| Lenovo X230    | i5-3320M        | 2 x 2600 | 6383      |
+| HP xBook 15 G3 | [i7-6820HQ](https://browser.geekbench.com/geekbench2/2688915) | 4 x 2710 |  11213   |
 
-## [Geekbench 3](https://www.geekbench.com/geekbench3/) - 2013-2016
+## [Geekbench 3](https://www.geekbench.com/legacy/) - 2013-2016
 
 | Computer           | CPU              | MHz      | Single | Multi |
-| ------------------ | ---------------- | -------- | ------ | ----- |
+| ------------------ | ---------------- | -------- | -----: | ----: |
 | Silentium AC       | Athlon 64 3000+  | 1 x 1803 | 724    | 712   |
 | Amazon Kindle 8 HD | MT8163           | 4 x 1300 | 645    | 1819  |
 | Lenovo X200        | Core2Duo P8400   | 2 x 2265 | 1190   | 2163  |
@@ -23,10 +26,10 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | AC Silentium II    | Phenom II X4 955 | 4 x 3199 | 1748   | 5983  |
 | Z600 workstation   | Xeon X5550       | 8 x 2666 | 2058   | 14416 |
 
-## [Geekbench 4](https://www.geekbench.com/geekbench4/) - 2016-2019
+## [Geekbench 4](https://www.geekbench.com/legacy/) - 2016-2019
 
 | Computer              | CPU              | MHz      | GPU              | Single | Multi | Compute |
-| --------------------- | ---------------- | -------- | ---------------- | ------ | ----- | ------- |
+| --------------------- | ---------------- | -------- | ---------------- | -----: | ----: | ------: |
 | Silentium AC          | Athlon 64 3000+  | 1 x 1803 | Radeon HD 5670   | 915    | 878   | 11376   |
 | Tanix TX3 Mini        | Amlogic S905W    | 4 x 1200 | Mali 450 MP3     | 465    | 1271  | 891     |
 | X96Air v2             | Amlogic S905X3   | 4 x 1900 | Mali G31 MP2     | 755    | 2105  | 1569    |
@@ -51,10 +54,10 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | MacBook Pro 15        | i7-4960HQ        | 4 x 2600 | Iris Pro         | 4428   | 15582 | 29291   |
 | Z600 workstation      | Xeon X5550       | 8 x 2666 | Radeon RX 470    | 2484   | 14904 | 109221  |
 
-## [Geekbench 5](https://www.geekbench.com/) - 2019-
+## [Geekbench 5](https://www.geekbench.com/legacy/) - 2019
 
-| Computer             |                | MHz      | GPU              | Single | Multi | Compute |
-| -------------------- | -------------- | -------- | ---------------- | ------ | ----- | ------- |
+| Computer             | CPU            | MHz      | GPU              | Single | Multi | Compute |
+| -------------------- | -------------- | -------- | ---------------- | -----: | ----: | ------: |
 | Lenovo X200          | Core2Duo P8400 | 2 x 2265 |                  | 349    | 583   |         |
 | Samsung Galaxy S7    | Qualcomm 820   | 4 x 1593 |                  | 288    | 695   | 850     |
 | EliteBook 8460p      | i5-2520M       | 2 x 2501 | HD Graphics 3000 | 549    | 1229  |         |
@@ -69,4 +72,19 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | MacBook Pro 15       | i7-4960HQ      | 4 x 2600 | Iris Pro         | 937    | 3263  | 4957    |
 | Z600 workstation     | Xeon X5550     | 8 x 2666 | Radeon RX 470    | 521    | 3881  | 36618   |
 
-Further tests ...
+## [Geekbench 6]() - 2023
+
+| Computer             | CPU                                                      | MHz      | GPU              | Single | Multi | Compute |
+| -------------------- | -------------------------------------------------------- | -------- | ---------------- | -----: | ----: | ------: |
+| HP zBook 15 G3       | [i7-6820HQ](https://browser.geekbench.com/v6/cpu/158904) | 4 x 3591 | Quadro M1000M    |   1102 |  3261 |    8677 |
+| Xigmatec Gemini      | i3-10100                                                 | 4 x 4198 | RTX 3070 Ti      |   1430 |  4676 |  132095 |
+
+## [Geekbench ML 0.6](https://www.geekbench.com/ml/) - 2023
+
+| CPU/GPU     | Cores |  MHz | Inference Score |
+|-------------|:-----:|-----:|----------------:|
+| [i3 10110](https://browser.geekbench.com/ml/v0/inference/407486)    |   4   | 4200 |            1537 |
+| [E5-2696 v3](https://browser.geekbench.com/ml/v0/inference/407539)  |   18  | 2300 |            2277 |
+| [RX 6600](https://browser.geekbench.com/ml/v0/inference/407554)     |   28  | 1626 |            6601 |
+| [RTX 3070 Ti](https://browser.geekbench.com/ml/v0/inference/407487) |  192  | 1580 |           12687 |
+
