@@ -84,13 +84,17 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 
 ## [Geekbench ML 0.6](https://www.geekbench.com/ml/) - 2023
 
-| Device          | CPU        |                        Score                                  | GPU         |                            Score                              | NPU | Score |
-|-----------------|------------|--------------------------------------------------------------:|-------------|--------------------------------------------------------------:|-----|-------|
-| iPhone 11 Pro   | A13 Bionic | [1862](https://browser.geekbench.com/ml/v0/inference/407486)  | A13 Cor eML |   [942](https://browser.geekbench.com/ml/v0/inference/410611) |     |       |
-| HP Z600         | Xeon X5550 |       |             |       |     |       |
-| Workstation II  | E5-2696 v3 | [2277](https://browser.geekbench.com/ml/v0/inference/407539)  | RX 6600     |  [6601](https://browser.geekbench.com/ml/v0/inference/407554) |     |       |
-| Workstation III | i3 10110   | [1537](https://browser.geekbench.com/ml/v0/inference/407486)  | RTX 3070 Ti | [12687](https://browser.geekbench.com/ml/v0/inference/407487) |     |       |
-| HP 800 mini G4  | i5 8500T   |       | GTX 960            |      [3053](https://browser.geekbench.com/ml/v0/inference/410616) |     |       |
+| Device           | CPU             |                        Score                                 | GPU         | GFLOPS |                            Score                              | NPU         | TOPS |                         Score                                |
+|------------------|-----------------|-------------------------------------------------------------:|-------------|-------:|--------------------------------------------------------------:|-------------|-----:|-------------------------------------------------------------:|
+| iPhone 7         | A10 Fusion      |  [259](https://browser.geekbench.com/ml/v0/inference/410649) | A10 6C      |    249 |   [599](https://browser.geekbench.com/ml/v0/inference/410650) | Core ML     |    - |  [309](https://browser.geekbench.com/ml/v0/inference/410654) |
+| Samsung Note20 5G| Snapdragon 865+ |  [553](https://browser.geekbench.com/ml/v0/inference/410638) | Adreno 650  |   1029 |   [555](https://browser.geekbench.com/ml/v0/inference/410640) | Hexagon 698 |   15 |  [550](https://browser.geekbench.com/ml/v0/inference/410644) |
+| iPhone 11 Pro    | A13 Bionic      | [1862](https://browser.geekbench.com/ml/v0/inference/407486) | A13 Core ML |    630 |   [942](https://browser.geekbench.com/ml/v0/inference/410611) | ANE 8C      |    5 | [1807](https://browser.geekbench.com/ml/v0/inference/410628) |
+| HP 800 mini G4   | i5 8500T        | [1523](https://browser.geekbench.com/ml/v0/inference/410647) | GTX 960     |   2413 |  [3053](https://browser.geekbench.com/ml/v0/inference/410616) | UHD 630     |    - |  [804](https://browser.geekbench.com/ml/v0/inference/410652) |
+| iPad Pro 11 gen3 | Apple M1        | [3010](https://browser.geekbench.com/ml/v0/inference/410630) | M1 8C       |   2600 |  [3363](https://browser.geekbench.com/ml/v0/inference/410633) | M1 16C      |   11 | [6857](https://browser.geekbench.com/ml/v0/inference/410635) [*](https://browser.geekbench.com/ml/v0/inference/343440) |   
+| HP Z600          | Xeon X5550      |  [560](https://browser.geekbench.com/ml/v0/inference/410658) | RX 470      |   4940 |  [3815](https://browser.geekbench.com/ml/v0/inference/410713) | -           |      |  |
+| Workstation II   | E5-2696 v3      | [2277](https://browser.geekbench.com/ml/v0/inference/407539) | RX 6600     |   8928 |  [6601](https://browser.geekbench.com/ml/v0/inference/407554) |             |      |  |
+| Workstation III  | i3 10110        | [1537](https://browser.geekbench.com/ml/v0/inference/407486) | RTX 3070 Ti |  21750 | [12687](https://browser.geekbench.com/ml/v0/inference/407487) |             |      |  |
+
 
 
 | CPU/GPU                                                             | Cores |  MHz | Inference Score |
