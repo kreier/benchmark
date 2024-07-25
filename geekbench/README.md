@@ -84,9 +84,18 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 
 ## [Geekbench ML 0.6](https://www.geekbench.com/ml/) - 2023
 
-| CPU/GPU     | Cores |  MHz | Inference Score |
-|-------------|:-----:|-----:|----------------:|
-| [i3 10110](https://browser.geekbench.com/ml/v0/inference/407486)    |   4   | 4200 |            1537 |
+| Device          | CPU        |                        Score                                  | GPU         |                            Score                              | NPU | Score |
+|-----------------|------------|--------------------------------------------------------------:|-------------|--------------------------------------------------------------:|-----|-------|
+| iPhone 11 Pro   | A13 Bionic | [1862](https://browser.geekbench.com/ml/v0/inference/407486)  | A13 Cor eML |   [942](https://browser.geekbench.com/ml/v0/inference/410611) |     |       |
+| HP Z600         | Xeon X5550 |       |             |       |     |       |
+| Workstation II  | E5-2696 v3 | [2277](https://browser.geekbench.com/ml/v0/inference/407539)  | RX 6600     |  [6601](https://browser.geekbench.com/ml/v0/inference/407554) |     |       |
+| Workstation III | i3 10110   | [1537](https://browser.geekbench.com/ml/v0/inference/407486)  | RTX 3070 Ti | [12687](https://browser.geekbench.com/ml/v0/inference/407487) |     |       |
+| HP 800 mini G4  | i5 8500T   |       | GTX 960            |      [3053](https://browser.geekbench.com/ml/v0/inference/410616) |     |       |
+
+
+| CPU/GPU                                                             | Cores |  MHz | Inference Score |
+|---------------------------------------------------------------------|:-----:|-----:|----------------:|
+| [i3 10110](https://browser.geekbench.com/ml/v0/inference/407486)    |    4  | 4200 |            1537 |
 | [E5-2696 v3](https://browser.geekbench.com/ml/v0/inference/407539)  |   18  | 2300 |            2277 |
 | [RX 6600](https://browser.geekbench.com/ml/v0/inference/407554)     |   28  | 1626 |            6601 |
 | [RTX 3070 Ti](https://browser.geekbench.com/ml/v0/inference/407487) |  192  | 1580 |           12687 |
