@@ -14,6 +14,7 @@ This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark
 | 🟢 GTX 960       |   0.086  |   2.597  |   ---    |  0.551  |  0.918  |  2.649  |  2.652  |
 | 🔴 RX 470        |   0.306  |   1.218  |   4.749  |  0.686  |  0.985  |  1.920  |  1.914  |
 | 🔴 RX 6600       |   0.570  |   8.324  |  16.641  |  0.466  |  1.845  |  7.498  |  5.564  |
+| 🟢 T4            |   0.250  |   8.092  |   ---    |  1.939  |  6.326  |  5.257  |  5.279  |
 | 🟢 RTX 3070 Ti   |   0.366  |  22.572  |   ---    |  3.049  | 11.502  |  9.993  |  8.681  |
 
 Specification:
@@ -30,11 +31,18 @@ Specification:
 | 🟢 GTX 960       |        |  8 |  1266 |  1024 |    2.593 |  97.41 |  6.91 |
 | 🔴 RX 470        |   2.0  | 32 |  1226 |  2048 |    5.022 | 193.25 |  4.63 |
 | 🔴 RX 6600       |        | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
+| 🟢 T4            |   1.2  | 40 |  1590 |  2560 |    8.141 | 245.42 |  4.74 |
 | 🟢 RTX 3070 Ti   |   1.2  | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles in 2020. Above results are taken early 2024.
 
 ## FP32 single
+
+The performance of GPUs in the 2010 and 2020 years is optimized for FP32 single precision. Therefore the computing power in GFLOPS is often indicated for this size. FP64 or double precision is significantly slower. That is the size supercomputer in the 1970 to 1990 were measured in for scientifc calculations.
+
+With the boom of AI and transformer models in machine learning edge computing is done in INT8 which is significantly easier to implement and more power efficient. NPUs since 2015 in smartphones use this metric for their speed. Since 2024 Microsoft calls PCs with at least 40 TOPS an AI PC to better support Copilot.
+
+This is an old list of mine where I just collected data, but not measured:
 
 Let's assume this is possible max raw performance in long (32 bit or single) FP32
 
@@ -48,10 +56,12 @@ Let's assume this is possible max raw performance in long (32 bit or single) FP3
 - XBOX 360
 - Xbos one S 
 - XBox Series S 
-- XBox Series X 
+- [XBox Series X](https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S) 
 
-In many cases it can be simple calculated by the CPU architecture and the frequency. For example my dual [https://ark.intel.com/content/www/us/en/ark/products/37106/intel-xeon-processor-x5550-8m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html](Xeon X5550) with 2.67 GHz has a [https://en.wikipedia.org/wiki/FLOPS](multiplier of 8) (Nehalem EP) which results in 2.67 x 8 = 21.36 gflops.
+In many cases it can be simple calculated by the CPU architecture and the frequency. For example my dual [Xeon X5550](https://ark.intel.com/content/www/us/en/ark/products/37106/intel-xeon-processor-x5550-8m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html) with 2.67 GHz has a [multiplier of 8](https://en.wikipedia.org/wiki/FLOPS) (Nehalem EP) which results in 2.67 x 8 = 21.36 gflops.
 
 ## FP64 double
 
 - RX 470 	237 GFLOPS
+
+The old value for supercomputers. Refinement follows. And OpenCL might not be the best option. For example the T4 scores 5.2 TOPS in INT8 with OpenCL, but is actually capable of [130 TOPS with the 320 Turing Tensor cores](https://www.pny.com/en-eu/nvidia-t4).
