@@ -76,3 +76,9 @@ The Arduino port from Paul Stoffregen does not run on ESP8266 yet. But [ochrin](
 
 Still no match for the 2314 coremark score of the Teensy 4.0 (Cortex-M7 at 600 MHz compared to LX6 with 240 MHz). I can't make the ESP32 toolchain running.
 
+## Update 2024/08/09
+
+The [Raspberry Pico 2350](https://riscv.org/news/2024/08/raspberry-pi-launch-new-rp2350-microcontroller-and-pico-2-development-board-with-risc-v-support/) was just released. It has both a [Cortex M33](https://www.nxp.com/docs/en/application-note/AN13579.pdf) dualcore and a [Hazard3](https://github.com/Wren6991/Hazard3) dualcore. Their speed (for 150 MHz) should be 4.02 and 3.81 CoreMark/MHz, respectively.
+
+An update for the M1 CoreMark is needed. And some test results for above processors. Scheduled as TBD in Saigon for September 2024.
+
