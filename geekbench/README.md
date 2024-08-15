@@ -106,3 +106,18 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | [RX 6600](https://browser.geekbench.com/ml/v0/inference/407554)     |   28  | 1626 |            6601 |
 | [RTX 3070 Ti](https://browser.geekbench.com/ml/v0/inference/407487) |  192  | 1580 |           12687 |
 
+
+## [Geekbench AI](https://www.geekbench.com/ai/) - 2024
+
+| Device            | Backend                                                     | Single |  Half | Quantized |
+|-------------------|-------------------------------------------------------------|-------:|------:|----------:|
+| Samsung Note20 5G | [Snapdragon 865+](https://browser.geekbench.com/ai/v1/4221) |    306 |   304 |       603 |
+|                   | [GPU](https://browser.geekbench.com/ai/v1/6121)             |    286 |   422 |       433 |
+|                   | [NNAPI](https://browser.geekbench.com/ai/v1/6366)           |    227 |   184 |       962 |
+|                   | QNN            |        |       |           |
+| iPhone 11 Pro     | [A13 Bionic](https://browser.geekbench.com/ai/v1/6071)      |   1637 |  2725 |      2231 |
+|                   | [GPU](https://browser.geekbench.com/ai/v1/6156)             |    917 |  1109 |       684 |
+|                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6775)   |   1186 |  3535 |      1432 |
+| iPad Pro 11 v3    | [M1](https://browser.geekbench.com/ai/v1/4199)              |   2865 |  4329 |      3605 |
+|                   | [GPU](https://browser.geekbench.com/ai/v1/6133)             |   4416 |  4593 |      4231 |
+|                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6089)   |   2141 | 12426 |     12707 |
