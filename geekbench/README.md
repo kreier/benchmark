@@ -114,7 +114,7 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | Samsung Note20 5G | [Snapdragon 865+](https://browser.geekbench.com/ai/v1/4221) |    306 |   304 |       603 |
 |                   | [GPU](https://browser.geekbench.com/ai/v1/6121)             |    286 |   422 |       433 |
 |                   | [NNAPI](https://browser.geekbench.com/ai/v1/6366)           |    227 |   184 |       962 |
-|                   | QNN            |        |       |           |
+|                   | [QNN](https://browser.geekbench.com/ai/v1/9673)             |     56 |    56 |       136 |
 | iPhone 11 Pro     | [A13 Bionic](https://browser.geekbench.com/ai/v1/6071)      |   1637 |  2725 |      2231 |
 |                   | [GPU](https://browser.geekbench.com/ai/v1/6156)             |    917 |  1109 |       684 |
 |                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6775)   |   1186 |  3535 |      1432 |
