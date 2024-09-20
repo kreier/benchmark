@@ -4,14 +4,15 @@ This is from this project https://github.com/ProjectPhysX/FluidX3D which got som
 
 Colors: 🔴 AMD, 🔵 Intel, 🟢 Nvidia, ⚪ Apple, 🟡 ARM
 
-|             Device             | FP32 [GFlops/s] | Mem [GB] | BW [GB/s] | FP32/FP32 [MLUPs/s] |
-|:-------------------------------|----------------:|---------:|----------:|--------------------:|
-| 🟡 Raspberry Pi 3              |                 |          |           |                     |
-| 🔵 UHD Graphics 620 (i5 7300U) |             422 |        6 |        10 |                  72 |
-| 🔵 UHD Graphics 630 (i5 8500T) |             422 |       13 |        23 |                 150 |
-| 🔴 RX 470                      |           5,022 |        4 |       152 |                1006 |
-| 🔴 RX 6600                     |           7,326 |        8 |       141 |                 922 |
-| 🟢 RTX 3070 Ti                 |          21,750 |        8 |       529 |                3465 |
+|             Device              | FP32 [GFlops/s] | Mem [GB] | BW [GB/s] | FP32/FP32 [MLUPs/s] |
+|:--------------------------------|----------------:|---------:|----------:|--------------------:|
+| 🟡 Raspberry Pi 3               |                 |          |           |                     |
+| 🔵 UHD Graphics 620 (i5 7300U)  |             422 |        6 |        10 |                  72 |
+| 🔵 UHD Graphics 630 (i5 8500T)  |             422 |       13 |        23 |                 150 |
+| 🔵 UHD Graphics 770 (i7 13700T) |             819 |        4 |        18 |                 118 |
+| 🔴 RX 470                       |           5,022 |        4 |       152 |                1006 |
+| 🔴 RX 6600                      |           7,326 |        8 |       141 |                 922 |
+| 🟢 RTX 3070 Ti                  |          21,750 |        8 |       529 |                3465 |
 
 A run looks like this
 
