@@ -121,3 +121,6 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 | iPad Pro 11 v3    | [M1](https://browser.geekbench.com/ai/v1/4199)              |   2865 |  4329 |      3605 |
 |                   | [GPU](https://browser.geekbench.com/ai/v1/6133)             |   4416 |  4593 |      4231 |
 |                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6089)   |   2141 | 12426 |     12707 |
+| HP Mini 400 G9    | [13700T](https://browser.geekbench.com/ai/v1/59603)         |   2086 |   860 |      2607 |
+|                   | [GPU DirektML](https://browser.geekbench.com/ai/v1/59616)   |   1553 |  1625 |      1035 |
+|                   | [GPU OpenVINO](https://browser.geekbench.com/ai/v1/59621)   |   2445 |  3590 |      5524 |
