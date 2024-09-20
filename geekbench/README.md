@@ -122,5 +122,6 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 |                   | [GPU](https://browser.geekbench.com/ai/v1/6133)             |   4416 |  4593 |      4231 |
 |                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6089)   |   2141 | 12426 |     12707 |
 | HP Mini 400 G9    | [13700T](https://browser.geekbench.com/ai/v1/59603)         |   2086 |   860 |      2607 |
+|                   | [CPU OpenVINO](https://browser.geekbench.com/ai/v1/59686)   |   3207 |  3284 |      7408 |
 |                   | [GPU DirektML](https://browser.geekbench.com/ai/v1/59616)   |   1553 |  1625 |      1035 |
 |                   | [GPU OpenVINO](https://browser.geekbench.com/ai/v1/59621)   |   2445 |  3590 |      5524 |
