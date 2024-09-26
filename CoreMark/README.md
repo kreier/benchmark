@@ -42,6 +42,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | i7-4960HQ               |    21326 |     | 3800 |     5.61 |
 | i7-6820HQ               |    23779 |     | 3660 |     6.61 |
 | i3-10100                |    30532 |     | 4220 |     7.23 |
+| i7-13700T               |    39082 |     | 4600 |     8.49 |
 
 ## Multithread results
 
@@ -58,9 +59,10 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | i7-6820HQ 8 threads         |   118862 | 3660 |     4.13 |
 | Xeon X5550 16 threads       |   124634 | 3060 |     2.55 |
 | i3-10100  8 threads         |   167829 | 4070 |     4.95 |
+| i7-13700T 16 threads        |   319893 | 2650 |     7.54 |
+| i7-13700T 24 threads        |   390614 | 2550 |     6.38 |
 
-
-Bluepill STM32F103C8T6 only with ST-Link V2 programmer.
+Bluepill STM32F103C8T6 can only be programmed with the ST-Link V2 programmer.
 
 Blackpill STM32F401CCU6 and STM32F411CEU6 working with:
 - Correct board and board part number
