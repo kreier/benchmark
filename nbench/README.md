@@ -20,10 +20,11 @@ mk@mbp:~/nbench-byte-2.2.3 $ make
 mk@mbp:~/nbench-byte-2.2.3 $ ./nbench
 ``` 
 
+## Error messages under macOS - and fix
 
-## Error messages under macOS
+If you try to run the 5 steps under macOS the `make` command will throw the error `ld: library not found for -lcrt0.o` since static linking is not supported in macOS. Edit the file [Makefile](https://github.com/kreier/benchmark/blob/main/nbench/nbench-byte-2.2.3/Makefile) in the nbench folder with `nano Makefile`. Go down to line 25 and remove `-s --static`. Save with `Ctrl+O` and exit with `Ctrl+X`. 
 
-If you try to run the 5 steps under macOS the `make` command will throw the error `ld: library not found for -lcrt0.o`. The solution ... I have to find.
+The new error is now from sysspec.c that 'malloc.h' is not found. This is because a condition in [sysspec.h](https://github.com/kreier/benchmark/blob/main/nbench/nbench-byte-2.2.3/sysspec.h) from line36 to 38 is wrong interpreted. Just comment these three lines with some `//` in front of them. After that the `make` compiles the working nbench program.
 
 ## Data collection 2005 - 2020:
 
@@ -132,5 +133,3 @@ Sorted by Integer index (in reference to K6/233) since its most relevant to user
 |Intel Core i7 6700HQ @ 2600 MHz                                    |63.682      |45.732       |68.159              |211.2  |122.9|-         |
 |Intel Core i7 4710HQ @ 2500 MHz                                    |50.423      |46.117       |70.039              |192    |126.3|-         |
 |__CPU__                                    |__Memory index__|__Integer index__|__Floating Point index__|__INTEGER__|__FLOAT__|__SuperPI 1M__|
-
-Xeon X5550 1M 15.112s
