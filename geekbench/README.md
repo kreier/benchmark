@@ -109,6 +109,8 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 
 ## [Geekbench AI](https://www.geekbench.com/ai/) - 2024
 
+Single precision is **32 bit**, Half precision is **16 bit** and Quantized is **8 bit** (float or int?)
+
 | Device            | Backend                                                     | Single |  Half | Quantized |
 |-------------------|-------------------------------------------------------------|-------:|------:|----------:|
 | Samsung Note20 5G | [Snapdragon 865+](https://browser.geekbench.com/ai/v1/4221) |    306 |   304 |       603 |
@@ -125,3 +127,6 @@ Geekbench 2.0 was [released on March 6th, 2007](https://www.geekbench.com/blog/2
 |                   | [CPU OpenVINO](https://browser.geekbench.com/ai/v1/59686)   |   3207 |  3284 |      7408 |
 |                   | [GPU DirektML](https://browser.geekbench.com/ai/v1/59616)   |   1553 |  1625 |      1035 |
 |                   | [GPU OpenVINO](https://browser.geekbench.com/ai/v1/59621)   |   2445 |  3590 |      5524 |
+| Xigmatek Gemini   | [10100](https://browser.geekbench.com/ai/v1/69749)          |   1435 |   799 |      1643 |
+|                   | [CPU OpenVINO](https://browser.geekbench.com/ai/v1/69759)   |   2331 |  2329 |      3715 |
+| (3070 Ti)         | [GPU DirektML](https://browser.geekbench.com/ai/v1/69729)   |  16458 | 24806 |     10928 |
