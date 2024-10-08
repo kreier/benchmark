@@ -61,13 +61,19 @@ The benchmarks drove the innovation in browser development significantly, but be
 
 With image classification using GPUs in AlexNet 2012 people saw the potential of GPUs for machine learning. And in 2022 the whole world payed attention with ChatGPT. The performance today is comparable with Supercomputers of the late 90s of the last century:
 
-<img src="gpu/GFLOPS_logarithm.png" width="49%"> <img src="gpu/GFLOPS_time.png" width="49%">
+![GFLOPS logarithmic](gpu/GFLOPS_logarithm.png)
+
+![GLFOPS over time](gpu/GFLOPS_time.png)
 
 A limiting factor for these LLMs is often the memory speed, not just processing power in GFLOPS. Here is how some of them compare to other ways of information transfer like Ethernet, DDR3 and USB4.
 
-<img src="gpu/comparison_speed_linear.png" width="49%> <img src="gpu/comparison_speed_logarithmic.png" width="49%">
+![Comparison speed linear](gpu/comparison_speed_linear.png)
 
 The speed differences are so vast I had to include a logarithmic graph. This visualizes the magnitudes of differences between the solutions.
+
+![Comparison speed logarithmic](gpu/comparison_speed_logarithmic.png)
+
+****
 
 ## SuperPi 1M
 
