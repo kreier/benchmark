@@ -28,11 +28,11 @@ Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2
 
 ![Results 2020](mix/coremark2020.png)
 
-The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 23770 for an i7-6820HQ or 124624 for a 16-thread execution on a dual Xeon X5550 machine. That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 3600 MHz in a Quadcore i7. Putting this into relationship narrows the differences:
+The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 39082 for an i7-13700T or 390614 in a 24-thread execution. That's 5580x or 55802x faster, almost 5 magnitudes! That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 4600 MHz in a Quadcore i7, another 280x. Putting these two values (CoreMark and Frequency) into relationship narrows the differences:
 
 ![Results 2020](mix/coremark-mhz.png)
 
-Still its comparing 8bit CPUs to 32bit ARM and 64bit x86 ones with long pipelines, many registers and the like. The difference in simple IPC is seen.
+It is still comparing an old 8bit CPUs with a modern 32bit ARM and 64bit x86 CPUs, with long pipelines, many registers and large caches. The difference in simple IPC is seen.
 
 ## [embench](embench) - 2019 for RISC-V comparison
 
@@ -72,8 +72,6 @@ A limiting factor for these LLMs is often the memory speed, not just processing 
 The speed differences are so vast I had to include a logarithmic graph. This visualizes the magnitudes of differences between the solutions.
 
 ![Comparison speed logarithmic](gpu/comparison_speed_logarithmic.png)
-
-****
 
 ## SuperPi 1M
 
