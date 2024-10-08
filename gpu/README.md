@@ -10,6 +10,10 @@ In many cases the limiting factor for the performance of an LLM is not the sheer
 
 The difference spans several magnitudes, so I included a logarithmic graph to the right. Even DDR5 with dual channel is no match for GDDR6X RAM or even HBM (high bandwidth memory).
 
+And one can see how much computing power today is available to the average consumer if you compare it to the processing power of supercomputers of the last millenia:
+
+<img src="GFLOPS_logarithm.png" width="49%"> <img src="GFLOPS_time.png" width="49%">
+
 
 Below some text from 2020 when I started to collect some information:
 
