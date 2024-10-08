@@ -4,6 +4,12 @@ On the way to a [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_
 
 ![GFLOPS of some GPUs](./gpu2024.png)
 
+In many cases the limiting factor for the performance of an LLM is not the sheer processing power of the CPU or GPU, but the bandwidth to access the memory. And the whole model has to fit into the RAM! This limits the size on many consumer GPUs, or makes it expensive to run these models. Fast memory is expensive. I compared the speed of a few links to memory from DDR3 over Ethernet and USB4 with the memory bus of some of my graphics cards:
+
+<img src="comparison_speed_linear.png" width="49%"> <img src="comparison_speed_logarithmic.png" width="49%">
+
+The difference spans several magnitudes, so I included a logarithmic graph to the right. Even DDR5 with dual channel is no match for GDDR6X RAM or even HBM (high bandwidth memory).
+
 
 Below some text from 2020 when I started to collect some information:
 
