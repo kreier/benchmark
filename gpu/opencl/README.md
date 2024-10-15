@@ -17,6 +17,7 @@ This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark
 | 🔴 RX 470        |   0.306  |   1.218  |   4.749  |  0.686  |  0.985  |  1.920  |  1.914  |
 | 🔴 RX 6600       |   0.570  |   8.324  |  16.641  |  0.466  |  1.845  |  7.498  |  5.564  |
 | 🟢 T4            |   0.250  |   8.092  |   ---    |  1.939  |  6.326  |  5.257  |  5.279  |
+| 🟢 RTX 3060 Ti   |   0.287  |  17.748  |  18.291  |  2.799  |  9.228  |  8.062  |  6.844  |
 | 🟢 RTX 3070 Ti   |   0.368  |  22.572  |  23.276  |  3.049  | 11.721  | 10.198  |  8.681  |
 
 Specification:
@@ -36,6 +37,7 @@ Specification:
 | 🔴 RX 470        |   2.0  | 32 |  1226 |  2048 |    5.022 | 193.25 |  4.63 |
 | 🔴 RX 6600       |        | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
 | 🟢 T4            |   1.2  | 40 |  1590 |  2560 |    8.141 | 245.42 |  4.74 |
+| 🟢 RTX 3060 Ti   |   1.2  | 38 |  1665 |  4864 |   16.197 | 423.68 |  9.83 |
 | 🟢 RTX 3070 Ti   |   1.2  | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles in 2020. Above results are taken early 2024.
