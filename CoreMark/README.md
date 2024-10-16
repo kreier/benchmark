@@ -16,7 +16,9 @@ make XCFLAGS="-g -DMULTITHREAD=24 -DUSE_FORK=1"
 cat run1.log
 ```
 
-![Results 2020](../mix/coremark2020.png)
+One can easily see how the score scales with the frequency over this wide range.
+
+![Results 2024](../mix/coremark2024.png)
 
 In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it [to Arduino](https://github.com/PaulStoffregen/CoreMark). It runs out of the box on an ESP32. Multicore optimisation is not enabled yet. In ubuntu it works with
 

@@ -24,9 +24,9 @@ The data gives some inside to the architechture of the CPU and the speed of the 
 
 ## [CoreMark](CoreMark) - 2009 for embedded systems
 
-Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2009 for embedded system it is too large for an Arduino Uno, but runs from an Arduino Mega 2560 onwards to multithreaded Octacore Xeon processor. The results show that it scales with frequency and improved IPC.
+Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2009 for embedded system it is too large for an Arduino Uno, but runs from an Arduino Mega 2560 onwards to multithreaded Octacore Xeon processor. The results show that it scales mostly with frequency and a little with improved IPC.
 
-![Results 2020](mix/coremark2020.png)
+![Results 2020](mix/coremark2024.png)
 
 The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 39082 for an i7-13700T or 390614 in a 24-thread execution. That's 5580x or 55802x faster, almost 5 magnitudes! That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 4600 MHz in a Quadcore i7, another 280x. Putting these two values (CoreMark and Frequency) into relationship narrows the differences:
 
