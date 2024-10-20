@@ -26,7 +26,9 @@ I tested some of my systems:
 | HP 800 mini G4           | i5 8500T   |   6/6 |          54 |        258 | UHD 630       | – <sup>2</sup> |
 | Macbook Air 2022         | M1         |   8/8 |         111 |        465 | 8CU 16GB      |  1167 |
 | Workstation II           | E5 2696 v3 | 18/36 |          51 |        530 | RX 6600       |       |
+| HP Elitedesk 800 G4 TWR  | i7 8700    |  6/12 |          70 |        417 | RTX 3060 Ti   |  8709 |
 | Xigmatek Gemini          | i3 10100   |   4/8 |          61 |        274 | RTX 3070 Ti   | 10263 |
+| HP Pro Mini 800 G9       | i7 13700T  | 16/24 |         104 |        602 | UHD 770       | – <sup>2</sup> |
 
 Notes:
 1. Requires CPU with [AVX2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#Advanced_Vector_Extensions_2) support, also known as __Haswell New Instructions__
