@@ -1,20 +1,21 @@
-﻿Board,CoreMark,MHz,Mark/MHz,measured,notes,ISA,CPU,bit,note2
-Arduino MEGA 2560,7,16,0.44,2020,,AVRxt,ATmega2560,8,
-STM32F103C8T6 128k,81,72,1.13,2020,,ARMv7-M,Cortex-M3,32,
-STM32F401CCU6 256k,150,84,1.79,2020,,ARMv7-M,Cortex-M4,32,+ FPU
-STM32F411CEU6 512k,172,100,1.72,2020,,ARMv7-M,Cortex-M4,32,+ FPU
-Raspberry Pico 2040,197,133,1.48,2023,with 200 MHz 297 CoreMark,ARMv6-M,Cortex-M0+,32,
-ESP32-C3 RISC-V,304,160,1.9,2023,should be 2.55,RISC-V,,32,
-T-Koala ESP32,351,160,2.19,2020,,,,32,
-T8 ESP32-S2 st7789,361,160,2.26,2023,,,,32,
-DOIT Devkit ESP32,375,160,2.34,2023,,,,32,
-ESP32-S3 Devkit,451,240,1.88,2023,,,,32,
-Raspberry Pi Model B v2,1574,700,2.25,2020,,ARMv6,BCM2835,32,
-Raspberry Pi 3 Model B,3800,1200,3.17,2020,,ARMv8,Cortex A53,64,
-Amlogic S905W tanix tx3,3913,1200,3.26,2020,,ARMv8-A,Cortex A53,64,
-Xeon X5550,13643,3060,4.46,2020,"Nehalem, Core Gen 1",x86-64,Gainestown,64,
-i5-3320M,21245,3300,6.44,2020,Core Gen 3,x86-64,Ivy Bridge,64,
-i7-6820HQ,23779,3660,6.5,2020,Core Gen 6,x86-64,Skylake-H,64,
-i3-10100,30532,4220,7.24,2021,Core Gen 10,x86-64,Comet Lake-S,64,
-i7-12700T,,,,2024,Core Gen 12,x86-64,Alder Lake-S,64,
-M1,31718,3200,9.91,2023,plus undocumented AMX instr.,ARMv8 SIMD/NEON,Firestorm,64,
+﻿Board,Mark/MHz,CoreMark,MHz,build,measured,notes,ISA,CPU,bit,note2
+Arduino MEGA 2560,0.44,7,16,1997,2020,,AVRxt,ATmega2560,8,
+STM32F103C8T6 128k,1.13,81,72,2007,2020,,ARMv7-M,Cortex-M3,32,
+STM32F401CCU6 256k,1.79,150,84,2013,2020,,ARMv7-M,Cortex-M4,32,+ FPU
+STM32F411CEU6 512k,1.72,172,100,2013,2020,,ARMv7-M,Cortex-M4,32,+ FPU
+Raspberry Pico 2040,1.48,197,133,2021,2023,with 200 MHz 297 CoreMark,ARMv6-M,Cortex-M0+,32,
+ESP32-C3 RISC-V,1.90,304,160,2016,2023,should be 2.55,RV32IMV,RISC-V,32,https://www.espressif.com/sites/default/files/documentation/esp32-c3_technical_reference_manual_en.pdf#riscvcpu
+T-Koala ESP32,2.19,351,160,2016,2020,,Xtensa,LX6,32,
+T8 ESP32-S2 st7789,2.26,361,160,2019,2023,,Xtensa,LX7,32,
+DOIT Devkit ESP32,2.34,375,160,2016,2023,,Xtensa,LX6,32,
+ESP32-S3 Devkit,1.88,451,240,2020,2023,,Xtensa,LX7,32,+ FPU
+Raspberry Pi Model B v2,2.25,1574,700,2012,2020,,ARMv6,BCM2835,32,
+Raspberry Pi 3 Model B,3.17,3800,1200,2016,2020,,ARMv8,Cortex A53,64,
+Amlogic S905W tanix tx3,3.26,3913,1200,2015,2020,,ARMv8-A,Cortex A53,64,
+Xeon X5550,4.46,13643,3060,2009,2020,"Core Gen 1, Nehalem 45nm",x86-64,Gainestown,64,
+Pentium G2030,6.36,19086,3000,2013,2024,"Core Gen 3, Ivy Bridge 22nm",x86-64,Ivy Bridge,64,
+i5-3320M,6.44,21245,3300,2012,2020,"Core Gen 3, Ivy Bridge 22nm",x86-64,Ivy Bridge,64,
+i7-6820HQ,6.50,23779,3660,2015,2020,"Core Gen 6, Skylake 14nm",x86-64,Skylake-H,64,
+i3-10100,7.24,30532,4220,2020,2021,"Core Gen 10, Comet Lake 14 nm",x86-64,Comet Lake-S,64,
+i7-13700T,8.50,39082,4600,2023,2024,Core Gen 13,x86-64,Raptor Lake-S,64,
+M1,9.91,31718,3200,2020,2023,plus undocumented AMX instr.,ARMv8 SIMD/NEON,Firestorm,64,
