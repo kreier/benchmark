@@ -1,6 +1,6 @@
 # GPU performance in TFLOPS and TIOPs
 
-This test is taken from https://github.com/ProjectPhysX/OpenCL-Benchmark 
+This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https://github.com/ProjectPhysX/OpenCL-Benchmark). If you get an error message about the missing `msvcp140.dll` you might have to install the [latest Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) first (with [permalink](https://aka.ms/vs/17/release/vc_redist.x64.exe)).
 
 | Device           | FP64<br>double | FP32<br>single | FP16<br>half | INT64<br>long | INT32<br>int | INT16<br>short | INT8<br>char |
 |------------------|:--------:|---------:|---------:|:-------:|:-------:|:-------:|:-------:|
