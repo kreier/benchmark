@@ -8,6 +8,7 @@ This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https
 | i5 3320M         |   0.000  |   0.000  |   ---    |  0.003  |  0.016  |  0.032  |  0.018  |
 | E3-1226 v3       |   0.047  |   0.046  |   ---    |  0.013  |  0.021  |  0.005  |  0.011  |
 | i3-10100         |   0.119  |   0.138  |   ---    |  0.041  |  0.053  |  0.197  |  0.217  |
+| i7-8700          |   0.201  |   0.197  |   ---    |  0.059  |  0.076  |  0.279  |  0.300  |
 | i7-13700T        |   0.272  |   0.220  |   ---    |  0.071  |  0.127  |  0.397  |  0.339  |
 | 🔵 HD Gen11      |    ---   |   0.182  |   0.333  |  0.008  |  0.030  |  0.361  |  0.063  |
 | 🔵 UHD 620       |   0.097  |   0.365  |   0.659  |  0.013  |  0.115  |  0.642  |  0.129  |
@@ -30,6 +31,7 @@ Specification:
 | i5 3320M         |   1.2  |  4 |  2600 |     2 |    0.166 |  27.65 |  6.93 |
 | E3-1226 v3       |   1.2  |  4 |  3300 |     2 |    0.211 |  22.11 |  8.73 |
 | i3-10100         |   3.0  |  8 |  3600 |     4 |    0.461 |  35.49 | 13.66 |
+| i7-8700          |   3.0  | 12 |  3200 |     6 |    0.614 |  34.66 | 13.03 |
 | i7-13700T        |   3.0  | 24 |  2400 |    16 |    0.000 |  23.55 | 11.39 |
 | 🔵 HD Gen 11     |   1.2  | 16 |   750 |   128 |    0.192 |  16.13 |  6.26 |
 | 🔵 UHD 620       |   3.0  | 24 |  1100 |   192 |    0.422 |  14.47 |  6.28 |
@@ -45,6 +47,80 @@ Specification:
 | 🟢 RTX 3070 Ti   |   1.2  | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
 I need more time to find software and do the measurements, but I was inpired by the comparison of the graphics performance of my PS4 Pro to other consoles in 2020. Above results are taken early 2024.
+
+## Install extra drivers
+
+The instructions are printed out if no CPU or GPU for OpenCL is found. They are in the [opencl.hpp](https://github.com/ProjectPhysX/OpenCL-Benchmark/blob/master/src/opencl.hpp) file.
+
+### AMD CPU
+
+AMD GPU Drivers, which contain the OpenCL Runtime 
+
+``` sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev
+mkdir -p ~/amdgpu
+wget -P ~/amdgpu https://repo.radeon.com/amdgpu-install/6.1.3/ubuntu/jammy/amdgpu-install_6.1.60103-1_all.deb
+sudo apt install -y ~/amdgpu/amdgpu-install*.deb
+sudo amdgpu-install -y --usecase=graphics,rocm,opencl --opencl=rocr
+sudo usermod -a -G render,video $(whoami)
+rm -r ~/amdgpu
+sudo shutdown -r now
+```
+
+### Intel GPU
+
+Intel GPU Drivers are already installed, only the OpenCL Runtime is needed 
+
+``` sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev intel-opencl-icd
+sudo usermod -a -G render $(whoami)
+sudo shutdown -r now
+```
+
+### Nvidia GPU
+
+Nvidia GPU Drivers, which contain the OpenCL Runtime 
+
+``` sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev nvidia-driver-550
+sudo shutdown -r now
+```
+
+### Intel and AMD CPU Runtime for OpenCL
+
+CPU Option 1: Intel CPU Runtime for OpenCL (works for both AMD/Intel CPUs)
+
+``` sh
+export OCLV="2024.18.6.0.02_rel"
+export TBBV="2021.13.0"
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev
+sudo mkdir -p ~/cpurt /opt/intel/oclcpuexp_${OCLV} /etc/OpenCL/vendors /etc/ld.so.conf.d
+sudo wget -P ~/cpurt https://github.com/intel/llvm/releases/download/2024-WW25/oclcpuexp-${OCLV}.tar.gz
+sudo wget -P ~/cpurt https://github.com/oneapi-src/oneTBB/releases/download/v${TBBV}/oneapi-tbb-${TBBV}-lin.tgz
+sudo tar -zxvf ~/cpurt/oclcpuexp-${OCLV}.tar.gz -C /opt/intel/oclcpuexp_${OCLV}
+sudo tar -zxvf ~/cpurt/oneapi-tbb-${TBBV}-lin.tgz -C /opt/intel
+echo /opt/intel/oclcpuexp_${OCLV}/x64/libintelocl.so | sudo tee /etc/OpenCL/vendors/intel_expcpu.icd
+echo /opt/intel/oclcpuexp_${OCLV}/x64 | sudo tee /etc/ld.so.conf.d/libintelopenclexp.conf
+sudo ln -sf /opt/intel/oneapi-tbb-${TBBV}/lib/intel64/gcc4.8/libtbb.so /opt/intel/oclcpuexp_${OCLV}/x64
+sudo ln -sf /opt/intel/oneapi-tbb-${TBBV}/lib/intel64/gcc4.8/libtbbmalloc.so /opt/intel/oclcpuexp_${OCLV}/x64
+sudo ln -sf /opt/intel/oneapi-tbb-${TBBV}/lib/intel64/gcc4.8/libtbb.so.12 /opt/intel/oclcpuexp_${OCLV}/x64
+sudo ln -sf /opt/intel/oneapi-tbb-${TBBV}/lib/intel64/gcc4.8/libtbbmalloc.so.2 /opt/intel/oclcpuexp_${OCLV}/x64
+sudo ldconfig -f /etc/ld.so.conf.d/libintelopenclexp.conf
+sudo rm -r ~/cpurt
+```
+
+### CPU Option 2: PoCL
+
+``` sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev pocl-opencl-icd
+```
+
+
 
 ## FP32 single
 
