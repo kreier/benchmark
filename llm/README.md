@@ -10,11 +10,13 @@ Interestingly the 1.3B model llama3.2:1b actually consumes 2.7 GB for the 100% G
 
 To disable the use of the GPU when generating the answer I set `/set parameter num_gpu 0`. You see the results of `tokens/s` below.
 
-| CPU GPU     | llama3.2:1b | llama3.1:8b | gemma2:9b |
-|-------------|-------------|-------------|-----------|
-| i7-6820HQ   | 14.7        | 3.2         |           |
-| i3-10100    | 18.2        | 5.4         |           |
-| i7-8700     | 18.1        | 5.8         | 4.4       |
-| M1000M      | 16.8        | 3.3         |           |
-| RTX 3060 Ti | 129.5       | 60.2        | 17.3      |
-| RTX 3070 Ti | 157.5       | 78.7        |           |
+| CPU GPU     | llama3.2:1b | llama3.1:8b | gemma2:9b | qwen2.5:7b |
+|-------------|-------------|-------------|-----------|------------|
+| i7-6820HQ   | 14.7        | 3.2         |           |            |
+| i3-10100    | 18.2        | 5.4         | 3.8       | 6.1        |
+| i7-8700     | 18.1        | 5.8         | 4.4       |            |
+| M1000M      | 16.8        | 3.3         |           |            |
+| RTX 3060 Ti | 129.5       | 60.2        | 17.3      |            |
+| RTX 3070 Ti | 157.5       | 78.7        | 15.9      | 77.9       |
+
+![token per second for some example machines](token_per_second_llama3.png)
