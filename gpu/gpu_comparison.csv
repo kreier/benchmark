@@ -1,0 +1,15 @@
+﻿model,detail,cores,pixel shader,vertex shader,TMU,ROPs,Memory,Bus Width,,GFLOPS FP32,GB/s,CU,notes
+Playstation 2 65nm,EE-GS-65nm,,16,2,8,16,4 MB,2560,,6.2,,,
+Playstation 3 28nm,RSX-28nm,,24,8,24,8,256 MB,128,GDDR3,230,21,,
+Playstation 4 Slim,Liverpool 16nm,1152,,,72,32,8192 MB,256,GDDR5,1834,176,,
+Playstation 4 Pro,Neo ,2304,,,144,32,8192 MB,256,GDDR5,4200,218,,
+Playstation 5,Oberon,2304,,,144,62,16192 MB,256,GDDR6,10290,448,36,
+AMD RX 470,Ellesmere,2048,,,128,32,4096 MB,256,GDDR5,4940,211,,
+Xbos 360 65nm,Xenos Jasper,240,,,16,8,512 MB,128,GDDR3,240,23,,
+Xbox One S,Durango 2,768,,,48,16,8192 MB,256,DDR3,1400,68,,
+Xbox Series S,Lockhard,1280,,,80,32,8192 MB,128,GDDR6,4006,224,20,
+Xbox Series X,Scarlet,3328,,,208,64,10000 MB,320,GDDR6,12150,560,52,
+GeForce GTX 960,GM206,1024,,,64,32,2048 MB,128,GDDR5,2413,112,,
+Apple M1,,1024,,8,128,,8192 MB,,,2600,70,16,
+Apple M1 Pro,,2048,,16,,,32000 MB,256,LPDDR5,5200,200,,164 GT/s 82 Gpixel/s
+Apple M1 Max,,4096,,32,,,64000 MB,512,LPDDR5,10400,400,32,
