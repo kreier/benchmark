@@ -32,11 +32,11 @@ Specification:
 | E3-1226 v3       |   1.2  |  4 |  3300 |     2 |    0.211 |  22.11 |  8.73 |
 | i3-10100         |   3.0  |  8 |  3600 |     4 |    0.461 |  35.49 | 13.66 |
 | i7-8700          |   3.0  | 12 |  3200 |     6 |    0.614 |  34.66 | 13.03 |
-| i7-13700T        |   3.0  | 24 |  2400 |    16 |    0.000 |  23.55 | 11.39 |
+| i7-13700T        |   3.0  | 24 |  2400 |    16 |    0.000 |  42.55 | 18.39 |
 | 🔵 HD Gen 11     |   1.2  | 16 |   750 |   128 |    0.192 |  16.13 |  6.26 |
 | 🔵 UHD 620       |   3.0  | 24 |  1100 |   192 |    0.422 |  14.47 |  6.28 |
 | 🔵 UHD 630       |   3.0  | 24 |  1100 |   192 |    0.422 |  29.89 | 15.30 |
-| 🔵 UHD 770       |   3.0  | 32 |  1600 |   256 |    0.819 |  22.85 | 11.08 |
+| 🔵 UHD 770       |   3.0  | 32 |  1600 |   256 |    0.819 |  45.25 | 18.18 |
 | 🟢 Quadro M1000M |   1.2  |  2 |  1071 |   512 |    1.097 |  71.74 |  6.35 |
 | ⚪ M1 GPU 8CU    |   1.2  |  8 |  1000 |  1024 |    2.048 |  65.54 | 18.28 |
 | 🟢 GTX 960       |        |  8 |  1266 |  1024 |    2.593 |  97.41 |  6.91 |
@@ -52,7 +52,7 @@ I need more time to find software and do the measurements, but I was inpired by 
 
 The instructions are printed out if no CPU or GPU for OpenCL is found. They are in the [opencl.hpp](https://github.com/ProjectPhysX/OpenCL-Benchmark/blob/master/src/opencl.hpp) file.
 
-### AMD CPU
+### AMD GPU
 
 AMD GPU Drivers, which contain the OpenCL Runtime 
 
