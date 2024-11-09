@@ -39,3 +39,13 @@ Of course larger models are more accurate. Meta measured this metric in serveral
 ![accuracy](accuracy_llms.png)
 
 With my hardware I try to fit my models in 8GB and probably will use 7b models. Or the new `llama3.2vision:11b`. I should have gone for the 12GB 3060!
+
+## Apple Silicon
+
+Since 2023 I am thinking about getting a M1 Pro or M2 Max processor with a lot of RAM to run LLMs on these machines. Looks like I'm not the only one, see [this conversation on llama.cpp](https://github.com/ggerganov/llama.cpp/discussions/4167) by ggerganov. He also included a graph for PP (prompt processing) and TG (text generation). Let's compare the values to my results for TG on the Nvidia GPUs on llama3.1:8b (probably comparable to LLaMa 7B):
+
+![graph PP and TG](text_generation_vs_bandwidth_apple_silicon.png)
+
+The M4 Pro with 275 MBs has already been updated, and it allignes with my estimate of 50 t/s for Q4_0 TG. That's about the speed of my RTX 3060 Ti. Following the graph I created above I would reach 20 t/s for models of 20 GB size (40b in Q4_0) and probably only 9 t/s for a larger 70b Q4_0 model while utilizing 43 GB RAM. Not sure if this fit into  a possible 48 GB option (+ $400) for the smallest M4 Pro 12/16. More RAM requires the largest M4 Max (+ $1100) but starts with 48GB RAM and goes up to 128 GB (+ $1000). And that's still not large enough for a 405b model, even quantized to Q4_0 you can estimate some 200 GB.
+
+Good that there is the cloud. Since you won't run it 24/7. Go with smaller models to play at home!
