@@ -126,4 +126,17 @@ In many cases it can be simple calculated by the CPU architecture and the freque
 
 ## FP64 double precision
 
-- RX 470 	237 GFLOPS
+This is a tricky one. In the 20th century this was the unit for scientific calculations and models, used for weather forecast or earth simulations. I guess it originates with the FE (finite elements) approach to model nature. The more parameters and details in the model, the more granularity you get and the better it represents reality. The flipside: it needs exponentially more computing power. That's why the number of FLoating Point OPerations per Second (FLOPS) became a unit of measurement for the speed of a Supercomputer. And the precision used as double precision with fp64 was merely implied.
+
+Having less bits per element saves storage, let's transport more data per cycle and is also faster to compute. The very compute units are getting smaller too. And in the early 2000s we started to use neural networks. Initially the nodes and parameters were stored in fp64, but the precision was not needed. The move to fp32 was swift, twice the data can be analyzed, hardware simplified. Google created the first NPU (Neural Processing Units) and realized that fp32 is still too much. But fp16 does not have the needed orders of magnitude. Realizing that magnitude (the exponent in floating point numbers) is more important than the significant digits (mantisse) a new format for floating points was introduced: bf16 (brain float) that uses the same number of bits for the exponent like bf32, but reduces the precision to fit into just 16 bit. Again halved.
+
+Then came the transformer models, and the Generative Pretrained Transfomers (GPT) from 1.0, 2.0, 3.0 and a special edition of 3.5 in form of ChatGPT. And again it became clear: the more parameters, the better the model. Yet another observation was made: The precision could be further reduced! The original bf16 or fp16 weights cold be reduced to int8 or less, maybe int4? The quantizied models from bf16 to int8 were now 4x smaller and fit in some consumer graphics cards. Processing or evaluation (EV) after prompt processing (PP) is usually only memory bandwidth contrained, so the answer is also generated 4x faster. In comparision generally it's better to have a model with more parameters but quantized fitting into the RAM than having a model with less parameters but full precision or resolution of the weights. What a time! 
+
+And consumer graphics cards are notorius slow in fp64, sometimes a quarter, 1/8 or 1/64 of the fp32 performance. I guess that's intentional, but also not surprizing since its not needed for 3D games.
+
+Examples:
+
+- RX 470 	237 GFLOPS versus 3793 in fp32
+- RTX 3060 Ti fp64: 287 versus fp32: 17748, that's 62x slower
+
+CPUs in general show the same performance, since they operate in 64 bit and feeding only 32 bit in OpenCL seems not to execute two operations in parallel.
