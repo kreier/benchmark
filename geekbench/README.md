@@ -129,4 +129,5 @@ Single precision is **32 bit**, Half precision is **16 bit** and Quantized is **
 |                   | [GPU OpenVINO](https://browser.geekbench.com/ai/v1/59621)   |   2445 |  3590 |      5524 |
 | Xigmatek Gemini   | [10100](https://browser.geekbench.com/ai/v1/69749)          |   1435 |   799 |      1643 |
 |                   | [CPU OpenVINO](https://browser.geekbench.com/ai/v1/69759)   |   2331 |  2329 |      3715 |
+| (3060 Ti)         | [GPU DirektML](https://browser.geekbench.com/ai/v1/171502)  |  13525 | 21623 |      9484 |
 | (3070 Ti)         | [GPU DirektML](https://browser.geekbench.com/ai/v1/69729)   |  16458 | 24806 |     10928 |
