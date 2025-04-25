@@ -26,7 +26,7 @@ If you try to run the 5 steps under macOS the `make` command will throw the erro
 
 The new error is now from sysspec.c that 'malloc.h' is not found. This is because a condition in [sysspec.h](https://github.com/kreier/benchmark/blob/main/nbench/nbench-byte-2.2.3/sysspec.h) from line36 to 38 is wrong interpreted. Just comment these three lines with some `//` in front of them. After that the `make` compiles the working nbench program.
 
-## Data collection 2005 - 2020:
+## Data collection 2005 - 2025:
 
 Sorted by Integer index (in reference to K6/233) since its most relevant to user experience. Pentium 90 is really old :)
 
@@ -70,7 +70,7 @@ Sorted by Integer index (in reference to K6/233) since its most relevant to user
 | Marc PC               | Athlon64 X2            | 2829 |       21.476 |        25.608 |   30.663 |  95.2 |  55.3 |    0m34.3s | 2009-03-24 |
 | HP Z600               | Xeon X5550             | 2667 |       27.461 |        26.342 |   47.894 | 107.5 |  86.4 |    0m14.8s | 2020-05-05 |
 | Eigenbau 5            | AMD Phenom II X4 955   | 3352 |       25.034 |        32.851 |   40.967 | 117.2 |  73.9 |    0m16.3s | 2015-11-07 |
-| MacBookAir            | i5 4250U               | 2300 |        39.05 |        33.215 |    54.26 | 142.7 |  97.8 |      —     | 2016-01-28 |
+| MacBookAir            | i5 4250U               | 2300 |       39.051 |        33.215 |    54.26 | 142.7 |  97.8 |      —     | 2016-01-28 |
 | Elitebook hp8460p     | i5 2520M               | 2500 |       40.699 |        37.018 |   52.635 | 154.5 |  94.9 |    0m13.1s | 2016-01-28 |
 | Thinkpad X230         | i5 3320M               | 2600 |       45.382 |        40.313 |   61.804 | 169.9 | 111.4 |    0m12.3s | 2017-03-23 |
 | zBook 15 G3           | i7 6820HQ              | 2700 |       57.200 |        43.732 |  107.954 | 196.6 | 194.6 |    0m10.7s | 2020-11-20 |
@@ -80,8 +80,10 @@ Sorted by Integer index (in reference to K6/233) since its most relevant to user
 | HP mini G4            | i5 8500T               | 2112 |       61.249 |        46.227 |  113.619 | 209.0 | 204.9 |    0m10.9s | 2024-01-07 |
 | Eigenbau 7 AI CUDA    | Xeon 2696 v3           | 2295 |       59.666 |        49.441 |  116.922 | 214.8 | 210.8 |    0m11.8s | 2024-01-07 |
 | VEX server C222       | i7 6700                | 3408 |       65.408 |        51.345 |  123.285 | 228.3 | 222.3 |      —     | 2022-12-12 |
-| Xigmatec Gemini       | i3 10100               | 3600 |       77.174 |        56.761 |  138.003 | 259.5 | 248.8 |    0m08.7s | 2023-10-12 |
-
+| Xigmatec Gemini       | i3 10100               | 4160 |       77.174 |        56.761 |  138.003 | 259.5 | 248.8 |    08.748s | 2023-10-12 |
+| MacBook Air 2020      | M1                     | 3200 |       66.939 |        79.733 |  216.304 | 296.4 | 389.9 |          - | 2024-09-26 |
+| HP mini 400 G9        | i7 13700T              | 4700 |      104.525 |        85.010 |  264.869 | 372.2 | 377.5 |    06.917s | 2024-09-26 |
+|       __Device__      |       __CPU__       | MHz | Memory Index | __Integer Index__ | FP Index |  INT  | FLOAT | SuperPI 1M |__Test Date__|
 
 ## Old list from 2020:
 
