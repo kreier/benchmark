@@ -6,6 +6,8 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 
 ## Test with the Phoronix Test Suite
 
+<img src="https://kreier.github.io/benchmark/docs/pts_logo.png" align="right" width="12%">
+
 It can be installed in WSL or Ubuntu with:
 
 ``` sh
@@ -15,6 +17,27 @@ cd phoronix-test-suite
 sudo ./install-sh
 phoronix-test-suite benchmark hpl
 ```
+
+<img src="https://kreier.github.io/benchmark/docs/ob_logo.png" align="right" width="8%">
+
+Some of my results are uploaded to [openbenchmarking.org](https://openbenchmarking.org/user/saiht).
+
+|      Machine      |     CPU    |  MHz |      FLOPS      | Cores |
+|:------------------|:----------:|-----:|----------------:|------:|
+| Arduino Uno R3    | ATmega328P |   16 |          94,300 |     1 |
+| Jetson Nano A02 🟢| Tegra X1   | 1500 |   3,848,500,000 |     4 |
+| hp zBook 15 G3 🔵 | i7-6820HQ  | 3600 |  99,997,800,000 |     4 |
+| Xigmatek Gemini 🔵| i3-10100   | 4038 | 132,278,500,000 |     4 |
+| hp mini 400 G9 🔵 | i7-13700T  | 1840 |                 |    16 |
+| hp MT 600 G4   🔴 | RX 6600    | 2044 | 570,000,000,000 | 1792  |
+
+<img src="https://kreier.github.io/benchmark/docs/opencl_logo.png" align="right" width="15%">
+
+This number can be measured much faster with **OpenCL**. Some results for CPUs and GPUs are in the [GPU benchmark section](../gpu/opencl/).
+
+In this section I also included a graph for comparison of GFLOPS with DP (fp64) from the fastest supercomputer of their time to consumer hardware a few years later:
+
+![comparison GFLOPS over years](https://kreier.github.io/benchmark/gpu/GFLOPS_time.png)
 
 ## Speed comparison results
 
@@ -29,7 +52,7 @@ Downloaded from [https://www.techpowerup.com/download/linpack-xtreme/](https://w
 ## List from 2017
 
 | Platform        | CPU/MCU     | Architecture                   | MFlops    | DMIPS     | MHz  | RAM kB  |
-| --------------- | ----------- | ------------------------------ | --------- | --------- | ---- | ------- |
+| --------------- | ----------- | ------------------------------ | --------- | --------- | ---: | ------: |
 | Arduino Uno R3  | ATmega328P  | AVR 8bit RISC                  | 0.0943    | 10        | 16   | 2       |
 | Embedded Pi     | STM32F103RB | ARM Cortex-M3 (ARMv7-M) 32bit  | 0.552     | 92        | 72   | 20      |
 | Node MCU 1.0    | ESP8266     | Tensilica Xtensa LX106 32bit   | 1.207     | 113       | 80   | 64      |
