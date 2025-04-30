@@ -1,6 +1,20 @@
 # Benchmark collection
 
-There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks I used over the years, and their results. Some benchmarks were created back in 1972. I measured the speed of a Lattice C compiler against Omicron Basic on my [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) in 1992. The data collection presented here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
+There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks and their results I used over the years. 
+
+- [Whetstone](whetstone) - 1972
+- [Linpack](LinpackDP) DP, double precision or fp64 - 1979
+- [Dhrystone](dhrystone) - 1984
+- [nbench](nbench) - 1996
+- [Memtest86+](memtest) - 1986
+- [CoreMark](CoreMark) - 2009
+- [GPU](gpu) with [gpu/OpenCL](gpu/opencl) and [gpu/fluidX3D](gpu/fluidX3D) by [ProjectPhysX](https://github.com/ProjectPhysX)
+- [GeekBench](geekbench)
+- [3Dmark](3Dmark)
+- [NVMe](nvm) with CrystalDiskMark and hdtune - 2007
+- [Webbrowser ](browserbench) - 2010
+
+Some benchmarks were created back in 1972. I measured the speed of a Lattice C compiler against Omicron Basic on my [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) in 1992. The data collection presented here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
 
 ## [Whetstone](whetstone) - 1972
 
