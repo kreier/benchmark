@@ -20,9 +20,11 @@ Some benchmarks were created back in 1972. I measured the speed of a Lattice C c
 
 This [synthetic benchmark from 1972](https://en.wikipedia.org/wiki/Whetstone_(benchmark)) is one of the oldest ones to estimate the [FLOPS - floating point operations](https://en.wikipedia.org/wiki/FLOPS) a CPU can perform per second. Well described in an [article of arstechnica](https://arstechnica.com/information-technology/2013/05/native-level-performance-on-the-web-a-brief-examination-of-asm-js/2/) from 2013. And it is neither related to wet nor a [whetstone](https://en.wikipedia.org/wiki/Sharpening_stone), but the town of [Whetstone](https://en.wikipedia.org/wiki/Whetstone,_Leicestershire) in England.
 
-## [Linpack](LinpackDP) - FLOPS since 1979
+## [Linpack](LinpackDP) DP - FLOPS since 1979
 
-Well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks) this benchmark from 1979 is still usefull today because it scales with IPC (instructions per cycle), frequency and number of cores. It is therefore used since 1993 to determine the speed of supercomputers with a single value to put it in a list for comparison as the [TOP500](https://en.wikipedia.org/wiki/TOP500). It is measured in FLOPS in DP (double precision, 64bit).
+This is older than Linux and not related, **Lin** is short for linear Algebra, today heavily used in parallel computing with BLAS - Basic Linear Algebra Subprograms. This benchmark from 1979 is well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks). It is still usefull today because it scales with IPC (instructions per cycle), frequency and most importantly **number of cores**. It is therefore used since 1993 to determine the speed of supercomputers with a single value to put it in a list for comparison as the [TOP500](https://en.wikipedia.org/wiki/TOP500). It is measured in FLOPS in DP (double precision, 64bit). For LLMs we don't need that much precision, but can compare it partly in modern GPUs and GPGPUs, for example with OpenCL. More further down in the GPU section.
+
+![GFLOPS over time](docs/GFLOPS_time.svg)
 
 ## [Dhrystone](dhrystone) - 1984
 
@@ -77,7 +79,9 @@ With image classification using GPUs in AlexNet 2012 people saw the potential of
 
 ![GFLOPS logarithmic](gpu/GFLOPS_logarithm.png)
 
+<!-->
 ![GLFOPS over time](gpu/GFLOPS_time.png)
+-->
 
 A limiting factor for these LLMs is often the memory speed, not just processing power in GFLOPS. Here is how some of them compare to other ways of information transfer like Ethernet, DDR3 and USB4.
 
