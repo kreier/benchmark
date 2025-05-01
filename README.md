@@ -81,7 +81,7 @@ With image classification using GPUs in AlexNet 2012 people saw the potential of
 
 ![GFLOPS logarithmic](gpu/GFLOPS_logarithm.png)
 
-<!-->
+<!--
 ![GLFOPS over time](gpu/GFLOPS_time.png)
 -->
 

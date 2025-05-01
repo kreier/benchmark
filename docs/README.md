@@ -8,6 +8,6 @@ Growing up with the Cray-2 as the fastest supercomputer with more than 1 GFLOPS 
 
 ![graph 2](./GFLOPS_time2.svg)
 
-![graph 1](./GFLOPS_time.png)
+![graph 1](./GFLOPS_time1.png)
 
 Origin of this graph: This [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) with some edits.
