@@ -7,6 +7,11 @@ With OpenCL we can not only test the GPU, but also the CPU. Here is a little sub
 
 On the way to a [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) and to compare the processing speed I tried to collect some theoretical GFLOPS data as well as measuring the computation speed in half-precision, single and double precision (FP16, FP32 and FP64) with OpenCL. In the near future some TOPS with INT8 for NPUs and __bf16__ numbers for GPUs will be interesting with tne new wave of AI and LLMs. 
 
+![graph 3](../docs/GFLOPS_time.svg)
+
+Origin of this graph above: This [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) with some edits.
+
+
 ![GFLOPS of some GPUs](./gpu2024.png)
 
 In many cases the limiting factor for the performance of an LLM is not the sheer processing power of the CPU or GPU, but the bandwidth to access the memory. And the whole model has to fit into the RAM! This limits the size on many consumer GPUs, or makes it expensive to run these models. Fast memory is expensive. I compared the speed of a few links to memory from DDR3 over Ethernet and USB4 with the memory bus of some of my graphics cards:

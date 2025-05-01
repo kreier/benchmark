@@ -1,6 +1,6 @@
 # GPU performance in GFLOPS
 
-This is from this project https://github.com/ProjectPhysX/FluidX3D which got some of my results:
+This is from this project [https://github.com/ProjectPhysX/FluidX3D](https://github.com/ProjectPhysX/FluidX3D) which got some of my results:
 
 Colors: 🔴 AMD, 🔵 Intel, 🟢 Nvidia, ⚪ Apple, 🟡 ARM
 

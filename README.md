@@ -26,6 +26,8 @@ This is older than Linux and not related, **Lin** is short for linear Algebra, t
 
 ![GFLOPS over time](docs/GFLOPS_time.svg)
 
+Origin of this graph: This [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) with some edits.
+
 ## [Dhrystone](dhrystone) - 1984
 
 If whet (wet) is for floating point operations, then dhry (dry) is for integer performance. This led to the [Dhrystone benchmark](https://en.wikipedia.org/wiki/Dhrystone) in 1984. Gave it a try as well. 

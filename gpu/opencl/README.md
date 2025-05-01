@@ -3,7 +3,7 @@
 This page uses two benchmarks:
 
 - [OpenCL-Benchmark](https://github.com/ProjectPhysX/OpenCL-Benchmark) from Project PhysX by Dr. Lehmann
-- []
+- [clpeak benchmark](#run-clpeak-benchmark)
 
 This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https://github.com/ProjectPhysX/OpenCL-Benchmark). If you get an error message about the missing `msvcp140.dll` you might have to install the [latest Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) first (with [permalink](https://aka.ms/vs/17/release/vc_redist.x64.exe)).
 
