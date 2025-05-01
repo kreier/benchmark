@@ -12,5 +12,6 @@ At least I got the mandelbrot in C++ running:
 
 ## Mandelbrot in C++
 
-In [this subfolder](mandelbrot_cpp) I copied the sourcecode from [benchmakrsgame-team.debian]() and wrote a little `Makefile` that works in Ubuntu in WSL. Original taken form [this source](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/mandelbrot-gpp-6.html).
+In [this subfolder](mandelbrot_cpp) I copied the sourcecode from [benchmarksgame-team.debian](https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/mandelbrot.html#mandelbrot) and wrote a little `Makefile` that works in Ubuntu in WSL. Original taken form [this source](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/mandelbrot-gpp-6.html).
 
+<img src="../docs/1x1.png" width="20%"><img src="../docs/mandelbrot200.png" width="30%">
