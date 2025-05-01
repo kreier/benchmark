@@ -26,20 +26,23 @@ Some of my results are uploaded to [openbenchmarking.org](https://openbenchmarki
 |:------------------|:----------:|-----:|----------------:|------:|
 | Arduino Uno R3    | ATmega328P |   16 |          94,300 |     1 |
 | Jetson Nano A02 🟢| Tegra X1   | 1500 |   3,848,500,000 |     4 |
+| Elitebook hp8460p 🔵| i5-2520M | 3200 |  37,275,300,000 |     2 |
 | hp zBook 15 G3 🔵 | i7-6820HQ  | 3600 |  99,997,800,000 |     4 |
 | Xigmatek Gemini 🔵| i3-10100   | 4038 | 132,278,500,000 |     4 |
-| hp mini 400 G9 🔵 | i7-13700T  | 1840 |                 |    16 |
-| hp MT 600 G4   🔴 | RX 6600    | 2044 | 570,000,000,000 | 1792  |
+| hp mini 400 G9 🔵 | i7-13700T  | 1840 | 235,712,000,000 |    16 |
+| hp MT 600 G4   🔴 | RX 6600    | 2044 | 570,000,000,000 |  1792 |
 
 <img src="https://kreier.github.io/benchmark/docs/opencl_logo.png" align="right" width="15%">
 
 This number can be measured much faster with **OpenCL**. Some results for CPUs and GPUs are in the [GPU benchmark section](../gpu/opencl/).
 
-In this section I also included a graph for comparison of GFLOPS with DP (fp64) from the fastest supercomputer of their time to consumer hardware a few years later:
+In this section I also included a graph for comparison of GFLOPS with DP (fp64) from the fastest supercomputer of their time to consumer hardware a few years later ([source Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing)):
 
 ![comparison GFLOPS over years](https://kreier.github.io/benchmark/gpu/GFLOPS_time.png)
 
-![updated comparison](../docs/GFLOPS_time.svg)
+Earlier graph:
+
+![updated comparison](../docs/GFLOPS_time1.png)
 
 ## Speed comparison results
 
