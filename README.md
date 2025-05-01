@@ -1,6 +1,6 @@
 # Benchmark collection
 
-There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks and their results I used over the years. 
+There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks and their results I used over the years, starting **1992**. 
 
 - [Whetstone](whetstone) - 1972
 - [Linpack](LinpackDP) DP, double precision or fp64 - 1979
@@ -14,7 +14,7 @@ There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(comput
 - [NVMe](nvm) with CrystalDiskMark and hdtune - 2007
 - [Webbrowser ](browserbench) - 2010
 
-Some benchmarks were created back in 1972. I measured the speed of a Lattice C compiler against Omicron Basic on my [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) in 1992. The data collection presented here started in 2007 with Memtest86+ and the website http://saiht.de/computer/benchmark.html .
+Some benchmarks were created back in 1972. I measured the speed of a Lattice C compiler against Omicron Basic on my [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) in 1992. The data collection presented here started in 2007 with Memtest86+ and the website [http://saiht.de/computer/benchmark.html](http://saiht.de/legacy/computer/benchmark.html) .
 
 ## [Whetstone](whetstone) - 1972
 
@@ -26,7 +26,7 @@ This is older than Linux and not related, **Lin** is short for linear Algebra, t
 
 ![GFLOPS over time](docs/GFLOPS_time.svg)
 
-Origin of this graph: This [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) with some edits.
+This graph shows my reality, starting **1992**. The fastest I could my hands on was a 80486 DX with only 2.63 MegaFLOPs in SP single precision, fp32. And my own Atari ST 520 STFM did not even support floating point natively, only integer with 32 bit and some 1 MIPS out of 8 MHz. The baseline of 1 GFLOPS is more than 1000x faster - floating point and 64 bit! The Athlon 64 with 1.8 GHz I got 14 years later in **2006** was very close to this magical limit. But for me the energy efficiency for long battery life in a laptop was *more important*. More power for me was only needed for ML (machine learning), starting another [12 years later](https://kreier.github.io/ml/) in **2018**. The origin of this graph can be seen in this [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) (some minor color corrections and edits).
 
 ## [Dhrystone](dhrystone) - 1984
 
@@ -112,10 +112,17 @@ I used it for some microcomputers as well:
 |   160 MHz | 16113 ms | 11375 ms |                |                |
 |   240 MHz |     -    |  7783 ms |                |                |
 
-## [Toy Benchmark Programs](to-benchmark-programs)
+## [Toy Benchmark Programs](toy-benchmark-programs)
+
+<img src="docs/mandelbrot200.png" width="20%" align="right">
 
 Ideas are taken from: 
+
+- 2001 [start - in waybackmachine](https://web.archive.org/web/20010124090400/http://www.bagley.org/~doug/shootout/)
+- 2002, 2004, 2008, 2018, 2021, 2025 [Sometimes people just make up stuff](https://benchmarksgame-team.pages.debian.net/benchmarksgame/sometimes-people-just-make-up-stuff.html)
 
 ### [Benchmark game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/) - Which programming language is the fastest?
 
 Compiled in 2018 (with history going back to 2002) several benchmarks compare the execution speed of programs in 24 languages. Many are optimized for multicore parallel execution, to make modern processors comparable. Probably disable the efficiency cores might speed up the processes.
+
+<img src="docs/1x1.png" width="20%"><img src="docs/fastest-programming-language.svg" width="60%">
