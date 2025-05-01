@@ -39,6 +39,8 @@ In this section I also included a graph for comparison of GFLOPS with DP (fp64) 
 
 ![comparison GFLOPS over years](https://kreier.github.io/benchmark/gpu/GFLOPS_time.png)
 
+![updated comparison](../docs/GFLOPS_time.svg)
+
 ## Speed comparison results
 
 |     CPU    |  MHz  |      FLOPS       |

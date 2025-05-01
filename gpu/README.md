@@ -1,5 +1,10 @@
 # GPU performance in GFLOPS
 
+With OpenCL we can not only test the GPU, but also the CPU. Here is a little substructure:
+
+- [OpenCL](./opencl/)
+- [Fluid3D](./fluidX3D/)
+
 On the way to a [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) and to compare the processing speed I tried to collect some theoretical GFLOPS data as well as measuring the computation speed in half-precision, single and double precision (FP16, FP32 and FP64) with OpenCL. In the near future some TOPS with INT8 for NPUs and __bf16__ numbers for GPUs will be interesting with tne new wave of AI and LLMs. 
 
 ![GFLOPS of some GPUs](./gpu2024.png)

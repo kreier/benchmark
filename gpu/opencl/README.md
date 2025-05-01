@@ -1,5 +1,10 @@
 # GPU performance in TFLOPS and TIOPs
 
+This page uses two benchmarks:
+
+- [OpenCL-Benchmark](https://github.com/ProjectPhysX/OpenCL-Benchmark) from Project PhysX by Dr. Lehmann
+- []
+
 This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https://github.com/ProjectPhysX/OpenCL-Benchmark). If you get an error message about the missing `msvcp140.dll` you might have to install the [latest Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) first (with [permalink](https://aka.ms/vs/17/release/vc_redist.x64.exe)).
 
 | Device           | FP64<br>double | FP32<br>single | FP16<br>half | INT64<br>long | INT32<br>int | INT16<br>short | INT8<br>char |
@@ -132,6 +137,24 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y g++ git make ocl-icd-libopencl1 ocl-icd-opencl-dev pocl-opencl-icd
 ```
 
+
+
+## Run `clpeak` Benchmark
+
+This [OpenCL benchmark clpeak](https://github.com/krrishnarraj/clpeak) is created by [Krishnaraj Bhat](https://github.com/krrishnarraj) and others. To install you need to:
+
+``` sh
+cd ~/ && mkdir workspace && cd workspace
+git clone https://github.com/krrishnarraj/clpeak.git
+cd clpeak
+git submodule update --init --recursive --remote
+mkdir build && cd build
+cmake ..
+make -j4
+./clpeak
+```
+
+The results with 2, 4, 8 and 16 show the vector width for the multiplications, starting with 1.
 
 
 ## FP32 single
