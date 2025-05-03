@@ -4,6 +4,12 @@ When the initial linpack was released in 1979 minicomputers like the [PDP-11](ht
 
 64bit for normal citizens took a little longer. In 2003 AMD starts shipping the [Athlon 64](https://en.wikipedia.org/wiki/Athlon_64) processor lines with the first x86-based 64-bit processor architecture. For smartphones to move to 64bit it took until 2013 with the [iPhone 5S](https://en.wikipedia.org/wiki/IPhone_5s).
 
+- [Phoronix Test Suite](#test-with-the-phoronix-test-suite)
+- [Fast test precompiled for Windows](#speed-comparison-on-windows)
+- Install [HPLinpack 2.3 on Ubuntu](#install-hplinpack-23-on-ubuntu)
+- [Paper from ICIST 2017 results](#paper-from-icist-2017-with-results)
+- [HPL by Intel](#hpl-by-intel)
+
 ## Test with the Phoronix Test Suite
 
 <img src="https://kreier.github.io/benchmark/docs/pts_logo.png" align="right" width="12%">
@@ -44,28 +50,85 @@ Earlier graph:
 
 ![updated comparison](../docs/GFLOPS_time1.png)
 
-## Speed comparison results
+## Speed comparison on Windows
 
-|     CPU    |  MHz  |      FLOPS       |
-| ---------- | ----: | ---------------: |
-| ATmega328P |    16 |           94,300 |
-|  i7-6820HQ | 3,600 |   99,997,800,000 |
-|   i3-10100 | 4,038 |  132,278,500,000 |
+With this download [https://www.techpowerup.com/download/linpack-xtreme/](https://www.techpowerup.com/download/linpack-xtreme/) you don't need to follow the longer steps on Ubunto below or install the phoronix test suite (might not work on smaller systems like Raspberry Pi 1). Results:
+
+|     CPU    |  MHz  |      FLOPS       |      |
+| ---------- | ----: | ---------------: | ---- |
+| ATmega328P |    16 |           94,300 | [paper](https://github.com/kreier/benchmark/blob/main/LinpackDP/paper_ICIST_2017.pdf) |
+| RPi 3      | 1,200 |      512,000,000 | [Roy Longbottom](http://www.roylongbottom.org.uk/Raspberry%20Pi%203B+%2032%20bit%20and%2064%20bit%20Benchmarks%20and%20stress%20tests.htm) |
+| RPi 4      | 1,800 |   13,507,000,000 | [Forum RaspberryPi](https://forums.raspberrypi.com//viewtopic.php?f=63&t=276089), [Roy Longbottom](https://www.researchgate.net/publication/334561068_Raspberry_Pi_4B_Stress_Tests_Including_High_Performance_Linpack) |
+| RPi 5      | 2,400 |   35,169,000,000 | [Quad-core](https://github.com/geerlingguy/sbc-reviews/issues/21) |
+| i7-6820HQ  | 3,600 |   99,997,800,000 |  |
+| i3-10100   | 4,038 |  132,278,500,000 |  |
 
 Downloaded from [https://www.techpowerup.com/download/linpack-xtreme/](https://www.techpowerup.com/download/linpack-xtreme/).
 
-## List from 2017
+## Install HPLinpack 2.3 on Ubuntu
+
+### 1. Install dependencies
+
+``` sh
+sudo apt-get install -y libatlas-base-dev mpich libmpich-dev gfortran
+```
+
+### 2. Download HPL
+
+``` sh
+cd ~
+wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
+tar -xvzf hpl-2.3.tar.gz
+mv hpl-2.3 hpl
+```
+
+### 3. Generate HPL template configuration file
+
+``` sh
+cd hpl/setup
+sh make_generic
+cp Make.UNKNOWN ../Make.linux
+cd ../
+```
+
+### 4. Modify `Make.linux`: Update paths for MPI and ATLAS libraries:
+
+``` sh 
+ARCH         = linux
+MPinc        = /usr/include/mpich/
+MPlib        = /usr/lib/x86_64-linux-gnu/libmpich.so
+LAinc        = /usr/include/x86_64-linux-gnu/atlas
+```
+
+### 5. Compile HPL
+
+``` sh
+make arch=linux -j $(nproc)
+```
+
+### 6. Modify `HPL.dat` and run HPL:
+
+``` sh
+cd bin/linux
+./xhpl
+```
+
+Full guide: [Gist by Levi Hope](https://gist.github.com/Levi-Hope/27b9c32cc5c9ded78fff3f155fc7b5ea)
+
+
+
+## Paper from ICIST 2017 with results
 
 | Platform        | CPU/MCU     | Architecture                   | MFlops    | DMIPS     | MHz  | RAM kB  |
-| --------------- | ----------- | ------------------------------ | --------- | --------- | ---: | ------: |
-| Arduino Uno R3  | ATmega328P  | AVR 8bit RISC                  | 0.0943    | 10        | 16   | 2       |
-| Embedded Pi     | STM32F103RB | ARM Cortex-M3 (ARMv7-M) 32bit  | 0.552     | 92        | 72   | 20      |
-| Node MCU 1.0    | ESP8266     | Tensilica Xtensa LX106 32bit   | 1.207     | 113       | 80   | 64      |
-| Node MCU32      | ESP32s      | Tensilica Xtensa LX106 32bit   | 2.805     | 176       | 160  | 520     |
-| NUCLEO F746ZG   | STM32F746Z  | ARM Cortex-M7 (ARMv7E-M) 32bit | 3.588     | 763       | 216  | 320     |
-| Raspberry Pi 1B | BCM2835     | ARM1176 (v6) 32bit             | 42        | 875       | 700  | 512000  |
-| Raspberry Pi 2  | BCM2836     | ARM Cortex-A7 (v7-A) 32bit     | 170.92    | 2019      | 900  | 1024000 |
-| Raspberry Pi 3  | BCM2837     | ARM Cortex-A53 (v8-A) 32bit    | 180.14    | 3039      | 1200 | 1024000 |
+| --------------- | ----------- | ------------------------------ | --------: | --------: | ---: | ------: |
+| Arduino Uno R3  | ATmega328P  | AVR 8bit RISC                  |    0.0943 |        10 |   16 |       2 |
+| Embedded Pi     | STM32F103RB | ARM Cortex-M3 (ARMv7-M) 32bit  |     0.552 |        92 |   72 |      20 |
+| Node MCU 1.0    | ESP8266     | Tensilica Xtensa LX106 32bit   |     1.207 |       113 |   80 |      64 |
+| Node MCU32      | ESP32s      | Tensilica Xtensa LX106 32bit   |     2.805 |       176 |  160 |     520 |
+| NUCLEO F746ZG   | STM32F746Z  | ARM Cortex-M7 (ARMv7E-M) 32bit |     3.588 |       763 |  216 |     320 |
+| Raspberry Pi 1B | BCM2835     | ARM1176 (v6) 32bit             |     42.00 |       875 |  700 |  512000 |
+| Raspberry Pi 2  | BCM2836     | ARM Cortex-A7 (v7-A) 32bit     |    170.92 |      2019 |  900 | 1024000 |
+| Raspberry Pi 3  | BCM2837     | ARM Cortex-A53 (v8-A) 32bit    |    180.14 |      3039 | 1200 | 1024000 |
 |                 |             |                                | LinpackDP | Dhrystone |      |         |
 
 Read more in [this article - paper ICIST 2017](paper_ICIST_2017.pdf).
