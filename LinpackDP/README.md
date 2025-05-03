@@ -28,15 +28,16 @@ phoronix-test-suite benchmark hpl
 
 Some of my results are uploaded to [openbenchmarking.org](https://openbenchmarking.org/user/saiht).
 
-|      Machine      |     CPU    |  MHz |      FLOPS      | Cores |
-|:------------------|:----------:|-----:|----------------:|------:|
-| Arduino Uno R3    | ATmega328P |   16 |          94,300 |     1 |
-| Jetson Nano A02 🟢| Tegra X1   | 1500 |   3,848,500,000 |     4 |
-| Elitebook hp8460p 🔵| i5-2520M | 3200 |  37,275,300,000 |     2 |
-| hp zBook 15 G3 🔵 | i7-6820HQ  | 3600 |  99,997,800,000 |     4 |
-| Xigmatek Gemini 🔵| i3-10100   | 4038 | 132,278,500,000 |     4 |
-| hp mini 400 G9 🔵 | i7-13700T  | 1840 | 235,712,000,000 |    16 |
-| hp MT 600 G4   🔴 | RX 6600    | 2044 | 570,000,000,000 |  1792 |
+|      Machine      |     CPU    |  MHz |      FLOPS      | Cores | architecture |
+|:------------------|:----------:|-----:|----------------:|------:| ------------ |
+| Arduino Uno R3    | ATmega328P |   16 |          94,300 |     1 | [8-bit AVR RISC](https://en.wikipedia.org/wiki/ATmega328) - [350nm](https://en.wikipedia.org/wiki/350_nm_process), 1997 |
+| Jetson Nano A02 🟢| Tegra X1   | 1500 |   3,848,500,000 |     4 | [Cortex-A57](https://en.wikipedia.org/wiki/ARM_Cortex-A57) - 20nm, 2019|
+| [Raspberry Pi 4](https://openbenchmarking.org/result/2505036-SAIH-PI4726352)    | BCM2711B0  | 1500 |   5,342,200,000 |     4 | [Cortex-A72](https://en.wikipedia.org/wiki/ARM_Cortex-A72) - 40nm, 2019 |
+| Elitebook hp8460p 🔵| i5-2520M | 3200 |  37,275,300,000 |     2 | [Sandy Bridge](https://en.wikipedia.org/wiki/Sandy_Bridge) - 32nm, 2011|
+| hp zBook 15 G3 🔵 | i7-6820HQ  | 3600 |  99,997,800,000 |     4 | [Skylake](https://en.wikipedia.org/wiki/Skylake_(microarchitecture)) - 14nm, 2015 |
+| Xigmatek Gemini 🔵| i3-10100   | 4038 | 132,278,500,000 |     4 | [Comet Lake](https://en.wikipedia.org/wiki/Comet_Lake) - 10nm, 2019 |
+| hp mini 400 G9 🔵 | i7-13700T  | 1840 | 235,712,000,000 |    16 | [Raptor Lake](https://en.wikipedia.org/wiki/Raptor_Lake) - 7nm, 2022 |
+| hp MT 600 G4   🔴 | RX 6600    | 2044 | 570,000,000,000 |  1792 | [RDNA2](https://en.wikipedia.org/wiki/RDNA_2) - TSMC N7, 2021 |
 
 <img src="https://kreier.github.io/benchmark/docs/opencl_logo.png" align="right" width="15%">
 
@@ -54,14 +55,14 @@ Earlier graph:
 
 With this download [https://www.techpowerup.com/download/linpack-xtreme/](https://www.techpowerup.com/download/linpack-xtreme/) you don't need to follow the longer steps on Ubunto below or install the phoronix test suite (might not work on smaller systems like Raspberry Pi 1). Results:
 
-|     CPU    |  MHz  |      FLOPS       |      |
-| ---------- | ----: | ---------------: | ---- |
-| ATmega328P |    16 |           94,300 | [paper](https://github.com/kreier/benchmark/blob/main/LinpackDP/paper_ICIST_2017.pdf) |
-| RPi 3      | 1,200 |      512,000,000 | [Roy Longbottom](http://www.roylongbottom.org.uk/Raspberry%20Pi%203B+%2032%20bit%20and%2064%20bit%20Benchmarks%20and%20stress%20tests.htm) |
-| RPi 4      | 1,800 |   13,507,000,000 | [Forum RaspberryPi](https://forums.raspberrypi.com//viewtopic.php?f=63&t=276089), [Roy Longbottom](https://www.researchgate.net/publication/334561068_Raspberry_Pi_4B_Stress_Tests_Including_High_Performance_Linpack) |
-| RPi 5      | 2,400 |   35,169,000,000 | [Quad-core](https://github.com/geerlingguy/sbc-reviews/issues/21) |
-| i7-6820HQ  | 3,600 |   99,997,800,000 |  |
-| i3-10100   | 4,038 |  132,278,500,000 |  |
+|     CPU    |  MHz  |      FLOPS       | source | architecture |
+| ---------- | ----: | ---------------: | ------ | ------------ |
+| ATmega328P |    16 |           94,300 | [paper](https://github.com/kreier/benchmark/blob/main/LinpackDP/paper_ICIST_2017.pdf) | [8-bit AVR RISC](https://en.wikipedia.org/wiki/ATmega328) - [350nm](https://en.wikipedia.org/wiki/350_nm_process), 1997 |
+| RPi 3      | 1,200 |     3,381,000,000 | [Roy Longbottom](http://www.roylongbottom.org.uk/Raspberry%20Pi%203B+%2032%20bit%20and%2064%20bit%20Benchmarks%20and%20stress%20tests.htm), [update](https://www.researchgate.net/publication/331983549_Raspberry_Pi_3B_and_3B_High_Performance_Linpack_and_Error_Tests) | [Cortex-A53](https://en.wikipedia.org/wiki/ARM_Cortex-A53)
+| RPi 4      | 1,800 |   13,507,000,000 | [Forum RaspberryPi](https://forums.raspberrypi.com//viewtopic.php?f=63&t=276089), [Roy Longbottom](https://www.researchgate.net/publication/334561068_Raspberry_Pi_4B_Stress_Tests_Including_High_Performance_Linpack) | [Cortex-A72](https://en.wikipedia.org/wiki/ARM_Cortex-A72) |
+| RPi 5      | 2,400 |   35,169,000,000 | [Quad-core](https://github.com/geerlingguy/sbc-reviews/issues/21) | [Cortex-A76](https://en.wikipedia.org/wiki/ARM_Cortex-A76) |
+| i7-6820HQ  | 3,600 |   99,997,800,000 | - | [Skylake](https://en.wikipedia.org/wiki/Skylake_(microarchitecture)) - 14nm, 2015 |
+| i3-10100   | 4,038 |  132,278,500,000 | - | [Comet Lake](https://en.wikipedia.org/wiki/Comet_Lake) - 10nm, 2019 |
 
 Downloaded from [https://www.techpowerup.com/download/linpack-xtreme/](https://www.techpowerup.com/download/linpack-xtreme/).
 
