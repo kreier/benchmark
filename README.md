@@ -1,5 +1,9 @@
 # Benchmark collection
 
+![GitHub Release](https://img.shields.io/github/v/release/kreier/benchmark)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/kreier/benchmark)
+![GitHub License](https://img.shields.io/github/license/kreier/benchmark)
+
 There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing)) out there. This here is just an overview of benchmarks and their results I used over the years, starting **1992**. 
 
 - [Whetstone](whetstone) - 1972
