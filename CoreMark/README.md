@@ -1,6 +1,10 @@
 # CoreMark
 
-The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence. For a quick test in Linux just enter the following commands:
+The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence. 
+
+## Single Core
+
+For a quick test in Linux just enter the following commands:
 
 ``` sh
 git clone https://github.com/eembc/coremark
@@ -8,6 +12,8 @@ cd coremark
 make
 cat run1.log
 ```
+
+## Multi Core
 To use all the available cores on a CPU like 13700T simply write
 
 ```
@@ -16,9 +22,13 @@ make XCFLAGS="-g -DMULTITHREAD=24 -DUSE_FORK=1"
 cat run1.log
 ```
 
+## Results
+
 One can easily see how the score scales with the frequency over this wide range.
 
 ![Results 2024](../mix/coremark2024.png)
+
+## Port for Arduino 2019 and ESP32
 
 In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https://www.pjrc.com/) with the [Teensy project](https://www.pjrc.com/teensy/) ported it [to Arduino](https://github.com/PaulStoffregen/CoreMark). It runs out of the box on an ESP32. Multicore optimisation is not enabled yet. In ubuntu it works with
 
@@ -26,7 +36,31 @@ In 2019 [Paul Stoffregen](https://github.com/PaulStoffregen) from [PJRC](https:/
 make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 ``` 
 
-## Some of my results from Arduino IDE and Ubuntu:
+## Port for esp8266 2020 with ESP IDF crosscompiling toolchain
+
+The Arduino port from Paul Stoffregen does not run on ESP8266 yet. But [ochrin](https://github.com/ochrin/coremark) used the esp8266 toolchain and got some results in March 2020. I tried to replicate his results:
+
+| Board            | CoreMark | Ochrin |
+| ---------------- | -------: | -----: |
+| ESP8266   80 MHz |      155 |    191 |
+| ESP8266  160 MHz |      262 |        |
+| ESP32     80 MHz |          |    166 |
+| ESP32    160 MHz |          |    332 |
+| ESP32    240 MHz |          |    498 |
+| ESP32 2C 160 MHz |          |    661 |
+| ESP32 2C 240 MHz |          |    991 |
+
+Still no match for the 2314 coremark score of the Teensy 4.0 (Cortex-M7 at 600 MHz compared to LX6 with 240 MHz). I can't make the ESP32 toolchain running.
+
+## Port for Raspberry Pico 2040 in 2021
+
+Starting in February 2021 in the [Raspberry Pi forum](https://forums.raspberrypi.com/viewtopic.php?t=304012) a port of CoreMark for the rp2040 was discussed and developed. The [latest version v1.0.7](https://github.com/protik09/CoreMark-RP2040/releases/tag/v1.0.7) is from April 2024. It is in the repository [https://github.com/protik09/CoreMark-RP2040](https://github.com/protik09/CoreMark-RP2040).
+
+Multi-Core is still on the ToDo list.
+
+## Results numbers
+
+### Some of my results from Arduino IDE and Ubuntu:
 
 | Board                   | CoreMark | LED | MHz  | Mark/MHz |
 | ----------------------- | -------: | :-: | ---: | -------- |
@@ -46,7 +80,7 @@ make XCFLAGS="-g -DMULTITHREAD=4 -DUSE_FORK=1"
 | i3-10100                |    30532 |     | 4220 |     7.23 |
 | i7-13700T               |    39082 |     | 4600 |     8.49 |
 
-## Multithread results
+### Multithread results
 
 | Board                       | CoreMark | MHz  | Mark/Mhz |
 | --------------------------- | -------: | ---: | -------- |
@@ -74,25 +108,12 @@ Blackpill STM32F401CCU6 and STM32F411CEU6 working with:
 
 Programming mode activated by press and hold Boot0 and hit NRST. You have a new USB devices "STM32 BOOTLOADER".
 
+### Results in a Graph - CoreMark/MHz
+
 Most interesting is the ratio CoreMark/MHz:
 
 ![Results 2020](../mix/coremark-mhz.png)
 
-## ESP IDF crosscompiling toolchain
-
-The Arduino port from Paul Stoffregen does not run on ESP8266 yet. But [ochrin](https://github.com/ochrin/coremark) used the esp8266 toolchain and got some results in March 2020. I tried to replicate his results:
-
-| Board            | CoreMark | Ochrin |
-| ---------------- | -------: | -----: |
-| ESP8266   80 MHz |      155 |    191 |
-| ESP8266  160 MHz |      262 |        |
-| ESP32     80 MHz |          |    166 |
-| ESP32    160 MHz |          |    332 |
-| ESP32    240 MHz |          |    498 |
-| ESP32 2C 160 MHz |          |    661 |
-| ESP32 2C 240 MHz |          |    991 |
-
-Still no match for the 2314 coremark score of the Teensy 4.0 (Cortex-M7 at 600 MHz compared to LX6 with 240 MHz). I can't make the ESP32 toolchain running.
 
 ## Update 2024/08/09
 
