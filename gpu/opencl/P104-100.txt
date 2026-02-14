@@ -1,0 +1,26 @@
+|----------------.------------------------------------------------------------|
+| Device ID      | 0                                                          |
+| Device Name    | NVIDIA P104-100                                            |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 535.288.01 (Linux)                                         |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 15 at 1733 MHz (1920 cores, 6.655 TFLOPs/s)                |
+| Memory, Cache  | 8116 MB VRAM, 720 KB global / 48 KB local                  |
+| Buffer Limits  | 2029 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         0.223 TFLOPs/s (1/32) |
+| FP32  compute                                         6.657 TFLOPs/s ( 1x ) |
+| FP16  compute                                         0.112 TFLOPs/s (1/64) |
+| INT64 compute                                         1.434  TIOPs/s (1/4 ) |
+| INT32 compute                                         2.238  TIOPs/s (1/3 ) |
+| INT16 compute                                         6.660  TIOPs/s ( 1x ) |
+| INT8  compute                                        24.369  TIOPs/s ( 4x ) |
+| Memory Bandwidth ( coalesced read      )                        282.60 GB/s |
+| Memory Bandwidth ( coalesced      write)                        314.01 GB/s |
+| Memory Bandwidth (misaligned read      )                        170.19 GB/s |
+| Memory Bandwidth (misaligned      write)                         69.88 GB/s |
+| PCIe   Bandwidth (send                 )                          0.80 GB/s |
+| PCIe   Bandwidth (   receive           )                          0.84 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen1 x16)    0.82 GB/s |
+|-----------------------------------------------------------------------------|

@@ -1,0 +1,26 @@
+|----------------.------------------------------------------------------------|
+| Device ID      | 1                                                          |
+| Device Name    | NVIDIA GeForce GTX 1070                                    |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 535.288.01 (Linux)                                         |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 15 at 1683 MHz (1920 cores, 6.463 TFLOPs/s)                |
+| Memory, Cache  | 8110 MB VRAM, 720 KB global / 48 KB local                  |
+| Buffer Limits  | 2027 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         0.223 TFLOPs/s (1/32) |
+| FP32  compute                                         6.707 TFLOPs/s ( 1x ) |
+| FP16  compute                                         0.112 TFLOPs/s (1/64) |
+| INT64 compute                                         1.253  TIOPs/s (1/4 ) |
+| INT32 compute                                         2.164  TIOPs/s (1/3 ) |
+| INT16 compute                                         6.502  TIOPs/s ( 1x ) |
+| INT8  compute                                        23.821  TIOPs/s ( 4x ) |
+| Memory Bandwidth ( coalesced read      )                        210.08 GB/s |
+| Memory Bandwidth ( coalesced      write)                        219.44 GB/s |
+| Memory Bandwidth (misaligned read      )                        150.24 GB/s |
+| Memory Bandwidth (misaligned      write)                         67.05 GB/s |
+| PCIe   Bandwidth (send                 )                          3.90 GB/s |
+| PCIe   Bandwidth (   receive           )                          3.55 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen2 x16)    3.51 GB/s |
+|-----------------------------------------------------------------------------|
