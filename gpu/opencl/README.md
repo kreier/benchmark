@@ -183,7 +183,9 @@ In many cases it can be simple calculated by the CPU architecture and the freque
 
 ## FP64 double
 
-- RX 470 	237 GFLOPS
+- RX 470  0.237 TFLOPS
+- 3070 Ti  
+- P100    3.521 TFLOPS 
 
 The old value for supercomputers. Refinement follows. And OpenCL might not be the best option. For example the T4 scores 5.2 TOPS in INT8 with OpenCL, but is actually capable of [130 TOPS with the 320 Turing Tensor cores](https://www.pny.com/en-eu/nvidia-t4).
 
@@ -193,5 +195,37 @@ I wanted to get a P100 with HBM2 memory as testing ground. In 2024 they were sti
 
 But I figured that I can use a free virtual GPU with my 7-year-old Kaggle account! Here is the notebook and result:
 
+https://www.kaggle.com/code/kreier/opencl-benchmark
 
+The P100 does not reach the 720 GB/s for HBM2 but stops shy of 600 GB/s - alsmost as fast as my GDDR6X memory on my 3070 Ti. The inexpensive P104-100 with GDDR5X and 320 GB/s are half as fast, but significantly cheaper. And my mainboard has space for 4 GPUs, so 30 GB VRAM are no problem.
 
+The output:
+
+```
+.-----------------------------------------------------------------------------.
+| Device ID      | 0                                                          |
+| Device Name    | Tesla P100-PCIE-16GB                                       |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 580.105.08 (Linux)                                         |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 56 at 1328 MHz (3584 cores, 9.519 TFLOPs/s)                |
+| Memory, Cache  | 16269 MB VRAM, 1344 KB global / 48 KB local                |
+| Buffer Limits  | 4067 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         3.521 TFLOPs/s (1/3 ) |
+| FP32  compute                                         8.915 TFLOPs/s ( 1x ) |
+| FP16  compute                                        16.576 TFLOPs/s ( 2x ) |
+| INT64 compute                                         1.195  TIOPs/s (1/8 ) |
+| INT32 compute                                         3.118  TIOPs/s (1/3 ) |
+| INT16 compute                                         9.030  TIOPs/s ( 1x ) |
+| INT8  compute                                         1.823  TIOPs/s (1/4 ) |
+| Memory Bandwidth ( coalesced read      )                        543.07 GB/s |
+| Memory Bandwidth ( coalesced      write)                        594.55 GB/s |
+| Memory Bandwidth (misaligned read      )                        302.78 GB/s |
+| Memory Bandwidth (misaligned      write)                         90.43 GB/s |
+| PCIe   Bandwidth (send                 )                          4.73 GB/s |
+| PCIe   Bandwidth (   receive           )                          5.19 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen3 x16)    4.60 GB/s |
+'-----------------------------------------------------------------------------'
+```
