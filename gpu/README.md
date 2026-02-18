@@ -4,6 +4,7 @@ With OpenCL we can not only test the GPU, but also the CPU. Here is a little sub
 
 - [OpenCL](./opencl/)
 - [Fluid3D](./fluidX3D/)
+- [LLM](../llm/)
 
 On the way to a [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) and to compare the processing speed I tried to collect some theoretical GFLOPS data as well as measuring the computation speed in half-precision, single and double precision (FP16, FP32 and FP64) with OpenCL. In the near future some TOPS with INT8 for NPUs and __bf16__ numbers for GPUs will be interesting with tne new wave of AI and LLMs. 
 
@@ -45,13 +46,14 @@ Using the [OpenCL-Benchmark tool](https://github.com/ProjectPhysX/OpenCL-Benchma
 | 🟢 Quadro M1000M |   0.035  |   0.734  |   ---    |  0.192  |  0.308  |  1.071  |  1.087  |
 | ⚪ M1 GPU 8CU    |    ---   |   0.620  |   ---    |  0.439  |  0.603  |  0.645  |  0.638  |
 | 🟢 GTX 960       |   0.086  |   2.597  |   ---    |  0.551  |  0.918  |  2.649  |  2.652  |
-| 🔴 RX 470        |   0.306  |   1.218  |   4.749  |  0.686  |  0.985  |  1.920  |  1.914  |
 | 🟢 P106-100      |   0.151  |   4.526  |   0.076  |  0.859  |  1.512  |  4.542  | 16.395  |
 | 🟢 GTX 1060      |   0.149  |   4.466  |   0.075  |  0.821  |  1.435  |  4.465  |  4.496  |
+| 🔴 RX 470        |   0.306  |   1.218  |   4.749  |  0.686  |  0.985  |  1.920  |  1.914  |
 | 🟢 GTX 1070      |   0.225  |   6.710  |   0.113  |  1.254  |  2.182  |  6.549  | 23.718  |
 | 🟢 P104-100      |   0.223  |   6.657  |   0.111  |  1.439  |  2.239  |  6.673  | 24.380  |
 | 🔴 RX 6600       |   0.570  |   8.324  |  16.641  |  0.466  |  1.845  |  7.498  |  5.564  |
-| 🟢 T4            |   0.250  |   8.092  |   ---    |  1.939  |  6.326  |  5.257  |  5.279  |
+| 🟢 T4            |   0.253  |   8.145  |  15.629  |  1.939  |  6.326  |  5.257  | 23.129  |
+| 🟢 P100          |   3.521  |   8.915  |  16.576  |  1.195  |  3.118  |  9.030  |  1.823  |
 | 🟢 RTX 3060 Ti   |   0.287  |  17.748  |  18.291  |  2.799  |  9.228  |  8.062  |  6.844  |
 | 🟢 RTX 3070 Ti   |   0.369  |  22.572  |  23.276  |  3.049  | 11.721  | 10.198  | 43.704  |
 
@@ -74,13 +76,14 @@ We also get some further details on the hardware:
 | 🟢 Quadro M1000M |   1.2  |  2 |  1071 |   512 |    1.097 |  71.74 |  6.35 |
 | ⚪ M1 GPU 8CU    |   1.2  |  8 |  1000 |  1024 |    2.048 |  65.54 | 18.28 |
 | 🟢 GTX 960       |   1.2  |  8 |  1266 |  1024 |    2.593 |  97.41 |  6.91 |
-| 🔴 RX 470        |   2.0  | 32 |  1226 |  2048 |    5.022 | 193.25 |  6.40 |
 | 🟢 P106-100      |   3.0  | 10 |  1708 |  1280 |    4.372 | 175.52 |  3.33 |
 | 🟢 GTX 1060      |   1.2  | 10 |  1708 |  1280 |    4.372 | 162.14 |  6.95 |
+| 🔴 RX 470        |   2.0  | 32 |  1226 |  2048 |    5.022 | 193.25 |  6.40 |
 | 🟢 GTX 1070      |   3.0  | 15 |  1683 |  1920 |    6.463 | 220.41 |  3.24 |
 | 🟢 P104-100      |   3.0  | 15 |  1733 |  1920 |    6.655 | 314.02 |  0.84 |
 | 🔴 RX 6600       |   2.0  | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
-| 🟢 T4            |   1.2  | 40 |  1590 |  2560 |    8.141 | 245.42 |  4.74 |
+| 🟢 T4            |   3.0  | 40 |  1590 |  2560 |    8.141 | 245.42 |  5.17 |
+| 🟢 P100          |   3.0  | 56 |  1328 |  3584 |    9.519 | 594.55 |  5.19 |
 | 🟢 RTX 3060 Ti   |   1.2  | 38 |  1665 |  4864 |   16.197 | 423.68 |  9.83 |
 | 🟢 RTX 3070 Ti   |   3.0  | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
@@ -91,27 +94,27 @@ Example output:
 | Device ID      | 0                                                          |
 | Device Name    | Tesla T4                                                   |
 | Device Vendor  | NVIDIA Corporation                                         |
-| Device Driver  | 535.104.05 (Linux)                                         |
-| OpenCL Version | OpenCL C 1.2                                               |
+| Device Driver  | 580.82.07 (Linux)                                          |
+| OpenCL Version | OpenCL C 3.0                                               |
 | Compute Units  | 40 at 1590 MHz (2560 cores, 8.141 TFLOPs/s)                |
-| Memory, Cache  | 15102 MB, 1280 KB global / 48 KB local                     |
-| Buffer Limits  | 3775 MB global, 64 KB constant                             |
+| Memory, Cache  | 14912 MB VRAM, 1280 KB global / 48 KB local                |
+| Buffer Limits  | 3728 MB global, 64 KB constant                             |
 |----------------'------------------------------------------------------------|
 | Info: OpenCL C code successfully compiled.                                  |
-| FP64  compute                                         0.250 TFLOPs/s (1/32) |
-| FP32  compute                                         8.092 TFLOPs/s ( 1x ) |
-| FP16  compute                                          not supported        |
+| FP64  compute                                         0.253 TFLOPs/s (1/32) |
+| FP32  compute                                         8.145 TFLOPs/s ( 1x ) |
+| FP16  compute                                        15.629 TFLOPs/s ( 2x ) |
 | INT64 compute                                         1.939  TIOPs/s (1/4 ) |
 | INT32 compute                                         6.326  TIOPs/s (2/3 ) |
-| INT16 compute                                         5.257  TIOPs/s (2/3 ) |
-| INT8  compute                                         5.279  TIOPs/s (2/3 ) |
-| Memory Bandwidth ( coalesced read      )                        245.42 GB/s |
-| Memory Bandwidth ( coalesced      write)                        215.51 GB/s |
-| Memory Bandwidth (misaligned read      )                        260.63 GB/s |
-| Memory Bandwidth (misaligned      write)                         84.02 GB/s |
-| PCIe   Bandwidth (send                 )                          4.74 GB/s |
-| PCIe   Bandwidth (   receive           )                          4.53 GB/s |
-| PCIe   Bandwidth (        bidirectional)            (Gen3 x16)    4.13 GB/s |
+| INT16 compute                                         5.607  TIOPs/s (2/3 ) |
+| INT8  compute                                        23.129  TIOPs/s ( 2x ) |
+| Memory Bandwidth ( coalesced read      )                        245.95 GB/s |
+| Memory Bandwidth ( coalesced      write)                        214.14 GB/s |
+| Memory Bandwidth (misaligned read      )                        241.42 GB/s |
+| Memory Bandwidth (misaligned      write)                         80.34 GB/s |
+| PCIe   Bandwidth (send                 )                          4.76 GB/s |
+| PCIe   Bandwidth (   receive           )                          5.17 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen3 x16)    4.46 GB/s |
 '-----------------------------------------------------------------------------'
 ```
 
@@ -147,7 +150,8 @@ And consumer graphics cards are notorius slow in fp64, sometimes a quarter, 1/8 
 
 Examples:
 
-- RX 470 	237 GFLOPS versus 3793 in fp32
-- RTX 3060 Ti fp64: 287 versus fp32: 17748, that's 62x slower
+- RX 470 	  fp64: 0.306 GFLOPS versus fp32:  1.218 TFLOPS, 4x slower
+- RTX 3060 Ti fp64: 0.287 GFLOPS versus fp32: 17.748 TFLOPS, that's 62x slower
+- P100        fp64: 3.521 TFLOPS versys fp32:  8.915 TFLOPS, that's 2.5x slower
 
 CPUs in general show the same performance, since they operate in 64 bit and feeding only 32 bit in OpenCL seems not to execute two operations in parallel.

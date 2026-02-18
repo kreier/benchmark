@@ -1,0 +1,34 @@
+2024/07/29
+.-----------------------------------------------------------------------------.
+|----------------.------------------------------------------------------------|
+| Device ID    0 | Tesla T4                                                   |
+|----------------'------------------------------------------------------------|
+|----------------.------------------------------------------------------------|
+| Device ID      | 0                                                          |
+| Device Name    | Tesla T4                                                   |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 535.104.05 (Linux)                                         |
+| OpenCL Version | OpenCL C 1.2                                               |
+| Compute Units  | 40 at 1590 MHz (2560 cores, 8.141 TFLOPs/s)                |
+| Memory, Cache  | 15102 MB, 1280 KB global / 48 KB local                     |
+| Buffer Limits  | 3775 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         0.250 TFLOPs/s (1/32) |
+| FP32  compute                                         8.092 TFLOPs/s ( 1x ) |
+| FP16  compute                                          not supported        |
+| INT64 compute                                         1.939  TIOPs/s (1/4 ) |
+| INT32 compute                                         6.326  TIOPs/s (2/3 ) |
+| INT16 compute                                         5.257  TIOPs/s (2/3 ) |
+| INT8  compute                                         5.279  TIOPs/s (2/3 ) |
+| Memory Bandwidth ( coalesced read      )                        245.42 GB/s |
+| Memory Bandwidth ( coalesced      write)                        215.51 GB/s |
+| Memory Bandwidth (misaligned read      )                        260.63 GB/s |
+| Memory Bandwidth (misaligned      write)                         84.02 GB/s |
+| PCIe   Bandwidth (send                 )                          4.74 GB/s |
+| PCIe   Bandwidth (   receive           )                          4.53 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen3 x16)    4.13 GB/s |
+|-----------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------|
+| Done. Press Enter to exit.                                                  |
+'-----------------------------------------------------------------------------'

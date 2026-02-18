@@ -24,3 +24,5 @@
 | PCIe   Bandwidth (   receive           )                          0.84 GB/s |
 | PCIe   Bandwidth (        bidirectional)            (Gen1 x16)    0.82 GB/s |
 |-----------------------------------------------------------------------------|
+
+Only Gen1 x4 is physically connected on this card. 1 GB/s is maximum.

@@ -1,3 +1,4 @@
+Old measure: Gen1 x8
 |----------------.------------------------------------------------------------|
 | Device ID      | 2                                                          |
 | Device Name    | NVIDIA P106-100                                            |
@@ -23,4 +24,32 @@
 | PCIe   Bandwidth (send                 )                          1.66 GB/s |
 | PCIe   Bandwidth (   receive           )                          1.67 GB/s |
 | PCIe   Bandwidth (        bidirectional)            (Gen1 x16)    1.65 GB/s |
+|-----------------------------------------------------------------------------|
+
+New run Gen1 x16 on 2026/02/19
+|----------------.------------------------------------------------------------|
+| Device ID      | 2                                                          |
+| Device Name    | NVIDIA P106-100                                            |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 535.288.01 (Linux)                                         |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 10 at 1708 MHz (1280 cores, 4.372 TFLOPs/s)                |
+| Memory, Cache  | 6075 MB VRAM, 480 KB global / 48 KB local                  |
+| Buffer Limits  | 1518 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         0.151 TFLOPs/s (1/32) |
+| FP32  compute                                         4.536 TFLOPs/s ( 1x ) |
+| FP16  compute                                         0.076 TFLOPs/s (1/64) |
+| INT64 compute                                         0.860  TIOPs/s (1/4 ) |
+| INT32 compute                                         1.511  TIOPs/s (1/3 ) |
+| INT16 compute                                         4.573  TIOPs/s ( 1x ) |
+| INT8  compute                                        16.661  TIOPs/s ( 4x ) |
+| Memory Bandwidth ( coalesced read      )                        166.59 GB/s |
+| Memory Bandwidth ( coalesced      write)                        175.74 GB/s |
+| Memory Bandwidth (misaligned read      )                        108.44 GB/s |
+| Memory Bandwidth (misaligned      write)                         44.04 GB/s |
+| PCIe   Bandwidth (send                 )                          2.96 GB/s |
+| PCIe   Bandwidth (   receive           )                          3.33 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen2 x16)    3.08 GB/s |
 |-----------------------------------------------------------------------------|

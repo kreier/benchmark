@@ -30,7 +30,7 @@ This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https
 | 🟢 GTX 1070      |   0.225  |   6.710  |   0.113  |  1.254  |  2.182  |  6.549  | 23.718  |
 | 🟢 P104-100      |   0.223  |   6.657  |   0.111  |  1.439  |  2.239  |  6.673  | 24.380  |
 | 🔴 RX 6600       |   0.570  |   8.324  |  16.641  |  0.466  |  1.845  |  7.498  |  5.564  |
-| 🟢 T4            |   0.250  |   8.092  |   ---    |  1.939  |  6.326  |  5.257  |  5.279  |
+| 🟢 T4            |   0.250  |   8.145  |  15.629  |  1.939  |  6.326  |  5.607  | 23.129  |
 | 🟢 RTX 3060 Ti   |   0.287  |  17.748  |  18.291  |  2.799  |  9.228  |  8.062  |  6.844  |
 | 🟢 RTX 3070 Ti   |   0.369  |  22.572  |  23.276  |  3.049  | 11.721  | 10.198  | 43.704  |
 
@@ -59,7 +59,7 @@ Specification:
 | 🟢 GTX 1070      |   3.0  | 15 |  1683 |  1920 |    6.463 | 220.41 |  3.24 |
 | 🟢 P104-100      |   3.0  | 15 |  1733 |  1920 |    6.655 | 314.02 |  0.84 |
 | 🔴 RX 6600       |   2.0  | 16 |  2044 |  1792 |    7.326 | 204.61 |  4.57 |
-| 🟢 T4            |   1.2  | 40 |  1590 |  2560 |    8.141 | 245.42 |  4.74 |
+| 🟢 T4            |   3.0  | 40 |  1590 |  2560 |    8.141 | 245.42 |  4.74 |
 | 🟢 RTX 3060 Ti   |   1.2  | 38 |  1665 |  4864 |   16.197 | 423.68 |  9.83 |
 | 🟢 RTX 3070 Ti   |   3.0  | 48 |  1770 |  6144 |   21.750 | 574.81 |  8.76 |
 
@@ -186,3 +186,12 @@ In many cases it can be simple calculated by the CPU architecture and the freque
 - RX 470 	237 GFLOPS
 
 The old value for supercomputers. Refinement follows. And OpenCL might not be the best option. For example the T4 scores 5.2 TOPS in INT8 with OpenCL, but is actually capable of [130 TOPS with the 320 Turing Tensor cores](https://www.pny.com/en-eu/nvidia-t4).
+
+### 2026-02-18 Cloud GPU for the rescue
+
+I wanted to get a P100 with HBM2 memory as testing ground. In 2024 they were still cheap, early 2025 it was already difficult to get them and by early 2026 all compute and memory was very expensive.
+
+But I figured that I can use a free virtual GPU with my 7-year-old Kaggle account! Here is the notebook and result:
+
+
+

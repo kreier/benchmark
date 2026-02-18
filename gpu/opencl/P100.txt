@@ -1,0 +1,41 @@
+Cloning into 'OpenCL-Benchmark'...
+remote: Enumerating objects: 313, done.
+remote: Counting objects: 100% (163/163), done.
+remote: Compressing objects: 100% (51/51), done.
+remote: Total 313 (delta 140), reused 129 (delta 112), pack-reused 150 (from 1)
+Receiving objects: 100% (313/313), 278.26 KiB | 13.91 MiB/s, done.
+Resolving deltas: 100% (204/204), done.
+/kaggle/working/OpenCL-Benchmark
+.-----------------------------------------------------------------------------.
+|----------------.------------------------------------------------------------|
+| Device ID    0 | Tesla P100-PCIE-16GB                                       |
+|----------------'------------------------------------------------------------|
+|----------------.------------------------------------------------------------|
+| Device ID      | 0                                                          |
+| Device Name    | Tesla P100-PCIE-16GB                                       |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 580.105.08 (Linux)                                         |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 56 at 1328 MHz (3584 cores, 9.519 TFLOPs/s)                |
+| Memory, Cache  | 16269 MB VRAM, 1344 KB global / 48 KB local                |
+| Buffer Limits  | 4067 MB global, 64 KB constant                             |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         3.521 TFLOPs/s (1/3 ) |
+| FP32  compute                                         8.915 TFLOPs/s ( 1x ) |
+| FP16  compute                                        16.576 TFLOPs/s ( 2x ) |
+| INT64 compute                                         1.195  TIOPs/s (1/8 ) |
+| INT32 compute                                         3.118  TIOPs/s (1/3 ) |
+| INT16 compute                                         9.030  TIOPs/s ( 1x ) |
+| INT8  compute                                         1.823  TIOPs/s (1/4 ) |
+| Memory Bandwidth ( coalesced read      )                        543.07 GB/s |
+| Memory Bandwidth ( coalesced      write)                        594.55 GB/s |
+| Memory Bandwidth (misaligned read      )                        302.78 GB/s |
+| Memory Bandwidth (misaligned      write)                         90.43 GB/s |
+| PCIe   Bandwidth (send                 )                          4.73 GB/s |
+| PCIe   Bandwidth (   receive           )                          5.19 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen3 x16)    4.60 GB/s |
+|-----------------------------------------------------------------------------|
+'-----------------------------------------------------------------------------'
+
+https://www.kaggle.com/code/kreier/opencl-benchmark

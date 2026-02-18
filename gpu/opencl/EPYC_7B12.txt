@@ -1,0 +1,29 @@
+PoCL OpenCL runtime installed. Attempting to build again...
+.-----------------------------------------------------------------------------.
+|----------------.------------------------------------------------------------|
+| Device ID    0 | pthread-AMD EPYC 7B12                                      |
+|----------------'------------------------------------------------------------|
+|----------------.------------------------------------------------------------|
+| Device ID      | 0                                                          |
+| Device Name    | pthread-AMD EPYC 7B12                                      |
+| Device Vendor  | AuthenticAMD                                               |
+| Device Driver  | 1.8 (Linux)                                                |
+| OpenCL Version | OpenCL C 1.2                                               |
+| Compute Units  | 2 at 2249 MHz (1 cores, 0.072 TFLOPs/s)                    |
+| Memory, Cache  | 10927 MB RAM, 32 KB global / 512 KB local                  |
+| Buffer Limits  | 4096 MB global, 512 KB constant                            |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64  compute                                         0.002 TFLOPs/s (1/32) |
+| FP32  compute                                         0.002 TFLOPs/s (1/32) |
+| FP16  compute                                          not supported        |
+| INT64 compute                                         0.004  TIOPs/s (1/16) |
+| INT32 compute                                         0.003  TIOPs/s (1/24) |
+| INT16 compute                                         0.007  TIOPs/s (1/12) |
+| INT8  compute                                         0.003  TIOPs/s (1/24) |
+| Memory Bandwidth ( coalesced read      )                          3.20 GB/s |
+| Memory Bandwidth ( coalesced      write)                          1.93 GB/s |
+| Memory Bandwidth (misaligned read      )                         16.70 GB/s |
+| Memory Bandwidth (misaligned      write)                         19.40 GB/s |
+|-----------------------------------------------------------------------------|
+'-----------------------------------------------------------------------------'
