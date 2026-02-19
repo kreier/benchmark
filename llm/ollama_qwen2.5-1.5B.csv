@@ -1,0 +1,8 @@
+﻿size,website,ollama ps,layers,quantized,memory required,parameters ,t/s,GB/s,GB/token,GPU,date
+1.5b,1.1 GB,1.1 GB,29,qwen2.5:1.5b,1.0 GiB,1.78 B,3.13,12,3.8,Jetson Nano,2025-01-29
+1.5b,1.1 GB,1.6 GB,29,qwen2.5:1.5b,1.5 GiB,1.78 B,3.14,12,3.8,Raspberry Pi 4,2025-01-29
+1.5b,1.1 GB,1.1 GB,29,qwen2.5:1.5b,1.0 GiB,1.78 B,15.53,60,3.9,i3-6100,2025-01-29
+1.5b,1.1 GB,2.0 GB,29,qwen2.5:1.5b,1.9 GiB,1.78 B,61.21,192,3.1,GTX 1060,2025-01-29
+1.5b,1.1 GB,1.4 GB,29,qwen2.5:1.5b,1.4 GiB,1.78 B,100.34,320,3.2,P106-100,2026-02-19
+1.5b,1.1 GB,2.0 GB,29,qwen2.5:1.5b,1.9 GiB,1.78 B,119.33,448,3.8,RTX 3060 Ti,2025-01-29
+1.5b,1.1 GB,2.0 GB,29,qwen2.5:1.5b,1.9 GiB,1.78 B,145.45,608,4.2,RTX 3070 Ti,2025-01-29

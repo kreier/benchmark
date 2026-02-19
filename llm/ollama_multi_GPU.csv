@@ -1,0 +1,18 @@
+﻿size,website,ollama ps,layers,quantized,memory required,parameters,token/s,offload,CPU/GPU,,,GB,GB/s,t/s,date
+1.5b,1.1 GB,2.0 GB,29,qwen 1.5B,1.9 GiB,1.78 B,158,,,,,,,,
+7b,4.7 GB,6.0 GB,29,qwen 7B,5.6 GiB,7.62 B,83,,,,,5.6,608,108.6,
+8b,4.9 GB,5.8 GB,33,llama 8B,5.4 GiB,8.03 B,79,,,,,,,,
+14b,9.0 GB,10 GB,49,qwen 14b,9.5 GiB,14.77 B,2.1,,100,,,,,,
+14b,9.0 GB,10 GB,49,qwen 14b,10.0 GiB,14.77 B,4.1,30,37/63,8GB GPU and CPU,,,,,
+14b,9.0 GB,16 GB,49,qwen 14b,15.6 GiB,14.77 B,10.8,13/12/12/12,,8/6/6/6 GPU,3060/1060/P106/P106,,,,2025-01-29
+14b,9.0 GB,15 GB,49,qwen 14b,14.1 GiB,14.77 B,14.2,17/16/16,,8/6/6 GPU,,14.1,192,13.6,
+14b,9.0 GB,13 GB,49,qwen 14b,12.5 GiB,14.77 B,12.2,26/23,,8/6 GPU,,,,,
+32b,20 GB,22 GB,65,qwen 32b,20.9 GiB,32.76 B,0.92,,100,,,,,,
+32b,20 GB,25 GB,65,qwen 32b,23.6 GiB,32.76 B,2.34,21/14/15,20/80,8/6/6 GPU,,,,,
+32b,20 GB,26 GB,65,qwen 32b,25.1 GiB,32.76 B,5.11,19/15/15/15,2/98,8/6/6/6 GPU,activate/deactivate?,25.1,192,7.6,2025-01-29
+32b,20 GB,,65,qwen2.5:32b,,32.76 B,6.37,,,8/6/6/6 GPU,num_gpu=65,,,,
+32b,20 GB,21 GB,65,qwen2.5:32b,20.4 GiB,32.76 B,8.42,18/18/18/11,,8/8/8/6 GPU,,,,,2026-02-19
+70b,43 GB,43 GB,81,,40.7 GiB,70.55 B,0.68,,E5-2696v3,Llama 3.1 70B Instruct,,,,,
+70b,43 GB,43 GB,81,llama 70b,43.2 GiB,70.55 B,,,E5-2696v3,Deepseek R1 70B,,,,,
+405b,243 GB,,,,,,,,,Llama 3.1 405B,,,,,
+671b,404 GB,,,llama 405b,,,,,,Deepseek R1,,376,1300,3.5,
