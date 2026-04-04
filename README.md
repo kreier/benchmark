@@ -28,7 +28,7 @@ This [synthetic benchmark from 1972](https://en.wikipedia.org/wiki/Whetstone_(be
 
 This is older than Linux and not related, **Lin** is short for linear Algebra, today heavily used in parallel computing with BLAS - Basic Linear Algebra Subprograms. This benchmark from 1979 is well described at [Wikipedia](https://en.wikipedia.org/wiki/LINPACK_benchmarks). It is still usefull today because it scales with IPC (instructions per cycle), frequency and most importantly **number of cores**. It is therefore used since 1993 to determine the speed of supercomputers with a single value to put it in a list for comparison as the [TOP500](https://en.wikipedia.org/wiki/TOP500). It is measured in FLOPS in DP (double precision, 64bit). For LLMs we don't need that much precision, but can compare it partly in modern GPUs and GPGPUs, for example with OpenCL. More further down in the GPU section.
 
-![GFLOPS over time](docs/GFLOPS_time.svg)
+![GFLOPS over time](https://kreier.github.io/benchmark/docs/GFLOPS_time.svg)
 
 This graph shows my reality, starting **1992**. The fastest I could my hands on was a 80486 DX with only 2.63 MegaFLOPs in SP single precision, fp32. And my own Atari ST 520 STFM did not even support floating point natively, only integer with 32 bit and some 1 MIPS out of 8 MHz. The baseline of 1 GFLOPS is more than 1000x faster - floating point and 64 bit! The Athlon 64 with 1.8 GHz I got 14 years later in **2006** was very close to this magical limit. But for me the energy efficiency for long battery life in a laptop was *more important*. More power for me was only needed for ML (machine learning), starting another [12 years later](https://kreier.github.io/ml/) in **2018**. The origin of this graph can be seen in this [Google Sheet](https://docs.google.com/spreadsheets/d/17QBJVa8wzo4B1aygXrlk0FWpG4UVwWn3Zo5LsfNnlJM/edit?usp=sharing) (some minor color corrections and edits).
 
@@ -52,7 +52,7 @@ Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2
 
 The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 39082 for an i7-13700T or 390614 in a 24-thread execution. That's 5580x or 55802x faster, almost 5 magnitudes! That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 4600 MHz in a Quadcore i7, another 280x. Putting these two values (CoreMark and Frequency) into relationship narrows the differences:
 
-![Results 2020](mix/coremark-mhz.png)
+![Results 2020](https://kreier.github.io/benchmark/mix/coremark-mhz.png)
 
 It is still comparing an old 8bit CPUs with a modern 32bit ARM and 64bit x86 CPUs, with long pipelines, many registers and large caches. The difference in simple IPC is seen.
 
@@ -95,7 +95,7 @@ A limiting factor for these LLMs is often the memory speed, not just processing 
 
 The speed differences are so vast I had to include a logarithmic graph. This visualizes the magnitudes of differences between the solutions.
 
-![Comparison speed logarithmic](gpu/comparison_speed_logarithmic.png)
+![Comparison speed logarithmic](https://kreier.github.io/benchmark/gpu/comparison_speed_logarithmic.png)
 
 ## SuperPi 1M
 
@@ -115,6 +115,8 @@ I used it for some microcomputers as well:
 |    80 MHz | 32807 ms | 23323 ms |                |                |
 |   160 MHz | 16113 ms | 11375 ms |                |                |
 |   240 MHz |     -    |  7783 ms |                |                |
+
+This portion above needs to be updated for many years now. More details are at [kreier.github.io/prime/](https://kreier.github.io/prime/)
 
 ## [Toy Benchmark Programs](toy-benchmark-programs)
 
