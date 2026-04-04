@@ -52,7 +52,7 @@ Intended for embedded systems by [EEMBC](https://github.com/eembc/coremark) in 2
 
 The results vary from some 7 points for the Arduino Mega 2560 (the Leonardo and Uno have not enough RAM) to 39082 for an i7-13700T or 390614 in a 24-thread execution. That's 5580x or 55802x faster, almost 5 magnitudes! That's hard to display with linear bar graphs. The range of frequencies is vast as well from 16 MHz in the Arduino to 4600 MHz in a Quadcore i7, another 280x. Putting these two values (CoreMark and Frequency) into relationship narrows the differences:
 
-![Results 2020](mix/coremark-mhz.png)
+![Results 2020](https://kreier.github.io/benchmark/mix/coremark-mhz.png)
 
 It is still comparing an old 8bit CPUs with a modern 32bit ARM and 64bit x86 CPUs, with long pipelines, many registers and large caches. The difference in simple IPC is seen.
 
