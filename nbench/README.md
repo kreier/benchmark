@@ -142,3 +142,88 @@ Sorted by Integer index (in reference to K6/233) since its most relevant to user
 |Intel Core i7 6700HQ @ 2600 MHz                                    |63.682      |45.732       |68.159              |211.2  |122.9|-         |
 |Intel Core i7 4710HQ @ 2500 MHz                                    |50.423      |46.117       |70.039              |192    |126.3|-         |
 |__CPU__                                    |__Memory index__|__Integer index__|__Floating Point index__|__INTEGER__|__FLOAT__|__SuperPI 1M__|
+
+## Fix to run on a router with OpenWRT
+
+First download the toolchain from [downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/](https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/) (at the very bottom):
+
+``` sh
+apt install build-essential libncurses-dev zlib1g-dev gawk git gettext libssl-dev xsltproc rsync wget unzip python3 zstd
+wget https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-sdk-25.12.2-ath79-generic_gcc-14.3.0_musl.Linux-x86_64.tar.zst
+tar xvf openwrt-sdk-25.12.2-ath79-generic_gcc-14.3.0_musl.Linux-x86_64.tar.zst
+make defconfig
+make toolchain/install
+export PATH=~/github/openwrt-sdk-25.12.2-ath79-generic_gcc-14.3.0_musl.Linux-x86_64/staging_dir/toolchain-mips_24kc_gcc-14.3.0_musl/bin:$PATH
+export STAGING_DIR=~/github/openwrt-sdk-25.12.2-ath79-generic_gcc-14.3.0_musl.Linux-x86_64/staging_dir
+```
+
+Then get nbench
+
+``` sh
+wget kreier.org/docs/nbench.tar.gz
+tar xf nbench.tar.gz
+cd nbench-byte-2.2.3
+make
+```
+
+This will be stuck at the ASSIGNMENT part (see below). The fix: Change these lines 202 and 203 in `nbench1.h`:
+
+``` h
+/*************************
+** ASSIGNMENT ALGORITHM **
+*************************/
+
+/*
+** DEFINES
+*/
+
+#define ASSIGNROWS 101L
+#define ASSIGNCOLS 101L
+```
+
+Reduce these values to 29. Then change the target compiler in the `MakeFile` line 22 from `CC = gcc` to .
+
+``` c
+CC = mips-openwrt-linux-musl-gcc
+```
+
+And then just run `make`. Copy the `nbench` to your router with `scp -O nbench root@192.168.17.1:/root/`.
+
+## Example output
+
+```sh
+$ ./nbench
+
+BYTEmark* Native Mode Benchmark ver. 2 (10/95)
+Index-split by Andrew D. Balsa (11/97)
+Linux/Unix* port by Uwe F. Mayer (12/96,11/97)
+
+TEST                : Iterations/sec.  : Old Index   : New Index
+                    :                  : Pentium 90* : AMD K6/233*
+--------------------:------------------:-------------:------------
+NUMERIC SORT        :            2531  :      64.91  :      21.32
+STRING SORT         :          3192.8  :    1426.62  :     220.82
+BITFIELD            :      1.1123e+09  :     190.79  :      39.85
+FP EMULATION        :          1302.4  :     624.96  :     144.21
+FOURIER             :       3.124e+05  :     355.29  :     199.55
+ASSIGNMENT          :           104.2  :     396.51  :     102.84
+IDEA                :           23861  :     364.94  :     108.35
+HUFFMAN             :           13254  :     367.52  :     117.36
+NEURAL NET          :          322.84  :     518.62  :     218.15
+LU DECOMPOSITION    :          8783.2  :     455.01  :     328.56
+==========================ORIGINAL BYTEMARK RESULTS==========================
+INTEGER INDEX       : 345.458
+FLOATING-POINT INDEX: 437.650
+Baseline (MSDOS*)   : Pentium* 90, 256 KB L2-cache, Watcom* compiler 10.0
+==============================LINUX DATA BELOW===============================
+CPU                 : 24 CPU GenuineIntel 13th Gen Intel(R) Core(TM) i7-13700T 1382MHz
+L2 Cache            : 30720 KB
+OS                  : Linux 6.6.75.1-microsoft-standard-WSL2
+C compiler          : gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)
+libc                : /lib/x86_64-linux-gnu/libc.so.6
+MEMORY INDEX        : 96.728
+INTEGER INDEX       : 79.072
+FLOATING-POINT INDEX: 242.742
+Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
+* Trademarks are property of their respective holder.
+```
