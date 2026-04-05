@@ -28,70 +28,69 @@ The new error is now from sysspec.c that 'malloc.h' is not found. This is becaus
 
 ## Data collection 2005 - 2026:
 
-Sorted by Integer index (in reference to K6/233) since its most relevant to user experience. The Pentium 90 fropm 1995 is really old 😊
+Sorted by Integer index (in **reference to K6/233** from 1997) since its most relevant to user experience. The Pentium 90 from 1995 is really old 😊
 
-|        __Device__       |         __CPU__        |  MHz | Memory Index | __Integer Index__ | FP Index | SuperPI 1M |__Test Date__|  ISA |
-|:-----------------------:|:----------------------:|-----:|-------------:|--------------:|---------:|-----------:|-----------:|----------:|
-| Samsung   Galaxy 3      | [Eclair 2.1] S5P6422   |  667 |        0.541 |         0.959 |    0.126 |          - | 12/15/2011 |     ARMv6 |
-| Vobis PC                | Pentium II             |  233 |        1.238 |          1.33 |    2.409 |    8m16.4s |   8/1/2012 |     IA-32 |
-| Huawei   Ideos X3       | [Ideos X3 - 2.3] ARMv6 |  600 |         1.04 |         1.685 |    0.228 |          - |   8/1/2013 |     ARMv6 |
-| TL-WR1043ND             | Atheros AR9132         |  400 |        1.379 |         1.712 |    0.035 |          - |   8/3/2013 |  MIPS 24K |
-| Samsung   GT-i5800      | [Froyo 2.2] ARMv6      |  667 |        1.024 |         1.821 |    0.238 |          - |   8/1/2012 |     ARMv6 |
-| Raspberry   Pi 1B       | BCM2835                |  700 |        2.456 |         3.106 |    2.029 |          - |            |    ARMv6Z |
-| Sony   Tipo 4.0.4       | MSM7225A Cortex-A5     |  800 |        2.748 |         3.282 |    3.711 |          - |  8/10/2014 |   ARMv7-A |
-| TP-Link   Archer C7     | Qualc. Atheros QCA9563 |  750 |        1.733 |         3.989 |     0.25 |          - |   4/5/2026 | MIPS 74Kc |
-| Thinkpad   X30          | Pentium III            |  933 |        4.709 |         5.164 |    8.916 |    4m01.7s |  8/10/2014 |     IA-32 |
-| Huawei   Y300 4.1.1     | MSM8225 S4 Cortex-A5   | 1008 |        3.665 |          5.46 |    4.685 |          - |  8/10/2014 |   ARMv7-A |
-| Raspberry   Pi 2        | BCM2836                | 1000 |        4.665 |         6.481 |    5.059 |          - |  8/10/2014 |   ARMv7-A |
-| Umi Fair                | MT6735                 |  988 |        5.799 |         6.717 |    8.055 |          - |   8/1/2015 |   ARMv8-A |
-| Thinkpad   X40          | Pentium M              | 1200 |         6.21 |         7.047 |   12.384 |    1m14.4s |   6/7/2014 |     IA-32 |
-| Samsung   N150          | Atom N450              | 1666 |        7.243 |         7.109 |    7.351 |    1m37.6s |   4/1/2010 |    x86-64 |
-| Marc old   PC           | Pentium 4              | 2000 |        9.394 |         7.529 |   13.164 |    1m34.2s |  7/23/2009 |     IA-32 |
-| Toshiba   NB100         | Atom N270              | 1600 |        7.752 |         7.579 |    7.068 |    1m37.6s |   8/1/2009 |     IA-32 |
-| HP Mini   1100          | Atom N455              | 1666 |        9.386 |          8.39 |    7.313 |    1m30.9s |  8/10/2013 |    x86-64 |
-| Raspberry   Pi 3        | BCM2837 B0             | 1200 |         6.78 |         9.524 |    9.174 |          - |   1/7/2024 |   ARMv8-A |
-| Nexus 4                 | S4 Pro Krait APQ8064   | 1512 |        4.591 |         9.895 |    9.086 |          - |  1/27/2015 |   ARMv7-A |
-| Tanix   TX3 mini        | Amlogic S905W          | 1200 |         8.68 |        10.948 |   10.155 |          - |  1/28/2024 |   ARMv8-A |
-| Silentium   II          | Athlon64               | 1800 |       11.269 |        11.927 |   20.517 |    49.100s |   5/9/2011 |    x86-64 |
-| Samsung   R20 russisch  | Core Duo T2450         | 2000 |       12.138 |        12.568 |   21.144 |    33.800s |  4/16/2009 |     IA-32 |
-| Medion   Akoya P2212T   | Intel N2920            | 1860 |       18.433 |         15.15 |   16.636 |    42.056s |  5/29/2014 |    x86-64 |
-| Jetson   Nano A02 4GB   | Tegra X1               | 1400 |       14.399 |        15.947 |   17.788 |            |  4/25/2025 |   ARMv8-A |
-| Silentium   II          | 64bit Athlon64         | 1800 |       13.595 |        16.121 |   19.566 |    49.400s |   5/9/2011 |    x86-64 |
-| Medion   Akoya E1232T   | Intel N2807            | 1580 |       19.981 |        16.207 |   18.001 |    43.033s |  7/31/2014 |    x86-64 |
-| MacBook   Air 2013      | Intel i5-4250U         | 1299 |       19.051 |        17.286 |   25.289 |          - |  8/10/2014 |    x86-64 |
-| Medion   PC 2013        | Intel Core i3          | 2527 |       28.488 |        17.781 |   36.673 |    17.437s |   7/2/2013 |    x86-64 |
-| Synology   DS216+II     | Intel N3060            | 1600 |       23.695 |        17.817 |   25.516 |    50.264s |  9/15/2020 |    x86-64 |
-| Acer   C720             | Celeron 2955U          | 1400 |       18.776 |        17.878 |   29.106 |          - |  6/25/2019 |    x86-64 |
-| Raspberry   Pi 4        | BCM2711                | 1500 |       15.319 |        18.061 |    34.62 |          - |  9/26/2024 |   ARMv8-A |
-| Medion   2010           | AthlonII X4            | 2607 |       18.265 |        18.958 |   31.843 |    30.700s |  8/30/2012 |    x86-64 |
-| Mark old   PC 2         | Sempron SI-42          | 2100 |       14.395 |        19.299 |   23.132 |   1m0.573s |   9/4/2009 |    x86-64 |
-| Thinkpad   X200         | Intel Core2 Duo P8400  | 2266 |       28.631 |        19.781 |   31.141 |    22.112s |  12/9/2016 |    x86-64 |
-| Galaxy   Note 8         | Exynos 8895            | 2400 |       23.448 |        32.408 |   50.742 |          - |   4/4/2026 |   ARMv8-A |
-|      Thinkpad   T61     |  Intel Core2 Duo T7300 | 2043 |       19.359 |        19.808 |   33.182 |    25.700s |  10/7/2014 |    x86-64 |
-|  Fujitsu   Celsius W360 |  Intel Core2 Duo E8300 | 2832 |       33.671 |        23.584 |   36.384 |    18.473s |  3/14/2016 |    x86-64 |
-|   Project   IDEAcenter  |   Intel Pentium E6600  | 3066 |       28.776 |        23.881 |   47.396 |    18.923s |  5/10/2022 |    x86-64 |
-|       Kramers   PC      |    Intel Core i3 550   | 3200 |       37.846 |        23.882 |   47.437 |          - |  9/20/2013 |    x86-64 |
-|         Timmy PC        |   Intel Core i7 870S   | 2667 |       24.206 |        24.602 |   41.085 |    14.700s |  5/20/2011 |    x86-64 |
-|         Mark PC         |       Athlon64 X2      | 2829 |       21.476 |        25.608 |   30.663 |    34.300s |  3/24/2009 |    x86-64 |
-|         HP Z600         |       Xeon X5550       | 2667 |       27.461 |        26.342 |   27.894 |    14.800s |   5/5/2020 |    x86-64 |
-|       Eigenbau   5      |  AMD Phenom II X4 955  | 3352 |       28.022 |        32.586 |   44.104 |    16.300s |  11/7/2015 |    x86-64 |
-|        MacBookAir       |        i5 4250U        | 2300 |        39.05 |        33.215 |    54.26 |          - |  1/28/2016 |    x86-64 |
-|   Elitebook   hp8460p   |        i5 2520M        | 2500 |       40.699 |        37.018 |   52.635 |    13.145s |  1/28/2016 |    x86-64 |
-|     Thinkpad   X230     |        i5 3320M        | 2600 |       45.382 |        40.313 |   61.804 |    12.264s |  3/23/2017 |    x86-64 |
-|      zBook 15   G3      |        i7 6820HQ       | 2700 |         57.2 |        43.732 |  107.954 |    10.712s | 11/20/2020 |    x86-64 |
-|   MacBookPro15   2013   |        i7 4960HQ       | 2600 |       55.046 |        44.618 |    73.57 |    10.164s |  9/12/2018 |    x86-64 |
-|    Asus ROG   GL552VW   |  Intel Core i7 6700HQ  | 2600 |       63.682 |        45.732 |   68.159 |          - |  2/15/2018 |    x86-64 |
-| Acer   Aspire V15 Nitro |  Intel Core i7 4710HQ  | 2500 |       50.423 |        46.117 |   70.039 |          - |  2/15/2018 |    x86-64 |
-|     HP mini   800 G4    |        i5 8500T        | 2112 |       61.249 |        46.227 |  113.619 |    10.900s |   1/7/2024 |    x86-64 |
-|   Eigenbau   6 AI CUDA  |         i3-6100        | 3700 |        68.15 |        48.103 |  118.447 |            |  4/26/2025 |    x86-64 |
-|   Eigenbau   7 AI CUDA  |      Xeon 2696 v3      | 2295 |       59.666 |        49.441 |  116.922 |    11.801s |   1/7/2024 |    x86-64 |
-|      Proxmox   1226     |       E3-1226 v3       | 3700 |       62.206 |        49.951 |  112.593 |    10.044s |  9/26/2024 |    x86-64 |
-|    Xigmatec   Gemini    |        i3 10100        | 4160 |       77.174 |        56.761 |  138.003 |    08.748s | 10/12/2023 |    x86-64 |
-|     Galaxy   Note 20    |     Snapdragon 865     | 3090 |       63.435 |        66.735 |  143.465 |            |   4/4/2026 | ARMv8.2-A |
-|   MacBook   Air 2020    |           M1           | 3200 |       66.939 |        79.733 |  216.304 |          - |  9/26/2024 | ARMv8.5-A |
-|     HP mini   400 G9    |        i7 13700T       | 4700 |      104.525 |         85.01 |  264.869 |    06.917s |  9/26/2024 |    x86-64 |
-|       Galaxy   S24      |       Exynos 2400      | 3210 |       83.274 |            86 |  163.313 |          - |   4/4/2026 | ARMv9.2-A |
-
+| Device                  | CPU                    |  MHz | Memory Index | __Integer Index__ | FP Index |  Test Date |    ISA    |
+|-------------------------|------------------------|-----:|-------------:|------------------:|---------:|:----------:|:---------:|
+| Samsung   Galaxy 3      | [Eclair 2.1] S5P6422   |  667 |        0.541 |         __0.959__ |    0.126 | 2011-12-15 |   ARMv6   |
+| Vobis PC                | Pentium II             |  233 |        1.238 |          __1.33__ |    2.409 | 2012-08-01 |   IA-32   |
+| Huawei   Ideos X3       | [Ideos X3 - 2.3] ARMv6 |  600 |         1.04 |         __1.685__ |    0.228 | 2013-08-01 |   ARMv6   |
+| TL-WR1043ND             | Atheros AR9132         |  400 |        1.379 |         __1.712__ |    0.035 | 2013-08-03 |  MIPS 24K |
+| Samsung   GT-i5800      | [Froyo 2.2] ARMv6      |  667 |        1.024 |         __1.821__ |    0.238 | 2012-08-01 |   ARMv6   |
+| Raspberry   Pi 1B       | BCM2835                |  700 |        2.456 |         __3.106__ |    2.029 |            |   ARMv6Z  |
+| Sony   Tipo 4.0.4       | MSM7225A Cortex-A5     |  800 |        2.748 |         __3.282__ |    3.711 | 2014-08-10 |  ARMv7-A  |
+| TP-Link   Archer C7     | Qualc. Atheros QCA9563 |  750 |        1.733 |         __3.989__ |     0.25 | 2026-04-05 | MIPS 74Kc |
+| Thinkpad   X30          | Pentium III            |  933 |        4.709 |         __5.164__ |    8.916 | 2014-08-10 |   IA-32   |
+| Huawei   Y300 4.1.1     | MSM8225 S4 Cortex-A5   | 1008 |        3.665 |          __5.46__ |    4.685 | 2014-08-10 |  ARMv7-A  |
+| Raspberry   Pi 2        | BCM2836                | 1000 |        4.665 |         __6.481__ |    5.059 | 2014-08-10 |  ARMv7-A  |
+| Umi Fair                | MT6735                 |  988 |        5.799 |         __6.717__ |    8.055 | 2015-08-01 |   ARMv8-A |
+| Thinkpad   X40          | Pentium M              | 1200 |         6.21 |         __7.047__ |   12.384 | 2014-06-07 |     IA-32 |
+| Samsung   N150          | Atom N450              | 1666 |        7.243 |         __7.109__ |    7.351 | 2010-04-01 |    x86-64 |
+| Marc old   PC           | Pentium 4              | 2000 |        9.394 |         __7.529__ |   13.164 | 2009-07-23 |     IA-32 |
+| Toshiba   NB100         | Atom N270              | 1600 |        7.752 |         __7.579__ |    7.068 | 2009-08-01 |     IA-32 |
+| HP Mini   1100          | Atom N455              | 1666 |        9.386 |          __8.39__ |    7.313 | 2013-08-10 |    x86-64 |
+| Raspberry   Pi 3        | BCM2837 B0             | 1200 |         6.78 |         __9.524__ |    9.174 | 2024-01-07 |   ARMv8-A |
+| Nexus 4                 | S4 Pro Krait APQ8064   | 1512 |        4.591 |         __9.895__ |    9.086 | 2015-01-27 |   ARMv7-A |
+| Tanix   TX3 mini        | Amlogic S905W          | 1200 |         8.68 |        __10.948__ |   10.155 | 2024-01-28 |   ARMv8-A |
+| Silentium   II          | Athlon64               | 1800 |       11.269 |        __11.927__ |   20.517 | 2011-05-09 |    x86-64 |
+| Samsung   R20 russisch  | Core Duo T2450         | 2000 |       12.138 |        __12.568__ |   21.144 | 2009-04-16 |     IA-32 |
+| Medion   Akoya P2212T   | Intel N2920            | 1860 |       18.433 |         __15.15__ |   16.636 | 2014-05-29 |    x86-64 |
+| Jetson   Nano A02 4GB   | Tegra X1               | 1400 |       14.399 |        __15.947__ |   17.788 | 2025-04-25 |   ARMv8-A |
+| Silentium   II          | 64bit Athlon64         | 1800 |       13.595 |        __16.121__ |   19.566 | 2011-05-09 |    x86-64 |
+| Medion   Akoya E1232T   | Intel N2807            | 1580 |       19.981 |        __16.207__ |   18.001 | 2014-07-31 |    x86-64 |
+| MacBook   Air 2013      | Intel i5-4250U         | 1299 |       19.051 |        __17.286__ |   25.289 | 2014-08-10 |    x86-64 |
+| Medion   PC 2013        | Intel Core i3          | 2527 |       28.488 |        __17.781__ |   36.673 | 2013-07-02 |    x86-64 |
+| Synology   DS216+II     | Intel N3060            | 1600 |       23.695 |        __17.817__ |   25.516 | 2020-09-15 |    x86-64 |
+| Acer   C720             | Celeron 2955U          | 1400 |       18.776 |        __17.878__ |   29.106 | 2019-06-25 |    x86-64 |
+| Raspberry   Pi 4        | BCM2711                | 1500 |       15.319 |        __18.061__ |    34.62 | 2024-09-26 |   ARMv8-A |
+| Medion   2010           | AthlonII X4            | 2607 |       18.265 |        __18.958__ |   31.843 | 2012-08-30 |    x86-64 |
+| Mark old   PC 2         | Sempron SI-42          | 2100 |       14.395 |        __19.299__ |   23.132 | 2009-09-04 |    x86-64 |
+| Thinkpad   X200         | Intel Core2 Duo P8400  | 2266 |       28.631 |        __19.781__ |   31.141 | 2016-12-09 |    x86-64 |
+| Galaxy   Note 8         | Exynos 8895            | 2400 |       23.448 |        __32.408__ |   50.742 | 2026-04-04 |   ARMv8-A |
+| Thinkpad   T61          | Intel Core2 Duo T7300  | 2043 |       19.359 |        __19.808__ |   33.182 | 2014-10-07 |    x86-64 |
+| Fujitsu   Celsius W360  | Intel Core2 Duo E8300  | 2832 |       33.671 |        __23.584__ |   36.384 | 2016-03-14 |    x86-64 |
+| Project   IDEAcenter    | Intel Pentium E6600    | 3066 |       28.776 |        __23.881__ |   47.396 | 2022-05-10 |    x86-64 |
+| Kramers   PC            | Intel Core i3 550      | 3200 |       37.846 |        __23.882__ |   47.437 | 2013-09-20 |    x86-64 |
+| Timmy PC                | Intel Core i7 870S     | 2667 |       24.206 |        __24.602__ |   41.085 | 2011-05-20 |    x86-64 |
+| Mark PC                 | Athlon64 X2            | 2829 |       21.476 |        __25.608__ |   30.663 | 2009-03-24 |    x86-64 |
+| HP Z600                 | Xeon X5550             | 2667 |       27.461 |        __26.342__ |   27.894 | 2020-05-05 |    x86-64 |
+| Eigenbau   5            | AMD Phenom II X4 955   | 3352 |       28.022 |        __32.586__ |   44.104 | 2015-11-07 |    x86-64 |
+| MacBookAir              | i5 4250U               | 2300 |        39.05 |        __33.215__ |    54.26 | 2016-01-28 |    x86-64 |
+| Elitebook   hp8460p     | i5 2520M               | 2500 |       40.699 |        __37.018__ |   52.635 | 2016-01-28 |    x86-64 |
+| Thinkpad   X230         | i5 3320M               | 2600 |       45.382 |        __40.313__ |   61.804 | 2017-03-23 |    x86-64 |
+| zBook 15   G3           | i7 6820HQ              | 2700 |         57.2 |        __43.732__ |  107.954 | 2020-11-20 |    x86-64 |
+| MacBookPro15   2013     | i7 4960HQ              | 2600 |       55.046 |        __44.618__ |    73.57 | 2018-09-12 |    x86-64 |
+| Asus ROG   GL552VW      | Intel Core i7 6700HQ   | 2600 |       63.682 |        __45.732__ |   68.159 | 2018-02-15 |    x86-64 |
+| Acer   Aspire V15 Nitro | Intel Core i7 4710HQ   | 2500 |       50.423 |        __46.117__ |   70.039 | 2018-02-15 |    x86-64 |
+| HP mini   800 G4        | i5 8500T               | 2112 |       61.249 |        __46.227__ |  113.619 | 2024-01-07 |    x86-64 |
+| Eigenbau   6 AI CUDA    | i3-6100                | 3700 |        68.15 |        __48.103__ |  118.447 | 2025-04-26 |    x86-64 |
+| Eigenbau   7 AI CUDA    | Xeon 2696 v3           | 2295 |       59.666 |        __49.441__ |  116.922 | 2024-01-07 |    x86-64 |
+| Proxmox   1226          | E3-1226 v3             | 3700 |       62.206 |        __49.951__ |  112.593 | 2024-09-26 |    x86-64 |
+| Xigmatec   Gemini       | i3 10100               | 4160 |       77.174 |        __56.761__ |  138.003 | 2023-10-12 |    x86-64 |
+| Galaxy   Note 20        | Snapdragon 865         | 3090 |       63.435 |        __66.735__ |  143.465 | 2026-04-04 | ARMv8.2-A |
+| MacBook   Air 2020      | M1                     | 3200 |       66.939 |        __79.733__ |  216.304 | 2024-09-26 | ARMv8.5-A |
+| HP mini   400 G9        | i7 13700T              | 4700 |      104.525 |        __85.011__ |  264.869 | 2024-09-26 |    x86-64 |
+| Galaxy   S24            | Exynos 2400            | 3210 |       83.274 |        __86.001__ |  163.313 | 2026-04-04 | ARMv9.2-A |
 
 ## Old list from 2020:
 
@@ -272,4 +271,64 @@ INTEGER INDEX       : 79.072
 FLOATING-POINT INDEX: 242.742
 Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
 * Trademarks are property of their respective holder.
+```
+
+## Example run from Samsung Galaxy S24
+
+``` sh
+~/nbench-byte-2.2.3 $ ./nbench
+
+BYTEmark* Native Mode Benchmark ver. 2 (10/95)
+Index-split by Andrew D. Balsa (11/97)
+Linux/Unix* port by Uwe F. Mayer (12/96,11/97)
+
+TEST                : Iterations/sec.  : Old Index   : New Index
+                    :                  : Pentium 90* : AMD K6/233*
+--------------------:------------------:-------------:------------
+NUMERIC SORT        :            5456  :     139.92  :      45.95
+STRING SORT         :          2594.3  :    1159.23  :     179.43
+BITFIELD            :      7.9496e+08  :     136.36  :      28.48
+FP EMULATION        :          1769.9  :     849.27  :     195.97
+FOURIER             :      2.4485e+05  :     278.46  :     156.40
+ASSIGNMENT          :          114.48  :     435.63  :     112.99
+IDEA                :           13072  :     199.94  :      59.36
+HUFFMAN             :           11555  :     320.42  :     102.32
+NEURAL NET          :           255.9  :     411.08  :     172.91
+LU DECOMPOSITION    :          4385.1  :     227.17  :     164.04
+==========================ORIGINAL BYTEMARK RESULTS==========================
+INTEGER INDEX       : 339.907
+FLOATING-POINT INDEX: 296.248
+Baseline (MSDOS*)   : Pentium* 90, 256 KB L2-cache, Watcom* compiler 10.0
+==============================LINUX DATA BELOW===============================
+CPU                 : 10 CPU
+L2 Cache            :
+OS                  : Linux 6.1.138-android14-11
+C compiler          : clang version 21.1.8
+libc                :
+MEMORY INDEX        : 83.274
+INTEGER INDEX       : 86.000
+FLOATING-POINT INDEX: 164.313
+Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
+* Trademarks are property of their respective holder.
+~/nbench-byte-2.2.3 $ fastfetch
+         -o          o-             u0_a521@localhost
+          +hydNNNNdyh+              -----------------
+        +mMMMMMMMMMMMMm+            OS: Android REL 16 aarch64
+      `dMMm:NMMMMMMN:mMMd`          Host: samsung SM-S921B
+      hMMMMMMMMMMMMMMMMMMh          Kernel: Linux 6.1.138-android14-11
+  ..  yyyyyyyyyyyyyyyyyyyy  ..      Uptime: 7 days, 22 hours, 18 mins
+.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.    Packages: 97 (dpkg)
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:    Shell: bash 5.3.9
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:    DE: BP2A.250605.031.A3.S921BXXUDCZC2
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:    WM: WindowManager (SurfaceFlinger)
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:    Terminal: Termux googleplay.2026.02.11
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-    Terminal Font: monospace
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+     CPU: Samsung Exynos 2400 [S5E9945] (10) @ 3.21z
+      mMMMMMMMMMMMMMMMMMMm          GPU: Samsung Xclipse 940 [Integrated]
+      `/++MMMMh++hMMMM++/`          Memory: 5.48 GiB / 7.06 GiB (78%)
+          MMMMo  oMMMM              Swap: 4.07 GiB / 12.00 GiB (34%)
+          MMMMo  oMMMM              Disk (/): 7.16 GiB / 7.16 GiB (100%) - erofs []
+          oNMm-  -mMNs              Disk (/storage/emulated): 58.28 GiB / 462.40 Ge
+                                    Local IP (wlan0): 10.10.10.181/24
+                                    Locale: en_US.UTF-8
 ```
