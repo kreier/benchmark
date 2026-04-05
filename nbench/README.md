@@ -164,33 +164,78 @@ Then get nbench
 wget kreier.org/docs/nbench.tar.gz
 tar xf nbench.tar.gz
 cd nbench-byte-2.2.3
-make
 ```
 
-This will be stuck at the ASSIGNMENT part (see below). The fix: Change these lines 202 and 203 in `nbench1.h`:
+### Adjust compiler and MAXPOSLONG
 
-``` h
-/*************************
-** ASSIGNMENT ALGORITHM **
-*************************/
-
-/*
-** DEFINES
-*/
-
-#define ASSIGNROWS 101L
-#define ASSIGNCOLS 101L
-```
-
-Reduce these values to 29. Then change the target compiler in the `MakeFile` line 22 from `CC = gcc` to .
+A simple `make` will not cross-compile, you have to adjust the parameter for your C Compiler in the `Makefile`:
 
 ``` c
 CC = mips-openwrt-linux-musl-gcc
 ```
 
-And then just run `make`. Copy the `nbench` to your router with `scp -O nbench root@192.168.17.1:/root/`.
+Another error is the determination of ``. Adjust the lines in the `nmglobal.h` to look like this:
 
-## Example output
+```h
+/*
+** MAXPOSLONG
+**
+** This is the maximum positive long.
+*/
+/*
+#ifdef LONG64
+#define MAXPOSLONG 0x7FFFFFFFFFFFFFFFL
+#else
+#define MAXPOSLONG 0x7FFFFFFFL
+#endif
+*/
+
+#include <limits.h>
+#define MAXPOSLONG LONG_MAX
+```
+
+And then just run `make`. Copy the `nbench` and `NNET.DAT` to your router with `scp -O nbench root@192.168.17.1:/root/`.
+
+### Example output Archer C7 with Qualcomm Atheros QCA9563 MIPS 74Kc
+
+```sh
+root@OpenWrt:~# ./nbench
+
+BYTEmark* Native Mode Benchmark ver. 2 (10/95)
+Index-split by Andrew D. Balsa (11/97)
+Linux/Unix* port by Uwe F. Mayer (12/96,11/97)
+
+TEST                : Iterations/sec.  : Old Index   : New Index
+                    :                  : Pentium 90* : AMD K6/233*
+--------------------:------------------:-------------:------------
+NUMERIC SORT        :          262.21  :       6.72  :       2.21
+STRING SORT         :          7.3572  :       3.29  :       0.51
+BITFIELD            :      1.1524e+08  :      19.77  :       4.13
+FP EMULATION        :          59.064  :      28.34  :       6.54
+FOURIER             :          325.81  :       0.37  :       0.21
+ASSIGNMENT          :          2.4801  :       9.44  :       2.45
+IDEA                :          1121.8  :      17.16  :       5.09
+HUFFMAN             :          382.25  :      10.60  :       3.38
+NEURAL NET          :         0.32985  :       0.53  :       0.22
+LU DECOMPOSITION    :          8.7911  :       0.46  :       0.33
+==========================ORIGINAL BYTEMARK RESULTS==========================
+INTEGER INDEX       : 11.137
+FLOATING-POINT INDEX: 0.447
+Baseline (MSDOS*)   : Pentium* 90, 256 KB L2-cache, Watcom* compiler 10.0
+==============================LINUX DATA BELOW===============================
+CPU                 :
+L2 Cache            :
+OS                  : Linux 6.12.74
+C compiler          : mips-openwrt-linux-musl-gcc
+libc                : static
+MEMORY INDEX        : 1.726
+INTEGER INDEX       : 3.973
+FLOATING-POINT INDEX: 0.248
+Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
+* Trademarks are property of their respective holder.
+```
+
+## Example output i7-13700T
 
 ```sh
 $ ./nbench
