@@ -70,6 +70,7 @@ Multi-Core is still on the ToDo list.
 | STM32F411CEU6 512k      |      172 |  31 |  100 |     1.72 |
 | T-Koala ESP32           |      351 |   5 |  160 |     2.19 |
 | Raspberry Pi Model B v2 |     1574 |     |  700 |     2.25 |
+| Qualcomm Atheros QCA956X |    2053 |     |  775 |     2.65 |
 | Raspberry Pi 3 Model B  |     3800 |     | 1200 |     3.17 |
 | Amlogic S905W tanix tx3 |     3913 |     | 1200 |     3.26 |
 | Raspberry Pi 4 v1.1 4GB |     8257 |     | 1500 |     5.50 |
@@ -79,6 +80,10 @@ Multi-Core is still on the ToDo list.
 | i7-6820HQ               |    23779 |     | 3660 |     6.61 |
 | i3-10100                |    30532 |     | 4220 |     7.23 |
 | i7-13700T               |    39082 |     | 4600 |     8.49 |
+| Apple M1                |    31718 |     | 3200 |     9.91 |
+| Exynos 2400 in Galaxy S24 |  33129 |     | 3210 |    10.32 |
+
+Note that only the Arduino is 8 bit, then followed by everything 32 bit until Qualcomm Atheros QCA956X, then continuing 64bin with the Raspberry Pi 3 with 3.17 Mark/MHz and a further big jump with out-of-order pipelines in the CPU for the Raspberry Pi 4 and 5.50 Mark/MHz.
 
 ### Multithread results
 
@@ -121,3 +126,42 @@ The [Raspberry Pico 2350](https://riscv.org/news/2024/08/raspberry-pi-launch-new
 
 An update for the M1 CoreMark is needed. And some test results for above processors. Scheduled as TBD in Saigon for September 2024.
 
+## Cross-compile for MIPS on TP-Link Archer C7
+
+I installed the toolchain already for ath79. Now we need to tell the compiler where to find it:
+
+```sh
+export STAGING_DIR=~/github/openwrt-sdk-25.12.2-ath79-generic_gcc-14.3.0_musl.Linux-x86_64/staging_dir/
+export PATH=$STAGING_DIR/toolchain-mips_24kc_gcc-14.3.0_musl/bin:$PATH
+```
+
+Then compile cleanly, and copy to your router:
+
+```sh
+make PORT_DIR=simple CC=mips-openwrt-linux-gcc XCFLAGS="-O2 -march=24kc -static" RUN=true
+scp -O coremark.exe root@10.5.5.1:/tmp/coremark
+```
+
+Log into your router and start the benchmark:
+
+```sh
+root@OpenWrt:/tmp# ./coremark
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 14613617
+Total time (secs): 14.613617
+Iterations/Sec   : 2052.879859
+Iterations       : 30000
+Compiler version : GCC14.3.0
+Compiler flags   : -O2 -DPERFORMANCE_RUN=1
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x5275
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2052.879859 / GCC14.3.0 -O2 -DPERFORMANCE_RUN=1   / STACK
+```
+
+2052.88 CoreMark at 775 MHz equals 2.65 CoreMark/MHz
