@@ -44,7 +44,7 @@ Memory:     64 MByte     83 MB/s PS-2 EDO-RAM</pre></td></tr>
 <td rowspan=2><pre>
 Cache instr: 64 kByte              2012/02/25
 Cache data:  32 kByte        TP-Link WR1043ND
-Memory:      32 MByte     ?? MB/s     DDR-400</pre></td></tr>
+Memory:      32 MByte     67 MB/s     DDR-400</pre></td></tr>
 <tr bgcolor=DDEEFF>
 <td> 400 MHz</td><td bgcolor=D0FFE0>266 BogoMIPS</td></tr>
 <tr><td height=3></td></tr>
