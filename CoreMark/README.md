@@ -1,6 +1,8 @@
 # CoreMark
 
-The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence. 
+The initial code was developed in 2009 by [EEMBC](https://github.com/eembc/coremark). Since 2018 it is additionally licenced with the Apache licence. It allows to compare 8bit SBCs like an Arduino Mega 2560 with just 8 kB RAM and 16 MHz to an i7-13700T with 4.6 GHz or a Exynos 2400.
+
+![logarithmic chart](./CoreMark_Frequency_log.svg)
 
 ## Single Core
 
@@ -12,6 +14,8 @@ cd coremark
 make
 cat run1.log
 ```
+
+![Mark per MHz](./CoreMark_MHz.svg)
 
 ## Multi Core
 To use all the available cores on a CPU like 13700T simply write
