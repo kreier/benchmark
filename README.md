@@ -10,7 +10,7 @@ There are countless [benchmarks](https://en.wikipedia.org/wiki/Benchmark_(comput
 - [Linpack](LinpackDP) DP, double precision or fp64 - 1979
 - [Dhrystone](dhrystone) - 1984
 - [nbench](nbench) - 1996
-- [Memtest86+](memtest) - 1986
+- [Memtest86+](memtest86) - 1986
 - [CoreMark](CoreMark) - 2009
 - [GPU](gpu) with [gpu/OpenCL](gpu/opencl) and [gpu/fluidX3D](gpu/fluidX3D) by [ProjectPhysX](https://github.com/ProjectPhysX)
 - [GeekBench](geekbench)

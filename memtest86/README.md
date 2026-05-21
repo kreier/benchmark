@@ -1,6 +1,6 @@
 # Memtest86 results
 
-I run these tests since 1999 and here are some numbers:
+I run these tests since 1999, the most recent tests are integrated into [this csv file](https://github.com/kreier/benchmark/blob/main/memtest86/results.csv). Other results until 2017 are:
 
 <table border=0 bgcolor="#F3F3F3" cellpadding=3 cellspacing=3>
 <tr bgcolor=DDEEFF style="text-align:left">

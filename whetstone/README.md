@@ -1,6 +1,6 @@
 # Whetstone
 
-copied from https://os.mbed.com/users/kirchnet/code/Nucleo_vs_Arduino_Speed_Test//file/466dbb9d16a8/arduino.txt/
+The code is copied from [mbed.com](https://os.mbed.com/users/kirchnet/code/Nucleo_vs_Arduino_Speed_Test//file/466dbb9d16a8/arduino.txt/)
 
 Had to adjust T1 and T2 to t1 and t2 since the otheres are used by the ESP32 library.
 
@@ -14,7 +14,7 @@ Had to adjust T1 and T2 to t1 and t2 since the otheres are used by the ESP32 lib
 
 ## Whetstone 1.2
 
-Copied from https://raw.githubusercontent.com/ghalfacree/Arduino-Sketches/master/Whetstone/Whetstone.ino
+Copied from [ghalfacree/Arduino-Sketches/master/Whetstone](https://raw.githubusercontent.com/ghalfacree/Arduino-Sketches/master/Whetstone/Whetstone.ino)
 
 - Arduino Leonardo:   7.96 MIPS
 - Arduino Uno:        8.01 MIPS
@@ -24,11 +24,11 @@ Copied from https://raw.githubusercontent.com/ghalfacree/Arduino-Sketches/master
 
 ### Original:
 
-http://www.netlib.org/benchmark/
+[http://www.netlib.org/benchmark/](http://www.netlib.org/benchmark/)
 
 ### Ubuntu
 
-```
+``` sh
 mkdir whetstone
 cd whetstone
 wget http://www.netlib.org/benchmark/whetstone.c
@@ -38,7 +38,7 @@ whet -c 100000
 
 ### Roy Longbottom
 
-```
+``` sh
 mkdir whetstone
 cd whetstone
 wget http://www.roylongbottom.org.uk/whets.c
