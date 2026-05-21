@@ -132,3 +132,17 @@ Ideas are taken from:
 Compiled in 2018 (with history going back to 2002) several benchmarks compare the execution speed of programs in 24 languages. Many are optimized for multicore parallel execution, to make modern processors comparable. Probably disable the efficiency cores might speed up the processes.
 
 <img src="docs/1x1.png" width="20%"><img src="docs/fastest-programming-language.svg" width="60%">
+
+## General trends in the last 50 years
+
+My first work with computers was on the [KC 85/3](https://en.wikipedia.org/wiki/KC_85) in 1987. This computer used a 8-bit CPU [U880](https://en.wikipedia.org/wiki/U880) from 1981 with 1.75 MHz and 32 kByte RAM, itself a clone of the [Z80](https://en.wikipedia.org/wiki/Zilog_Z80) from 1976. It was also powering my first own computer, a [ZX81](https://en.wikipedia.org/wiki/ZX81) with 3.75 MHz and 1 kByte RAM.
+
+[Karl Rupp](https://www.karlrupp.net/) wrote an article about some general changes in Microprocessors in the [last 40 years in 2015](https://www.karlrupp.net/2015/06/40-years-of-microprocessor-trend-data/). This article was then updated [after 42 years](https://www.karlrupp.net/2018/02/42-years-of-microprocessor-trend-data/), and the graph itself after 48 years and 50 years in the [respective Github repository](https://github.com/karlrupp/microprocessor-trend-data) in 2022. This is the graph:
+
+![50 yesrs microprocessors ](docs/50-years-processor-trend.png)
+
+You can see both [Moore's law](https://en.wikipedia.org/wiki/Moore%27s_law) and [Dennard scaling](https://en.wikipedia.org/wiki/Dennard_scaling) affecting the technology that we use.
+
+The first computer I bought was the Atari STFM 520 in 1991 with the Motorola 68000 CPU and 8 MHz, plus 512 kByte RAM that I increased to 1 MByte. The CPU itself was already 1979 released - 12 years earlier. In future years this distance should get closer. In early 2026 I got a used Galaxy S24 from 2024 with an Exynos 2400 CPU, 3.21 GHz and 8 GByte of LPDDR5 RAM. The Cores are ARMv9.2-A with Cortex-X4 and A720, A520 and were released 2023.
+
+Another article talks about [CPU, GPU and MIC Hardware Characteristics over Time](https://www.karlrupp.net/2013/06/cpu-gpu-and-mic-hardware-characteristics-over-time/). AVX and SIMD entered the CPU, GPU continued the parallel trend, and Cerebras extends the parallelism to 900,000 cores on one chip for faster interconnect, closer to the fast SRAM etc. My 3070 Ti has only 6000 cores.
