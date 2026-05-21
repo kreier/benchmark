@@ -122,8 +122,8 @@ Single precision is **32 bit**, Half precision is **16 bit** and Quantized is **
 |                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6775)   |   1186 |  3535 |      1432 |
 | Samsung Galaxy S24 | [Exynos 2400](https://browser.geekbench.com/ai/v1/504268)  |   2151 |  2304 |      3197 |
 |                   | GPU                                                         |   1331 |  2418 |      1814 |
-|                   | [NNAPI](https://browser.geekbench.com/ai/v1/6775)   |   1186 |  3535 |      1432 |
-|                   | ENN                                                         |    917 |  1109 |       684 |
+|                   | [NNAPI](https://browser.geekbench.com/ai/v1/504272)         |    277 |   284 |       789 |
+|                   | [ENN](https://browser.geekbench.com/ai/v1/504282)           |   3554 | 25298 |     47314 |
 | iPad Pro 11 v3    | [M1](https://browser.geekbench.com/ai/v1/4199)              |   2865 |  4329 |      3605 |
 |                   | [GPU](https://browser.geekbench.com/ai/v1/6133)             |   4416 |  4593 |      4231 |
 |                   | [Neural Engine](https://browser.geekbench.com/ai/v1/6089)   |   2141 | 12426 |     12707 |
