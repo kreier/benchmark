@@ -25,6 +25,7 @@ This test is taken from [https://github.com/ProjectPhysX/OpenCL-Benchmark](https
 | ⚪ M1 GPU 8CU    |    ---   |   0.620  |   ---    |  0.439  |  0.603  |  0.645  |  0.638  |
 | 🟢 GTX 960       |   0.086  |   2.597  |   ---    |  0.551  |  0.918  |  2.649  |  2.652  |
 | 🔴 RX 470        |   0.306  |   1.218  |   4.749  |  0.686  |  0.985  |  1.920  |  1.914  |
+| 🟢 GTX 1050 Max-Q |  0.068  |   2.059  |   ---    |  0.421  |  0.694  |  1.986  |  4.164  |
 | 🟢 P106-100      |   0.151  |   4.526  |   0.076  |  0.859  |  1.512  |  4.542  | 16.395  |
 | 🟢 GTX 1060      |   0.149  |   4.466  |   0.075  |  0.821  |  1.435  |  4.465  |  4.496  |
 | 🟢 GTX 1070      |   0.225  |   6.710  |   0.113  |  1.254  |  2.182  |  6.549  | 23.718  |
@@ -213,13 +214,13 @@ The output:
 | Buffer Limits  | 4067 MB global, 64 KB constant                             |
 |----------------'------------------------------------------------------------|
 | Info: OpenCL C code successfully compiled.                                  |
-| FP64  compute                                         3.521 TFLOPs/s (1/3 ) |
-| FP32  compute                                         8.915 TFLOPs/s ( 1x ) |
-| FP16  compute                                        16.576 TFLOPs/s ( 2x ) |
-| INT64 compute                                         1.195  TIOPs/s (1/8 ) |
-| INT32 compute                                         3.118  TIOPs/s (1/3 ) |
-| INT16 compute                                         9.030  TIOPs/s ( 1x ) |
-| INT8  compute                                         1.823  TIOPs/s (1/4 ) |
+| FP64   Compute   (double, fma  )                      3.521 TFLOPs/s (1/3 ) |
+| FP32   Compute   (float , fma  )                      8.915 TFLOPs/s ( 1x ) |
+| FP16   Compute   (half2 , fma  )                     16.576 TFLOPs/s ( 2x ) |
+| INT64  Compute   (long  , a*b+c)                      1.195  TIOPs/s (1/8 ) |
+| INT32  Compute   (int   , a*b+c)                      3.118  TIOPs/s (1/3 ) |
+| INT16  Compute   (short2, a*b+c)                      9.030  TIOPs/s ( 1x ) |
+| INT8   Compute   (char4 , dp4a )                      1.823  TIOPs/s (1/4 ) |
 | Memory Bandwidth ( coalesced read      )                        543.07 GB/s |
 | Memory Bandwidth ( coalesced      write)                        594.55 GB/s |
 | Memory Bandwidth (misaligned read      )                        302.78 GB/s |
