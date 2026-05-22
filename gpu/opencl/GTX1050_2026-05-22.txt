@@ -63,3 +63,41 @@
 | Memory, Cache  | 8006 MB RAM, 256 KB global / 32 KB local                   |
 | Buffer Limits  | 2001 MB global, 128 KB constant                            |
 |----------------'------------------------------------------------------------|
+
+Updated driver to 582.53
+
+.-----------------------------------------------------------------------------.
+|----------------.------------------------------------------------------------|
+| Device ID    0 | NVIDIA GeForce GTX 1050 with Max-Q Design                  |
+| Device ID    1 | Intel(R) UHD Graphics 620                                  |
+| Device ID    2 | Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz                   |
+|----------------'------------------------------------------------------------|
+|----------------.------------------------------------------------------------|
+| Device ID      | 0                                                          |
+| Device Name    | NVIDIA GeForce GTX 1050 with Max-Q Design                  |
+| Device Vendor  | NVIDIA Corporation                                         |
+| Device Driver  | 582.53 (Windows)                                           |
+| OpenCL Version | OpenCL C 3.0                                               |
+| Compute Units  | 5 at 1139 MHz (640 cores, 1.458 TFLOPs/s)                  |
+| Memory, Cache  | 2047 MB VRAM, 240 KB global / 48 KB local                  |
+| Buffer Limits  | 511 MB global, 64 KB constant                              |
+|----------------'------------------------------------------------------------|
+| Info: OpenCL C code successfully compiled.                                  |
+| FP64   Compute   (double, fma  )                      0.067 TFLOPs/s (1/24) |
+| FP32   Compute   (float , fma  )                      1.946 TFLOPs/s ( 1x ) |
+| FP16   Compute   (half2 , fma  )                      0.034 TFLOPs/s (1/64) |
+| INT64  Compute   (long  , a*b+c)                      0.394  TIOPs/s (1/4 ) |
+| INT32  Compute   (int   , a*b+c)                      0.685  TIOPs/s (1/2 ) |
+| INT16  Compute   (short2, a*b+c)                      1.979  TIOPs/s ( 1x ) |
+| INT8   Compute   (char4 , dp4a )                      6.970  TIOPs/s ( 4x ) |
+| Memory Bandwidth ( coalesced read      )                         97.93 GB/s |
+| Memory Bandwidth ( coalesced      write)                        102.69 GB/s |
+| Memory Bandwidth (misaligned read      )                         50.32 GB/s |
+| Memory Bandwidth (misaligned      write)                         17.42 GB/s |
+| PCIe   Bandwidth (send                 )                          3.12 GB/s |
+| PCIe   Bandwidth (   receive           )                          3.26 GB/s |
+| PCIe   Bandwidth (        bidirectional)            (Gen1 x16)    3.19 GB/s |
+|-----------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------|
+| Done. Press Enter to exit.                                                  |
+'-----------------------------------------------------------------------------'
