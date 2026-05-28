@@ -141,7 +141,7 @@ My first work with computers was on the [KC 85/3](https://en.wikipedia.org/wiki/
 
 ![50 yesrs microprocessors ](docs/50-years-processor-trend.png)
 
-You can see both [Moore's law](https://en.wikipedia.org/wiki/Moore%27s_law) and [Dennard scaling](https://en.wikipedia.org/wiki/Dennard_scaling) affecting the technology that we use.
+You can see both [Moore's law](https://en.wikipedia.org/wiki/Moore%27s_law) and [Dennard scaling](https://en.wikipedia.org/wiki/Dennard_scaling) affecting the technology that we use. See [a video from Asianometry](https://www.youtube.com/watch?v=7p8ZeSbblec).
 
 The first computer I bought was the Atari STFM 520 in 1991 with the Motorola 68000 CPU and 8 MHz, plus 512 kByte RAM that I increased to 1 MByte. The CPU itself was already 1979 released - 12 years earlier. In future years this distance should get closer. In early 2026 I got a used Galaxy S24 from 2024 with an Exynos 2400 CPU, 3.21 GHz and 8 GByte of LPDDR5 RAM. The Cores are ARMv9.2-A with Cortex-X4 and A720, A520 and were released 2023.
 
